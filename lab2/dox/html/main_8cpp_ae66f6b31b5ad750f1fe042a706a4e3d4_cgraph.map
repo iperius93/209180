@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_benchmark.html#aa5fa344572d7ee2a2320aa8074610304" title="Generuje losowe liczby i zapisuje do pliku." alt="" coords="104,5,288,35"/>
+<area shape="rect" id="node5" href="$class_benchmark.html#a1e780b2563c46ab092393c0ed4e18e6f" title="Testuje Liste i zapisuje wyniki do pliku wynikow." alt="" coords="132,58,260,89"/>
+<area shape="rect" id="node9" href="$class_lista.html#ad00be09a712bd0f9af9bd19b4edcfc03" title="Zwraca adres do tablicy, typu int." alt="" coords="128,111,264,142"/>
+<area shape="rect" id="node7" href="$class_lista.html#af687ce305398fea29139c1226cf27dc3" title="Wczytuje dane do tablicy." alt="" coords="336,58,477,89"/>
+</map>

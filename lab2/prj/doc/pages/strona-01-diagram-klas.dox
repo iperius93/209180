@@ -1,0 +1,11 @@
+/*!
+
+  \page strona-diagramu-klas   Diagram klas
+
+
+  \image html diagram_klas.png "Zależności między klasami"
+  \image html glowny.png "Ogólny diagram przepływu"
+  \image html liczeniepunktow.png  "Obrzek przedstawia sposób wyliczania współrzednych"
+ 
+
+*/

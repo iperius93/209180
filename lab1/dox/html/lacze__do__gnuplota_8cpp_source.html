@@ -1,0 +1,527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>2Ow1L: Plik źródłowy lacze_do_gnuplota.cpp</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">2Ow1L
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li><a href="dirs.html"><span>Katalogi</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('lacze__do__gnuplota_8cpp.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">lacze_do_gnuplota.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="lacze__do__gnuplota_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
+<a name="l00002"></a>00002 <span class="comment"> * lacze_do_gnuplota.cpp</span>
+<a name="l00003"></a>00003 <span class="comment"> *</span>
+<a name="l00004"></a>00004 <span class="comment"> *  Created on: 25-05-2014</span>
+<a name="l00005"></a>00005 <span class="comment"> *      Author: rafal</span>
+<a name="l00006"></a>00006 <span class="comment"> */</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;cstdio&gt;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;cstring&gt;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;cmath&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;sys/stat.h&gt;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;unistd.h&gt;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;fcntl.h&gt;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#include &lt;sstream&gt;</span>
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 <span class="preprocessor">#ifdef __GNUG__</span>
+<a name="l00023"></a>00023 <span class="preprocessor"></span><span class="preprocessor">#pragma implementation</span>
+<a name="l00024"></a>00024 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00025"></a>00025 <span class="preprocessor"></span>
+<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="lacze__do__gnuplota_8hh.html" title="Definicja klasy InfoPlikuDoRysowania oraz LaczeDoGNUPlota.">lacze_do_gnuplota.hh</a>&quot;</span>
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028 <span class="keyword">using namespace </span>std;
+<a name="l00029"></a>00029 
+<a name="l00030"></a><a class="code" href="lacze__do__gnuplota_8cpp.html#ac00bfb46347d26fdc58568fe1ab5fa5b">00030</a> <span class="preprocessor">#define STDIN        0</span>
+<a name="l00031"></a><a class="code" href="lacze__do__gnuplota_8cpp.html#a8875037d0772a4fc34516f1e03d7e238">00031</a> <span class="preprocessor"></span><span class="preprocessor">#define STDOUT       1</span>
+<a name="l00032"></a>00032 <span class="preprocessor"></span>
+<a name="l00033"></a>00033 <span class="keyword">namespace </span>PzG {
+<a name="l00034"></a>00034 
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036  std::list&lt;InfoPlikuDoRysowania&gt;  LaczeDoGNUPlota::_InfoPlikow;
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 
+<a name="l00040"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a4531e6d166faf2e2c8bb4a54a9c9e1f8">00040</a>  <span class="keywordtype">void</span> LaczeDoGNUPlota::WyswietlajKomunikatyBledow( <span class="keywordtype">bool</span> Tryb )
+<a name="l00041"></a>00041  {
+<a name="l00042"></a>00042   _WyswietlajKomunikatyOBledach = Tryb;
+<a name="l00043"></a>00043  }
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045 
+<a name="l00046"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#afc10ec7f193032ecae714f6d832dcbf0">00046</a>   LaczeDoGNUPlota::~LaczeDoGNUPlota()
+<a name="l00047"></a>00047   {}
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 
+<a name="l00050"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a5063854b7232a7951d120a21df63f2b7">00050</a>  <span class="keywordtype">bool</span> LaczeDoGNUPlota::PrzeslijDoGNUPlota(<span class="keyword">const</span> <span class="keywordtype">char</span> *Komunikat)
+<a name="l00051"></a>00051  {
+<a name="l00052"></a>00052   <span class="keywordtype">int</span> Ilosc = strlen(Komunikat);
+<a name="l00053"></a>00053   <span class="keywordtype">int</span> IloscPrzeslanych;
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055   <span class="keywordflow">while</span> (((IloscPrzeslanych = write(_Wejscie_GNUPlota,Komunikat,Ilosc)) != -1)
+<a name="l00056"></a>00056           &amp;&amp; Ilosc &gt; 0) {
+<a name="l00057"></a>00057     Komunikat += IloscPrzeslanych;
+<a name="l00058"></a>00058     Ilosc -= IloscPrzeslanych;
+<a name="l00059"></a>00059   }
+<a name="l00060"></a>00060   <span class="keywordflow">if</span> (Ilosc &gt; 0) {
+<a name="l00061"></a>00061     KomunikatBledu(<span class="stringliteral">&quot;!!! Przeslanie polecenia do GNUPlota nie powiodlo sie.&quot;</span>);
+<a name="l00062"></a>00062     <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00063"></a>00063   }
+<a name="l00064"></a>00064   <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00065"></a>00065  }
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069 
+<a name="l00070"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a5845189b5ab8c3634acf57024e5deeaf">00070</a>  LaczeDoGNUPlota::LaczeDoGNUPlota()
+<a name="l00071"></a>00071  {
+<a name="l00072"></a>00072    _PokazOs_OX = _PokazOs_OY = <span class="keyword">true</span>;
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074    _TrybRys = <a class="code" href="namespace_pz_g.html#aeedae1ef10c66d720f9e89de408ca4caa5eb0cf8b3405e136f092efdb489d60c4">TR_2D</a>;
+<a name="l00075"></a>00075    WyswietlajKomunikatyBledow();
+<a name="l00076"></a>00076    _Wyjscie_GNUPlota = _Wejscie_GNUPlota = -1;
+<a name="l00077"></a>00077    UstawZakresX(-350,350);
+<a name="l00078"></a>00078    UstawZakresY(-350,350);
+<a name="l00079"></a>00079    UstawZakresZ(-200,200);
+<a name="l00080"></a>00080    UstawRotacjeXZ(60,30);
+<a name="l00081"></a>00081    UstawSkaleXZ(1,1);
+<a name="l00082"></a>00082  }
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086 
+<a name="l00087"></a><a class="code" href="namespace_pz_g.html#ae1ae4d36f66c77879380ba73da8e20e3">00087</a>  <span class="keywordtype">bool</span> <a class="code" href="namespace_pz_g.html#ae1ae4d36f66c77879380ba73da8e20e3">CzyJestPlik</a>(<span class="keywordtype">char</span> <span class="keyword">const</span> *NazwaPliku)
+<a name="l00088"></a>00088  {
+<a name="l00089"></a>00089   <span class="keyword">struct </span>stat buf;
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091   <span class="keywordflow">if</span> (stat(NazwaPliku,&amp;buf)) <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00092"></a>00092   <span class="keywordflow">if</span> (!(S_ISREG(buf.st_mode))) <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00093"></a>00093   <span class="keywordflow">if</span> (!(buf.st_mode &amp; S_IRUSR)) <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00094"></a>00094   <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00095"></a>00095  }
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100  <span class="comment">//-------------------------------------------------------------------------</span>
+<a name="l00101"></a>00101  <span class="comment">// Powoduje dodanie do listy plikow zawierajacych dane dla gnuplota,</span>
+<a name="l00102"></a>00102  <span class="comment">// nowej nazwy pliku.</span>
+<a name="l00103"></a>00103  <span class="comment">//</span>
+<a name="l00104"></a>00104  <span class="comment">// PRE:  NazwaPliku  - nazwa pliku z danymi dla gnuplota.</span>
+<a name="l00105"></a>00105  <span class="comment">// POST:</span>
+<a name="l00106"></a>00106  <span class="comment">//  Zwraca wartosc:</span>
+<a name="l00107"></a>00107  <span class="comment">//     true - jezeli istnieje plik o nazwie zawartej w zmiennej NazwaPliku.</span>
+<a name="l00108"></a>00108  <span class="comment">//             Zostaje on ponadto dodany do listy plikow z danymi</span>
+<a name="l00109"></a>00109  <span class="comment">//             dla gnuplota.</span>
+<a name="l00110"></a>00110  <span class="comment">//    fasle - Jezeli nie istnieje plik o nazwie zawartej w zmiennej</span>
+<a name="l00111"></a>00111  <span class="comment">//            NazwaPliku. Zadne dodatkowe dzialanie nie jest realizowane.</span>
+<a name="l00112"></a>00112  <span class="comment">//</span>
+<a name="l00113"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a34bd48f57c0fd69c12bf4127a1cacd8f">00113</a>  <span class="keywordtype">bool</span> LaczeDoGNUPlota::DodajNazwePliku( <span class="keyword">const</span> <span class="keywordtype">char</span>      * NazwaPliku,
+<a name="l00114"></a>00114                                         <a class="code" href="namespace_pz_g.html#a705c92106f39b7d0c34a6739d10ff0b6" title="Sposób rysowania linii.">RodzajRysowania</a>   RodzRys,
+<a name="l00115"></a>00115                                         <span class="keywordtype">int</span>               Szerokosc
+<a name="l00116"></a>00116                                       )
+<a name="l00117"></a>00117  {
+<a name="l00118"></a>00118   <span class="keywordtype">bool</span> rezultat = <span class="keyword">true</span>;
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120   <span class="keywordflow">if</span> (!<a class="code" href="namespace_pz_g.html#ae1ae4d36f66c77879380ba73da8e20e3">CzyJestPlik</a>(NazwaPliku)) {
+<a name="l00121"></a>00121     <span class="keywordtype">string</span> Komunikat = <span class="stringliteral">&quot;!!! Ostrzezenie: Brak pliku &quot;</span>;
+<a name="l00122"></a>00122     Komunikat += NazwaPliku;
+<a name="l00123"></a>00123     <span class="comment">//TMP    KomunikatBledu(Komunikat.c_str());</span>
+<a name="l00124"></a>00124     rezultat = <span class="keyword">false</span>;
+<a name="l00125"></a>00125   }
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127   _InfoPlikow.push_back(<a class="code" href="class_pz_g_1_1_info_pliku_do_rysowania.html" title="Zestaw informacji dotycz±cy pliku i sposobu rysowania.">InfoPlikuDoRysowania</a>(NazwaPliku,RodzRys,Szerokosc));
+<a name="l00128"></a>00128   <span class="keywordflow">return</span> rezultat;
+<a name="l00129"></a>00129  }
+<a name="l00130"></a>00130 
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132  <span class="comment">//-------------------------------------------------------------------------</span>
+<a name="l00133"></a>00133  <span class="comment">// Informuje, czy po³±czenie z programem gnuplot zosta³o zainicjowane.</span>
+<a name="l00134"></a>00134  <span class="comment">//</span>
+<a name="l00135"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#ab5045a46f45c989f92209b543e484085">00135</a>  <span class="keywordtype">bool</span> LaczeDoGNUPlota::CzyPolaczenieJestZainicjowane()<span class="keyword"> const</span>
+<a name="l00136"></a>00136 <span class="keyword"> </span>{
+<a name="l00137"></a>00137   <span class="keywordflow">return</span> _Wejscie_GNUPlota &gt; -1 &amp;&amp; _Wyjscie_GNUPlota &gt; -1;
+<a name="l00138"></a>00138  }
+<a name="l00139"></a>00139 
+<a name="l00140"></a>00140 
+<a name="l00141"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a61fd7057776e7cdc0be16b8b80e582f2">00141</a>  <span class="keywordtype">void</span> LaczeDoGNUPlota::KomunikatBledu(<span class="keyword">const</span> <span class="keywordtype">char</span> *Komunikat)<span class="keyword"> const</span>
+<a name="l00142"></a>00142 <span class="keyword"> </span>{
+<a name="l00143"></a>00143   <span class="keywordflow">if</span> (!CzyWyswietlacKomunikaty()) <span class="keywordflow">return</span>;
+<a name="l00144"></a>00144   cerr &lt;&lt; Komunikat &lt;&lt; endl;
+<a name="l00145"></a>00145  }
+<a name="l00146"></a>00146 
+<a name="l00147"></a>00147 
+<a name="l00148"></a><a class="code" href="lacze__do__gnuplota_8cpp.html#a2b501945c8d86114fcf6420cc1ee6306">00148</a> <span class="preprocessor">#define ROZ_LINII   120</span>
+<a name="l00149"></a>00149 <span class="preprocessor"></span>
+<a name="l00150"></a>00150 
+<a name="l00151"></a>00151 
+<a name="l00152"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a200ce6bdb980c314a9eafe49e8f2dd5e">00152</a>  <span class="keywordtype">bool</span> LaczeDoGNUPlota::Inicjalizuj()
+<a name="l00153"></a>00153  {
+<a name="l00154"></a>00154   <span class="keywordflow">if</span> (CzyPolaczenieJestZainicjowane()) <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00155"></a>00155   <span class="keywordflow">if</span> (!UtworzProcesPotomny()) <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00156"></a>00156 
+<a name="l00157"></a>00157   <span class="keywordflow">return</span> PrzeslijDoGNUPlota(<span class="stringliteral">&quot;\n&quot;</span>);
+<a name="l00158"></a>00158  }
+<a name="l00159"></a>00159 
+<a name="l00160"></a>00160 
+<a name="l00173"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a1c7b9acc40de8d8bbb40fb0722512933">00173</a>  <span class="keywordtype">bool</span> LaczeDoGNUPlota::UtworzProcesPotomny()
+<a name="l00174"></a>00174  {
+<a name="l00175"></a>00175   <span class="keywordtype">int</span> indesk[2],outdesk[2];
+<a name="l00176"></a>00176 
+<a name="l00177"></a>00177   <span class="keywordflow">if</span> (pipe(indesk) == -1 || pipe(outdesk) == -1) {
+<a name="l00178"></a>00178     KomunikatBledu(
+<a name="l00179"></a>00179       <span class="stringliteral">&quot;### Niemozliwe utworzenie kanalow komunikacyjnych do podprocesow.&quot;</span>);
+<a name="l00180"></a>00180     exit(1);
+<a name="l00181"></a>00181   }
+<a name="l00182"></a>00182 
+<a name="l00183"></a>00183   <span class="keywordflow">switch</span> (fork()) {
+<a name="l00184"></a>00184     <span class="keywordflow">case</span> -1: KomunikatBledu(<span class="stringliteral">&quot;### Niemozliwe rozwidlenie procesu.&quot;</span>);
+<a name="l00185"></a>00185              exit(1);
+<a name="l00186"></a>00186     <span class="keywordflow">case</span>  0:
+<a name="l00187"></a>00187        <span class="comment">/* Start potomka */</span>
+<a name="l00188"></a>00188 
+<a name="l00189"></a>00189        <span class="keywordflow">if</span> (close(<a class="code" href="lacze__do__gnuplota_8cpp.html#ac00bfb46347d26fdc58568fe1ab5fa5b">STDIN</a>) == -1) {
+<a name="l00190"></a>00190          KomunikatBledu(<span class="stringliteral">&quot;### Blad przy zamykaniu strumienia wejsciowego.&quot;</span>);
+<a name="l00191"></a>00191          exit(1);
+<a name="l00192"></a>00192        }
+<a name="l00193"></a>00193        <span class="keywordflow">if</span> (dup(outdesk[<a class="code" href="lacze__do__gnuplota_8cpp.html#ac00bfb46347d26fdc58568fe1ab5fa5b">STDIN</a>]) == -1) {
+<a name="l00194"></a>00194          KomunikatBledu(<span class="stringliteral">&quot;### Blad duplikacji kanalu wejsciowego.&quot;</span>);
+<a name="l00195"></a>00195          exit(1);
+<a name="l00196"></a>00196        }
+<a name="l00197"></a>00197 
+<a name="l00198"></a>00198        <span class="keywordflow">if</span> (close(<a class="code" href="lacze__do__gnuplota_8cpp.html#a8875037d0772a4fc34516f1e03d7e238">STDOUT</a>) == -1) {
+<a name="l00199"></a>00199          KomunikatBledu(
+<a name="l00200"></a>00200             <span class="stringliteral">&quot;### Blad zamkniecia kanalu standardowego kanalu wyjsciowego.&quot;</span>);
+<a name="l00201"></a>00201          exit(1);
+<a name="l00202"></a>00202        }
+<a name="l00203"></a>00203        <span class="keywordflow">if</span> (dup(indesk[<a class="code" href="lacze__do__gnuplota_8cpp.html#a8875037d0772a4fc34516f1e03d7e238">STDOUT</a>]) == -1) {
+<a name="l00204"></a>00204          KomunikatBledu(<span class="stringliteral">&quot;### Blad duplikacji kanalu wyjsciowego.&quot;</span>);
+<a name="l00205"></a>00205          exit(1);
+<a name="l00206"></a>00206        }
+<a name="l00207"></a>00207        <span class="keywordflow">if</span> (close(outdesk[STDIN]) == -1) {
+<a name="l00208"></a>00208          KomunikatBledu(<span class="stringliteral">&quot;### Blad zamkniecia kanalu wejsciowego.&quot;</span>);
+<a name="l00209"></a>00209          exit(1);
+<a name="l00210"></a>00210        }
+<a name="l00211"></a>00211        <span class="keywordflow">if</span> (close(outdesk[STDOUT]) == -1) {
+<a name="l00212"></a>00212          KomunikatBledu(<span class="stringliteral">&quot;### Blad zamkniecia kanalu wyjsciowego.&quot;</span>);
+<a name="l00213"></a>00213          exit(1);
+<a name="l00214"></a>00214        }
+<a name="l00215"></a>00215        <span class="keywordflow">if</span> (close(indesk[STDIN]) == -1) {
+<a name="l00216"></a>00216          KomunikatBledu(<span class="stringliteral">&quot;### Blad zamkniecia duplikatu kanalu wejsciowego.&quot;</span>);
+<a name="l00217"></a>00217          exit(1);
+<a name="l00218"></a>00218        }
+<a name="l00219"></a>00219        <span class="keywordflow">if</span> (close(indesk[STDOUT]) == -1) {
+<a name="l00220"></a>00220          KomunikatBledu(<span class="stringliteral">&quot;### Blad zamkniecia duplikatu kanalu wyjsciowego.&quot;</span>);
+<a name="l00221"></a>00221          exit(1);
+<a name="l00222"></a>00222        }
+<a name="l00223"></a>00223        <span class="keywordtype">char</span> Tab[3];
+<a name="l00224"></a>00224        read(STDIN,Tab,1);
+<a name="l00225"></a>00225        write(STDOUT,<span class="stringliteral">&quot;\n&quot;</span>,1);
+<a name="l00226"></a>00226        <span class="keyword">const</span> <span class="keywordtype">char</span> *Comm;
+<a name="l00227"></a>00227 
+<a name="l00228"></a>00228        execlp(Comm = <span class="stringliteral">&quot;gnuplot&quot;</span>,<span class="stringliteral">&quot;gnuplot&quot;</span>,NULL);
+<a name="l00229"></a>00229 
+<a name="l00230"></a>00230        KomunikatBledu(<span class="stringliteral">&quot;!!! Blad:&quot;</span>);
+<a name="l00231"></a>00231        KomunikatBledu(<span class="stringliteral">&quot;!!! W procesie potomnym nie mogl zostac.&quot;</span>);
+<a name="l00232"></a>00232        KomunikatBledu(<span class="stringliteral">&quot;!!! uruchomiony program gnuplot.&quot;</span>);
+<a name="l00233"></a>00233        KomunikatBledu(<span class="stringliteral">&quot;!!! Nastapilo przerwanie dzialania procesu potomnego.&quot;</span>);
+<a name="l00234"></a>00234        KomunikatBledu(<span class="stringliteral">&quot;!!! Jednym z mozliwych powodow problemu moze byc&quot;</span>);
+<a name="l00235"></a>00235        KomunikatBledu(<span class="stringliteral">&quot;!!! Brak programu gnuplot w szukanej sciezce.&quot;</span>);
+<a name="l00236"></a>00236        KomunikatBledu(<span class="stringliteral">&quot;!!! Do uruchomienia programu gnuplot bylo uzyte polecenie:&quot;</span>);
+<a name="l00237"></a>00237        KomunikatBledu(Comm);
+<a name="l00238"></a>00238        exit(1);
+<a name="l00239"></a>00239 
+<a name="l00240"></a>00240     <span class="keywordflow">default</span>:
+<a name="l00241"></a>00241        <span class="keywordflow">if</span> (close(outdesk[STDIN]) == -1 || close(indesk[STDOUT]) == -1) {
+<a name="l00242"></a>00242          KomunikatBledu(<span class="stringliteral">&quot; Blad zamkniecia outpipe[STDIN], inpipe[STDOUT].&quot;</span>);
+<a name="l00243"></a>00243        }
+<a name="l00244"></a>00244 
+<a name="l00245"></a>00245        fcntl(indesk[STDIN],F_SETFL,O_NDELAY);
+<a name="l00246"></a>00246        _Wyjscie_GNUPlota  = indesk[<a class="code" href="lacze__do__gnuplota_8cpp.html#ac00bfb46347d26fdc58568fe1ab5fa5b">STDIN</a>];
+<a name="l00247"></a>00247        _Wejscie_GNUPlota =  outdesk[<a class="code" href="lacze__do__gnuplota_8cpp.html#a8875037d0772a4fc34516f1e03d7e238">STDOUT</a>];
+<a name="l00248"></a>00248   }
+<a name="l00249"></a>00249   <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00250"></a>00250  }
+<a name="l00251"></a>00251 
+<a name="l00252"></a>00252 
+<a name="l00253"></a>00253 
+<a name="l00254"></a>00254 
+<a name="l00255"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#addae9ac156ae2fb227f792faff3aa148">00255</a>  <span class="keywordtype">bool</span> LaczeDoGNUPlota::RysujDoPliku(<span class="keyword">const</span> <span class="keywordtype">char</span> *NazwaPliku)
+<a name="l00256"></a>00256  {
+<a name="l00257"></a>00257   <span class="keywordflow">if</span> (!CzyPolaczenieJestZainicjowane()) {
+<a name="l00258"></a>00258     <span class="keywordflow">if</span> (!Inicjalizuj()) <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00259"></a>00259   }
+<a name="l00260"></a>00260   <span class="keywordtype">string</span> Polecenie = <span class="stringliteral">&quot;\n\n\nset output &#39;&quot;</span>;
+<a name="l00261"></a>00261   Polecenie += NazwaPliku;
+<a name="l00262"></a>00262   Polecenie += <span class="stringliteral">&quot;\n set term png\n&quot;</span>;
+<a name="l00263"></a>00263   <span class="keywordflow">if</span> (!PrzeslijDoGNUPlota(Polecenie.c_str())) {
+<a name="l00264"></a>00264     KomunikatBledu(<span class="stringliteral">&quot;!!! Rysunek nie moze byc utworzony.&quot;</span>);
+<a name="l00265"></a>00265     <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00266"></a>00266   }
+<a name="l00267"></a>00267 
+<a name="l00268"></a>00268   <span class="keywordtype">bool</span> Wynik = Rysuj();
+<a name="l00269"></a>00269   <span class="keywordflow">if</span> (!PrzeslijDoGNUPlota(<span class="stringliteral">&quot;\n\n\nset output \nset term x11\n&quot;</span>)) {
+<a name="l00270"></a>00270     KomunikatBledu(<span class="stringliteral">&quot;!!! Wyjscie dla gnuplot&#39;a nie zostalo poprawnie\n&quot;</span>
+<a name="l00271"></a>00271                    <span class="stringliteral">&quot;!!! przestawione na STDOUT.\n&quot;</span>);
+<a name="l00272"></a>00272     <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00273"></a>00273   }
+<a name="l00274"></a>00274   <span class="keywordflow">return</span> Wynik;
+<a name="l00275"></a>00275  }
+<a name="l00276"></a>00276 
+<a name="l00277"></a>00277 
+<a name="l00278"></a>00278 
+<a name="l00298"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#ad3d7607946b82aa941d786dcd086d27e">00298</a>  <span class="keywordtype">bool</span> LaczeDoGNUPlota::DopiszRysowanieZPlikow( std::string  &amp;Polecenie,
+<a name="l00299"></a>00299                                                 <span class="keywordtype">char</span> <span class="keyword">const</span> **Sep
+<a name="l00300"></a>00300                                              )
+<a name="l00301"></a>00301  {
+<a name="l00302"></a>00302   <span class="keywordflow">if</span> (_InfoPlikow.empty()) <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00303"></a>00303   list&lt;InfoPlikuDoRysowania&gt;::const_iterator Nazwy = _InfoPlikow.begin();
+<a name="l00304"></a>00304 
+<a name="l00305"></a>00305   <span class="keywordflow">for</span> (; Nazwy != _InfoPlikow.end(); ++Nazwy ) {
+<a name="l00306"></a>00306     <span class="comment">//       OSStrm.empty();</span>
+<a name="l00307"></a>00307        ostringstream OSStrm;
+<a name="l00308"></a>00308        Polecenie += *Sep;
+<a name="l00309"></a>00309        Polecenie += <span class="stringliteral">&quot; \&#39;&quot;</span>;
+<a name="l00310"></a>00310        Polecenie += Nazwy-&gt;WezNazwePliku();
+<a name="l00311"></a>00311        ((Polecenie += <span class="charliteral">&#39;\&#39;&#39;</span>) += <span class="stringliteral">&quot; notitle &quot;</span>) +=
+<a name="l00312"></a>00312        (Nazwy-&gt;WezRodzRys() == <a class="code" href="namespace_pz_g.html#a705c92106f39b7d0c34a6739d10ff0b6a927eaa159aa4bd3198f0a330b967746d">RR_Ciagly</a> ? <span class="stringliteral">&quot; w l&quot;</span> : <span class="stringliteral">&quot; w p pt 5&quot;</span>);
+<a name="l00313"></a>00313        <span class="keywordflow">if</span>  (Nazwy-&gt;WezRodzRys() == <a class="code" href="namespace_pz_g.html#a705c92106f39b7d0c34a6739d10ff0b6a927eaa159aa4bd3198f0a330b967746d">RR_Ciagly</a>) OSStrm &lt;&lt; <span class="stringliteral">&quot; lw &quot;</span> &lt;&lt; Nazwy-&gt;WezSzerokosc();
+<a name="l00314"></a>00314                                          <span class="keywordflow">else</span> OSStrm &lt;&lt; <span class="stringliteral">&quot; ps &quot;</span> &lt;&lt; Nazwy-&gt;WezSzerokosc();
+<a name="l00315"></a>00315        Polecenie += OSStrm.str();
+<a name="l00316"></a>00316        *Sep = <span class="stringliteral">&quot;, &quot;</span>;
+<a name="l00317"></a>00317   }
+<a name="l00318"></a>00318   <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00319"></a>00319  }
+<a name="l00320"></a>00320 
+<a name="l00321"></a>00321 
+<a name="l00322"></a>00322 
+<a name="l00323"></a>00323  <span class="comment">//-------------------------------------------------------------------------</span>
+<a name="l00324"></a>00324  <span class="comment">//  Jezeli lista plikow nie jest pusta, to generuje sekwencje polecen</span>
+<a name="l00325"></a>00325  <span class="comment">//  dla programu gnuplot majaca na celu narysowanie plaszczyzn na</span>
+<a name="l00326"></a>00326  <span class="comment">//  na podstawie danych zawartych w plikach z listy.</span>
+<a name="l00327"></a>00327  <span class="comment">//</span>
+<a name="l00328"></a>00328  <span class="comment">//  PRE:  Na liscie plikow nie powinna byc pusta. Nazwy plikow na niej</span>
+<a name="l00329"></a>00329  <span class="comment">//        mozna umiescic za pomoca metody &#39;DodajNazwe&#39;.</span>
+<a name="l00330"></a>00330  <span class="comment">//        Metoda nie wymaga wcze¶niejszego zainicjowania po³±czenia</span>
+<a name="l00331"></a>00331  <span class="comment">//        z gnuplotem.</span>
+<a name="l00332"></a>00332  <span class="comment">//  POST: true   - gdy zostaja poprawnie wyslane polecenia dla gnuplota.</span>
+<a name="l00333"></a>00333  <span class="comment">//                 Nie oznacza to jednak, ze proces rysowania zakoñczy³</span>
+<a name="l00334"></a>00334  <span class="comment">//                 siê pomy¶lnie.</span>
+<a name="l00335"></a>00335  <span class="comment">//       false   - gdy po³±czenie z gnuplotem nie moze zostac poprawnie</span>
+<a name="l00336"></a>00336  <span class="comment">//                 zainicjalizowane lub gdy lista plikow jest pusta.</span>
+<a name="l00337"></a>00337  <span class="comment">//</span>
+<a name="l00338"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a065f5b8402737cc62b0ad4f66d028335">00338</a>  <span class="keywordtype">bool</span> LaczeDoGNUPlota::Rysuj()
+<a name="l00339"></a>00339  {
+<a name="l00340"></a>00340   <span class="keywordflow">if</span> (!CzyPolaczenieJestZainicjowane()) {
+<a name="l00341"></a>00341     <span class="keywordflow">if</span> (!Inicjalizuj()) <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00342"></a>00342   }
+<a name="l00343"></a>00343 
+<a name="l00344"></a>00344   <span class="keywordtype">string</span> Polecenie;
+<a name="l00345"></a>00345 
+<a name="l00346"></a>00346   BudujPreambulePoleceniaRysowania(Polecenie);
+<a name="l00347"></a>00347 
+<a name="l00348"></a>00348   <span class="keywordtype">char</span> <span class="keyword">const</span> *Sep = <span class="stringliteral">&quot;&quot;</span>;
+<a name="l00349"></a>00349   <span class="keywordtype">bool</span> TrzebaRysowac = DopiszPlikiDoPoleceniaRysowania(Polecenie,&amp;Sep);
+<a name="l00350"></a>00350   <span class="comment">/*</span>
+<a name="l00351"></a>00351 <span class="comment"></span>
+<a name="l00352"></a>00352 <span class="comment">  */</span>
+<a name="l00353"></a>00353   TrzebaRysowac = DopiszRysowanieZPlikow(Polecenie,&amp;Sep) || TrzebaRysowac;
+<a name="l00354"></a>00354 
+<a name="l00355"></a>00355   <span class="keywordflow">if</span> (!TrzebaRysowac) <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00356"></a>00356   Polecenie += <span class="stringliteral">&quot;\npause -1\n&quot;</span>;
+<a name="l00357"></a>00357   <span class="keywordtype">string</span> Komenda = <span class="stringliteral">&quot;/usr/bin/echo \&quot;&quot;</span>;
+<a name="l00358"></a>00358   Komenda += Polecenie;
+<a name="l00359"></a>00359   Komenda += <span class="stringliteral">&quot;\&quot; | gnuplot&amp;&quot;</span>;
+<a name="l00360"></a>00360 
+<a name="l00361"></a>00361   <span class="keywordflow">return</span> PrzeslijDoGNUPlota(Polecenie.c_str());
+<a name="l00362"></a>00362  }
+<a name="l00363"></a>00363 
+<a name="l00364"></a>00364 
+<a name="l00365"></a>00365 
+<a name="l00366"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a27d33c79a7ca6e87ab7c473015b15c7e">00366</a>  <span class="keywordtype">void</span>  LaczeDoGNUPlota::BudujPreambulePoleceniaRysowania(std::string &amp;Preambula)<span class="keyword"> const</span>
+<a name="l00367"></a>00367 <span class="keyword"> </span>{
+<a name="l00368"></a>00368   <span class="keywordflow">switch</span> (_TrybRys) {
+<a name="l00369"></a>00369    <span class="keywordflow">case</span> <a class="code" href="namespace_pz_g.html#aeedae1ef10c66d720f9e89de408ca4caa5eb0cf8b3405e136f092efdb489d60c4">TR_2D</a>: BudujPreambule_2D(Preambula); <span class="keywordflow">break</span>;
+<a name="l00370"></a>00370    <span class="keywordflow">case</span> <a class="code" href="namespace_pz_g.html#aeedae1ef10c66d720f9e89de408ca4caa856e6b0fa6b8a9dc184c60cf27dcc5d2">TR_3D</a>: BudujPreambule_3D(Preambula); <span class="keywordflow">break</span>;
+<a name="l00371"></a>00371   }
+<a name="l00372"></a>00372  }
+<a name="l00373"></a>00373 
+<a name="l00374"></a>00374 
+<a name="l00375"></a>00375 
+<a name="l00376"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a0dc1e1bd87faf86731689d578790cbee">00376</a>  <span class="keywordtype">void</span>  LaczeDoGNUPlota::BudujPreambule_2D(std::string &amp;Preambula)<span class="keyword"> const</span>
+<a name="l00377"></a>00377 <span class="keyword"> </span>{
+<a name="l00378"></a>00378   Preambula.clear();
+<a name="l00379"></a>00379   Preambula.reserve(1000);
+<a name="l00380"></a>00380   Preambula = <span class="stringliteral">&quot;\n\n&quot;</span>;
+<a name="l00381"></a>00381 
+<a name="l00382"></a>00382   <span class="keywordflow">if</span> (_PokazOs_OX) Preambula += <span class="stringliteral">&quot;set xzeroaxis lt 0 lw 1\n&quot;</span>;
+<a name="l00383"></a>00383   <span class="keywordflow">if</span> (_PokazOs_OY) Preambula += <span class="stringliteral">&quot;set yzeroaxis lt 0 lw 1\n&quot;</span>;
+<a name="l00384"></a>00384 
+<a name="l00385"></a>00385   Preambula += ZapiszUstawienieZakresu(<span class="charliteral">&#39;x&#39;</span>);
+<a name="l00386"></a>00386   Preambula += ZapiszUstawienieZakresu(<span class="charliteral">&#39;y&#39;</span>);
+<a name="l00387"></a>00387   Preambula += <span class="stringliteral">&quot;\nplot &quot;</span>;
+<a name="l00388"></a>00388  }
+<a name="l00389"></a>00389 
+<a name="l00390"></a>00390 
+<a name="l00391"></a>00391 
+<a name="l00392"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a48ddd1ea8a7170b76d749fded99eadb9">00392</a>  <span class="keywordtype">void</span>  LaczeDoGNUPlota::BudujPreambule_3D(std::string &amp;Preambula)<span class="keyword"> const</span>
+<a name="l00393"></a>00393 <span class="keyword"> </span>{
+<a name="l00394"></a>00394   Preambula.clear();
+<a name="l00395"></a>00395   Preambula.reserve(1000);
+<a name="l00396"></a>00396   Preambula = <span class="stringliteral">&quot;\n\n&quot;</span>
+<a name="l00397"></a>00397                        <span class="stringliteral">&quot;set parametric\n&quot;</span>
+<a name="l00398"></a>00398                        <span class="stringliteral">&quot;set isosamples 9\n&quot;</span>
+<a name="l00399"></a>00399                        <span class="stringliteral">&quot;set urange [-180:180]\n&quot;</span>
+<a name="l00400"></a>00400                        <span class="stringliteral">&quot;set vrange [-90:90]\n&quot;</span>;
+<a name="l00401"></a>00401 
+<a name="l00402"></a>00402   <span class="keywordflow">if</span> (_PokazOs_OX) Preambula += <span class="stringliteral">&quot;set xzeroaxis lt 0 lw 1\n&quot;</span>;
+<a name="l00403"></a>00403   <span class="keywordflow">if</span> (_PokazOs_OY) Preambula += <span class="stringliteral">&quot;set yzeroaxis lt 0 lw 1\n&quot;</span>;
+<a name="l00404"></a>00404 
+<a name="l00405"></a>00405   Preambula += ZapiszUstawienieZakresu(<span class="charliteral">&#39;x&#39;</span>);
+<a name="l00406"></a>00406   Preambula += ZapiszUstawienieZakresu(<span class="charliteral">&#39;y&#39;</span>);
+<a name="l00407"></a>00407   Preambula += ZapiszUstawienieZakresu(<span class="charliteral">&#39;z&#39;</span>);
+<a name="l00408"></a>00408   Preambula += ZapiszUstawienieRotacjiISkali();
+<a name="l00409"></a>00409   Preambula += <span class="stringliteral">&quot;set hidden3d\nsplot &quot;</span>;
+<a name="l00410"></a>00410  }
+<a name="l00411"></a>00411 
+<a name="l00412"></a>00412 
+<a name="l00413"></a>00413 
+<a name="l00414"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a3fc0ab02fcbaee3f0af9840cd8001cfa">00414</a> std::string LaczeDoGNUPlota::ZapiszUstawienieZakresu(<span class="keywordtype">char</span> Os)<span class="keyword"> const</span>
+<a name="l00415"></a>00415 <span class="keyword"></span>{
+<a name="l00416"></a>00416   ostringstream strm;
+<a name="l00417"></a>00417   <span class="keywordtype">float</span> Min, Max;
+<a name="l00418"></a>00418 
+<a name="l00419"></a>00419   <span class="keywordflow">switch</span> (Os) {
+<a name="l00420"></a>00420    <span class="keywordflow">case</span> <span class="charliteral">&#39;x&#39;</span>:  Min = Xmin();  Max = Xmax();  <span class="keywordflow">break</span>;
+<a name="l00421"></a>00421    <span class="keywordflow">case</span> <span class="charliteral">&#39;y&#39;</span>:  Min = Ymin();  Max = Ymax();  <span class="keywordflow">break</span>;
+<a name="l00422"></a>00422    <span class="keywordflow">case</span> <span class="charliteral">&#39;z&#39;</span>:  Min = Zmin();  Max = Zmax();  <span class="keywordflow">break</span>;
+<a name="l00423"></a>00423    <span class="keywordflow">default</span>: cerr &lt;&lt; <span class="stringliteral">&quot;!!! Blad w &#39;ZapiszUstawienieZakresu&#39; niedozwolony&quot;</span>
+<a name="l00424"></a>00424                     <span class="stringliteral">&quot; znak: &quot;</span> &lt;&lt; Os &lt;&lt; endl;
+<a name="l00425"></a>00425             <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;
+<a name="l00426"></a>00426   }
+<a name="l00427"></a>00427   strm &lt;&lt; <span class="stringliteral">&quot;set &quot;</span> &lt;&lt; Os &lt;&lt; <span class="stringliteral">&quot;range [&quot;</span> &lt;&lt;  Min &lt;&lt; <span class="stringliteral">&quot;:&quot;</span> &lt;&lt; Max &lt;&lt; <span class="stringliteral">&quot;]\n&quot;</span>;
+<a name="l00428"></a>00428   <span class="keywordflow">return</span> strm.str();
+<a name="l00429"></a>00429 }
+<a name="l00430"></a>00430 
+<a name="l00431"></a>00431 
+<a name="l00432"></a>00432 
+<a name="l00433"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a1ff05325e6dfa77ed1e081aea3df6d28">00433</a> std::string LaczeDoGNUPlota::ZapiszUstawienieRotacjiISkali()<span class="keyword"> const</span>
+<a name="l00434"></a>00434 <span class="keyword"></span>{
+<a name="l00435"></a>00435   ostringstream strm;
+<a name="l00436"></a>00436   strm &lt;&lt; <span class="stringliteral">&quot;set view &quot;</span> &lt;&lt; RotacjaX() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; RotacjaZ()
+<a name="l00437"></a>00437        &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; SkalaX() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; SkalaZ() &lt;&lt; endl;
+<a name="l00438"></a>00438   <span class="keywordflow">return</span> strm.str();
+<a name="l00439"></a>00439 }
+<a name="l00440"></a>00440 
+<a name="l00441"></a>00441 
+<a name="l00442"></a>00442 
+<a name="l00443"></a>00443 
+<a name="l00444"></a>00444 
+<a name="l00445"></a>00445 
+<a name="l00446"></a>00446 
+<a name="l00447"></a>00447  <span class="comment">//-------------------------------------------------------------------------</span>
+<a name="l00448"></a>00448  <span class="comment">//  Metda usuwa ostatnia nazwe z listy nazw plikow.</span>
+<a name="l00449"></a>00449  <span class="comment">//</span>
+<a name="l00450"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a75f599f17413ea8602c6dbba09f36407">00450</a>  <span class="keywordtype">void</span> LaczeDoGNUPlota::UsunOstatniaNazwe()
+<a name="l00451"></a>00451  {
+<a name="l00452"></a>00452    list&lt;InfoPlikuDoRysowania&gt;::iterator Nazwy = _InfoPlikow.end();
+<a name="l00453"></a>00453    _InfoPlikow.erase(--Nazwy,_InfoPlikow.end());
+<a name="l00454"></a>00454  }
+<a name="l00455"></a>00455 
+<a name="l00456"></a>00456 
+<a name="l00457"></a>00457 
+<a name="l00458"></a>00458  <span class="comment">//-------------------------------------------------------------------------</span>
+<a name="l00459"></a>00459  <span class="comment">//  Metda calkowicie kasuje zawartosc listy nazw plikow.</span>
+<a name="l00460"></a>00460  <span class="comment">//</span>
+<a name="l00461"></a><a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a89a1d90d017d264cd26398464d074073">00461</a>  <span class="keywordtype">void</span> LaczeDoGNUPlota::UsunWszystkieNazwyPlikow()
+<a name="l00462"></a>00462  {
+<a name="l00463"></a>00463   _InfoPlikow.clear();
+<a name="l00464"></a>00464  }
+<a name="l00465"></a>00465 
+<a name="l00466"></a>00466 
+<a name="l00467"></a>00467 
+<a name="l00468"></a>00468 
+<a name="l00469"></a>00469 } <span class="comment">//___ Koniec przestrzeni nazw: PzG ____________________________________________</span>
+</pre></div></div><!-- contents -->
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="lacze__do__gnuplota_8cpp.html">lacze_do_gnuplota.cpp</a>      </li>
+
+    <li class="footer">Wygenerowano Mon Jun 16 2014 11:51:29 dla 2Ow1L programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>
