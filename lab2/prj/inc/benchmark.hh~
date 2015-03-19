@@ -17,7 +17,7 @@ using namespace std;
 
 #include "lista.hh"
 
-/*
+/*!
  *	\brief Modeluje pojęcie Benchmark
  *
  *	Klasa modeluje pojecie testu Benchmark jest to klasa
@@ -58,11 +58,11 @@ class Benchmark
 	 *	\brief Testuje Liste i zapisuje wyniki do pliku wynikow.
 
 		\param Testowa - obiekt typu Lista, tetsowany obiekt
-		\param dane - wskaznik na tablice danych
+		\param rodzaj_listy - wskazuje na jakiej strukturze danych pracujemy
 		\param powtorzenia - ilosc powtorzen testu
 		\param ilosc_liczb - ile liczb wykorzystamy do testu
 	*/
-	void testuj(Lista Testowa, int* dane, int powtorzenia, int ilosc_liczb);
+	void testuj(Lista Testowa, int rodzaj_listy, int powtorzenia, int ilosc_liczb);
 	
 	/*!
 	 *	\brief Konstruktor klasy Benchmark

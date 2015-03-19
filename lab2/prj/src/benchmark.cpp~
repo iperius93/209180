@@ -33,9 +33,14 @@ void Benchmark::generuj_liczby(int ilosc, int zakres)
 	
 	plik_danych.close();
 }
-void Benchmark::testuj(Lista Testowa, int* dane, int powtorzenia, int ilosc_liczb)
+
+/*!
+ * Metoda ktora testuje obiekt typu Lista wysłany jako parametr. 
+   Testuj za pomocą określonej ilosci danych, ilosc danych zawarta jest w zmiennej ilosc_liczb.
+   Metoda testuje program kilka razy w zaleznosci od zmiennej powtorzenia.
+ */
+void Benchmark::testuj(Lista Testowa, int rodzaj_listy, int powtorzenia, int ilosc_liczb)
 {
-	Testowa.wczytaj_dane();
 	
 	double suma_czas = 0;
 	double czas=0;
@@ -45,13 +50,17 @@ void Benchmark::testuj(Lista Testowa, int* dane, int powtorzenia, int ilosc_licz
 	for(int j=0;j<powtorzenia;j++)
 	{
 		gettimeofday(start, NULL);
-		for(int i=0;i<ilosc_liczb;i++)
-		{
-			dane[i] = dane[i] * 2;
-		}
+		if(rodzaj_listy == 1) Testowa.wczytaj_dane_list(ilosc_liczb);
+		else if(rodzaj_listy == 2) Testowa.wczytaj_dane_queue(ilosc_liczb);
+		else if(rodzaj_listy == 3) Testowa.wczytaj_dane_stack(ilosc_liczb);
+		else cerr << "Bledny kod"<<endl;
 		gettimeofday(stop,NULL);
 		czas = stop->tv_usec - start->tv_usec;
 		suma_czas += czas;
+		if(rodzaj_listy == 1) Testowa.wyswietl_dane_list(ilosc_liczb);
+		else if(rodzaj_listy == 2) Testowa.wyswietl_dane_queue(ilosc_liczb);
+		else if(rodzaj_listy == 3) Testowa.wyswietl_dane_stack(ilosc_liczb);
+		else cerr << "Bledny kod"<<endl;
 	}
 	double srednia;
 	srednia = suma_czas/powtorzenia;

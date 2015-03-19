@@ -14,6 +14,10 @@
 #include <ctime>
 #include <fstream>
 
+#include "queue.hh"
+#include "stack.hh"
+#include "single_list.hh"
+
 using namespace std;
 
 /*!
@@ -27,49 +31,60 @@ using namespace std;
 class Lista
 {
 	/*!
-	 *	\brief Wskaznik na tablice typu int.
+	 *	\brief Obiekt typu Single_List.
 	 *	
-	 *	Pole jest wzkaznikiem na tablice ktora 
-	 *	zawiera pola typu int.
+	 *	Obiekt jest po prostu Listą jednokierunkową.
 	*/
-	int *tablica;
+	Single_List sl;
 	/*!
-	 *	\brief Zmienna typu int, ktora przechowuje 
-	 *	ile elementow ma tablica.
+	 *	\brief Obiekt typu Stack.
+	 *	
+	 *	Obiekt jest po prostu Stosem.
+	*/
+	Stack S;
+	/*!
+	 *	\brief Obiekt typu Queue.
+	 *	
+	 *	Obiekt jest po prostu Kolejką.
+	*/
+	Queue Q;
+	
+	/*!
+	 *	\brief Zmienna przechowywująca ilość elementow.
+	 *	
+	 *	Zmienna typu int, ktora zawiera liczbe elementow 
+		w strukturze np. w stosie, kolejce, liscie.
 	*/
 	int ilosc;
 	
-	/*!
-	 *	\brief Konstruktor klasy Lista
-	 *
-	 *	Tworzy dynamiczna tablice za pomocą 
-		wskaznika tablica, ilosc elementow zalezy 
-		od parametru ilosc_liczb.
-		\param ilosc_liczb - ilosc pol w tablicy
-		\pre - brak
-		
-	*/
 	public:
-	Lista(int ilosc_liczb)
-	{
-		tablica = new int [ilosc_liczb];
-		ilosc=ilosc_liczb;
-	}
 	
 	/*!
-	 *	\brief Wczytuje dane do tablicy.
+	 *	\brief Wczytuje dane do struktury danych Stos.
 	*/
-	void wczytaj_dane();
-
+	void wczytaj_dane_stack(int ilosc_liczb);
 	/*!
-	 *	\brief Wyswietla dany do tablicy.
+	 *	\brief Wczytuje dane do struktury danych Kolejka.
 	*/
-	void wyswietl_dane();
-
+	void wczytaj_dane_queue(int ilosc_liczb);
 	/*!
-	 *	\brief Zwraca adres do tablicy, typu int.
+	 *	\brief Wczytuje dane do struktury danych Lista Jednokierunkowa.
 	*/
-	int* zwroc_adres();
+	void wczytaj_dane_list(int ilosc_liczb);
+	
+	/*!
+	 *	\brief Wyswietla dane zawarte w Stosie.
+	*/
+	void wyswietl_dane_stack();
+	/*!
+	 *	\brief Wyswietla zawarte w Kolejce.
+	*/
+	void wyswietl_dane_queue();
+	/*!
+	 *	\brief Wyswietla zawarte w Liscie Jednokierunkowej.
+	*/
+	void wyswietl_dane_list();
+
 };
 
 

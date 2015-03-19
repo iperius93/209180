@@ -84,67 +84,111 @@
  <a href="class_lista.html#details">Więcej...</a></p>
 
 <p><code>#include &lt;<a class="el" href="lista_8hh_source.html">lista.hh</a>&gt;</code></p>
+<div class="dynheader">
+Diagram współpracy dla Lista:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_lista__coll__graph.png" border="0" usemap="#_lista_coll__map" alt="Collaboration graph"/></div>
+<map name="_lista_coll__map" id="_lista_coll__map">
+<area shape="rect" id="node2" href="class_stack.html" title="Modeluje pojęcie Stack." alt="" coords="5,123,61,154"/><area shape="rect" id="node4" href="struct_element.html" title="Modeluje pojęcie Element." alt="" coords="93,6,163,37"/><area shape="rect" id="node7" href="class_single___list.html" title="Modeluje pojęcie Single_List." alt="" coords="85,123,171,154"/><area shape="rect" id="node10" href="class_queue.html" title="Modeluje pojęcie Queue." alt="" coords="195,123,256,154"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
 
 <p><a href="class_lista-members.html">Lista wszystkich składowych.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a6a5daf08acd10aab475cb3d9c5b0bbe1">Lista</a> (int ilosc_liczb)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor klasy <a class="el" href="class_lista.html" title="Modeluje pojęcie Lista.">Lista</a>.  <a href="#a6a5daf08acd10aab475cb3d9c5b0bbe1"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#af687ce305398fea29139c1226cf27dc3">wczytaj_dane</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Wczytuje dane do tablicy.  <a href="#af687ce305398fea29139c1226cf27dc3"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a42fba0573a55126fe5ee025114ef4735">wyswietl_dane</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Wyswietla dany do tablicy.  <a href="#a42fba0573a55126fe5ee025114ef4735"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#ad00be09a712bd0f9af9bd19b4edcfc03">zwroc_adres</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca adres do tablicy, typu int.  <a href="#ad00be09a712bd0f9af9bd19b4edcfc03"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a57287985b35260123fd104639686c86e">wczytaj_dane_stack</a> (int ilosc_liczb)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Wczytuje dane do struktury danych Stos.  <a href="#a57287985b35260123fd104639686c86e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a515870cb021cd7624582df00d0a73140">wczytaj_dane_queue</a> (int ilosc_liczb)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Wczytuje dane do struktury danych Kolejka.  <a href="#a515870cb021cd7624582df00d0a73140"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a3e2c7b63ec04a26fa077627d077b3a32">wczytaj_dane_list</a> (int ilosc_liczb)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Wczytuje dane do struktury danych <a class="el" href="class_lista.html" title="Modeluje pojęcie Lista.">Lista</a> Jednokierunkowa.  <a href="#a3e2c7b63ec04a26fa077627d077b3a32"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a91aa3c8e4401c2ae7be75030c14191bc">wyswietl_dane_stack</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Wyswietla dane zawarte w Stosie.  <a href="#a91aa3c8e4401c2ae7be75030c14191bc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a46f6340ecf1b4fbeb5426c9ff8f55010">wyswietl_dane_queue</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Wyswietla zawarte w Kolejce.  <a href="#a46f6340ecf1b4fbeb5426c9ff8f55010"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#aa99dbb06edbe1707b6052be3b5f9c16d">wyswietl_dane_list</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Wyswietla zawarte w Liscie Jednokierunkowej.  <a href="#aa99dbb06edbe1707b6052be3b5f9c16d"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Atrybuty prywatne</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a0f81ac20cb0c07611c199eedbb28cee6">tablica</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Wskaznik na tablice typu int.  <a href="#a0f81ac20cb0c07611c199eedbb28cee6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_single___list.html">Single_List</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a2871ffe55a13bd985c3c98ff62196484">sl</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt typu <a class="el" href="class_single___list.html" title="Modeluje pojęcie Single_List.">Single_List</a>.  <a href="#a2871ffe55a13bd985c3c98ff62196484"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stack.html">Stack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a1be495f7ca40f985bd18245645943946">S</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt typu <a class="el" href="class_stack.html" title="Modeluje pojęcie Stack.">Stack</a>.  <a href="#a1be495f7ca40f985bd18245645943946"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_queue.html">Queue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a9780dd7cbeaf766712027adcfa53d74b">Q</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Obiekt typu <a class="el" href="class_queue.html" title="Modeluje pojęcie Queue.">Queue</a>.  <a href="#a9780dd7cbeaf766712027adcfa53d74b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lista.html#a9d8c3145c8e79ee9fb664c226cbf0ad7">ilosc</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna typu int, ktora przechowuje ile elementow ma tablica.  <a href="#a9d8c3145c8e79ee9fb664c226cbf0ad7"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Zmienna przechowywująca ilość elementow.  <a href="#a9d8c3145c8e79ee9fb664c226cbf0ad7"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Opis szczegółowy</h2>
 <div class="textblock"><p>Klasa modeluje pojecie Listy w naszym przypadku tablice o zadanym rozmiarze w zmiennej ilosc typu int. </p>
 
-<p>Definicja w linii <a class="el" href="lista_8hh_source.html#l00027">27</a> pliku <a class="el" href="lista_8hh_source.html">lista.hh</a>.</p>
-</div><hr/><h2>Dokumentacja konstruktora i destruktora</h2>
-<a class="anchor" id="a6a5daf08acd10aab475cb3d9c5b0bbe1"></a><!-- doxytag: member="Lista::Lista" ref="a6a5daf08acd10aab475cb3d9c5b0bbe1" args="(int ilosc_liczb)" -->
+<p>Definicja w linii <a class="el" href="lista_8hh_source.html#l00031">31</a> pliku <a class="el" href="lista_8hh_source.html">lista.hh</a>.</p>
+</div><hr/><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a3e2c7b63ec04a26fa077627d077b3a32"></a><!-- doxytag: member="Lista::wczytaj_dane_list" ref="a3e2c7b63ec04a26fa077627d077b3a32" args="(int ilosc_liczb)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_lista.html#a6a5daf08acd10aab475cb3d9c5b0bbe1">Lista::Lista</a> </td>
+          <td class="memname">void <a class="el" href="class_lista.html#a3e2c7b63ec04a26fa077627d077b3a32">Lista::wczytaj_dane_list</a> </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>ilosc_liczb</em></td><td>)</td>
-          <td><code> [inline]</code></td>
+          <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Tworzy dynamiczna tablice za pomocą wskaznika tablica, ilosc elementow zalezy od parametru ilosc_liczb. </p>
-<dl class="params"><dt><b>Parametry:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ilosc_liczb</td><td>- ilosc pol w tablicy </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="pre"><dt><b>Warunek wstępny:</b></dt><dd>- brak </dd></dl>
 
-<p>Definicja w linii <a class="el" href="lista_8hh_source.html#l00053">53</a> pliku <a class="el" href="lista_8hh_source.html">lista.hh</a>.</p>
+<p>Definicja w linii <a class="el" href="lista_8cpp_source.html#l00054">54</a> pliku <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_lista_a3e2c7b63ec04a26fa077627d077b3a32_icgraph.png" border="0" usemap="#class_lista_a3e2c7b63ec04a26fa077627d077b3a32_icgraph" alt=""/></div>
+<map name="class_lista_a3e2c7b63ec04a26fa077627d077b3a32_icgraph" id="class_lista_a3e2c7b63ec04a26fa077627d077b3a32_icgraph">
+<area shape="rect" id="node3" href="class_benchmark.html#ac09752738b63821eed800c30463d609c" title="Testuje Liste i zapisuje wyniki do pliku wynikow." alt="" coords="220,5,348,35"/><area shape="rect" id="node5" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="397,5,448,35"/></map>
+</div>
+</p>
 
 </div>
 </div>
-<hr/><h2>Dokumentacja funkcji składowych</h2>
-<a class="anchor" id="af687ce305398fea29139c1226cf27dc3"></a><!-- doxytag: member="Lista::wczytaj_dane" ref="af687ce305398fea29139c1226cf27dc3" args="()" -->
+<a class="anchor" id="a515870cb021cd7624582df00d0a73140"></a><!-- doxytag: member="Lista::wczytaj_dane_queue" ref="a515870cb021cd7624582df00d0a73140" args="(int ilosc_liczb)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_lista.html#af687ce305398fea29139c1226cf27dc3">Lista::wczytaj_dane</a> </td>
+          <td class="memname">void <a class="el" href="class_lista.html#a515870cb021cd7624582df00d0a73140">Lista::wczytaj_dane_queue</a> </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ilosc_liczb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="lista_8cpp_source.html#l00037">37</a> pliku <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_lista_a515870cb021cd7624582df00d0a73140_icgraph.png" border="0" usemap="#class_lista_a515870cb021cd7624582df00d0a73140_icgraph" alt=""/></div>
+<map name="class_lista_a515870cb021cd7624582df00d0a73140_icgraph" id="class_lista_a515870cb021cd7624582df00d0a73140_icgraph">
+<area shape="rect" id="node3" href="class_benchmark.html#ac09752738b63821eed800c30463d609c" title="Testuje Liste i zapisuje wyniki do pliku wynikow." alt="" coords="241,5,369,35"/><area shape="rect" id="node5" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="419,5,469,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a57287985b35260123fd104639686c86e"></a><!-- doxytag: member="Lista::wczytaj_dane_stack" ref="a57287985b35260123fd104639686c86e" args="(int ilosc_liczb)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_lista.html#a57287985b35260123fd104639686c86e">Lista::wczytaj_dane_stack</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ilosc_liczb</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -157,20 +201,74 @@ Atrybuty prywatne</h2></td></tr>
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_lista_af687ce305398fea29139c1226cf27dc3_icgraph.png" border="0" usemap="#class_lista_af687ce305398fea29139c1226cf27dc3_icgraph" alt=""/></div>
-<map name="class_lista_af687ce305398fea29139c1226cf27dc3_icgraph" id="class_lista_af687ce305398fea29139c1226cf27dc3_icgraph">
-<area shape="rect" id="node3" href="class_benchmark.html#a1e780b2563c46ab092393c0ed4e18e6f" title="Testuje Liste i zapisuje wyniki do pliku wynikow." alt="" coords="196,5,324,35"/><area shape="rect" id="node5" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="373,5,424,35"/></map>
+<div class="center"><img src="class_lista_a57287985b35260123fd104639686c86e_icgraph.png" border="0" usemap="#class_lista_a57287985b35260123fd104639686c86e_icgraph" alt=""/></div>
+<map name="class_lista_a57287985b35260123fd104639686c86e_icgraph" id="class_lista_a57287985b35260123fd104639686c86e_icgraph">
+<area shape="rect" id="node3" href="class_benchmark.html#ac09752738b63821eed800c30463d609c" title="Testuje Liste i zapisuje wyniki do pliku wynikow." alt="" coords="236,5,364,35"/><area shape="rect" id="node5" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="413,5,464,35"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a42fba0573a55126fe5ee025114ef4735"></a><!-- doxytag: member="Lista::wyswietl_dane" ref="a42fba0573a55126fe5ee025114ef4735" args="()" -->
+<a class="anchor" id="aa99dbb06edbe1707b6052be3b5f9c16d"></a><!-- doxytag: member="Lista::wyswietl_dane_list" ref="aa99dbb06edbe1707b6052be3b5f9c16d" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_lista.html#a42fba0573a55126fe5ee025114ef4735">Lista::wyswietl_dane</a> </td>
+          <td class="memname">void <a class="el" href="class_lista.html#aa99dbb06edbe1707b6052be3b5f9c16d">Lista::wyswietl_dane_list</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="lista_8cpp_source.html#l00098">98</a> pliku <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_lista_aa99dbb06edbe1707b6052be3b5f9c16d_icgraph.png" border="0" usemap="#class_lista_aa99dbb06edbe1707b6052be3b5f9c16d_icgraph" alt=""/></div>
+<map name="class_lista_aa99dbb06edbe1707b6052be3b5f9c16d_icgraph" id="class_lista_aa99dbb06edbe1707b6052be3b5f9c16d_icgraph">
+<area shape="rect" id="node3" href="class_benchmark.html#ac09752738b63821eed800c30463d609c" title="Testuje Liste i zapisuje wyniki do pliku wynikow." alt="" coords="225,5,353,35"/><area shape="rect" id="node5" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="403,5,453,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a46f6340ecf1b4fbeb5426c9ff8f55010"></a><!-- doxytag: member="Lista::wyswietl_dane_queue" ref="a46f6340ecf1b4fbeb5426c9ff8f55010" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_lista.html#a46f6340ecf1b4fbeb5426c9ff8f55010">Lista::wyswietl_dane_queue</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definicja w linii <a class="el" href="lista_8cpp_source.html#l00089">89</a> pliku <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
+
+<p><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_lista_a46f6340ecf1b4fbeb5426c9ff8f55010_icgraph.png" border="0" usemap="#class_lista_a46f6340ecf1b4fbeb5426c9ff8f55010_icgraph" alt=""/></div>
+<map name="class_lista_a46f6340ecf1b4fbeb5426c9ff8f55010_icgraph" id="class_lista_a46f6340ecf1b4fbeb5426c9ff8f55010_icgraph">
+<area shape="rect" id="node3" href="class_benchmark.html#ac09752738b63821eed800c30463d609c" title="Testuje Liste i zapisuje wyniki do pliku wynikow." alt="" coords="247,5,375,35"/><area shape="rect" id="node5" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="424,5,475,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a91aa3c8e4401c2ae7be75030c14191bc"></a><!-- doxytag: member="Lista::wyswietl_dane_stack" ref="a91aa3c8e4401c2ae7be75030c14191bc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_lista.html#a91aa3c8e4401c2ae7be75030c14191bc">Lista::wyswietl_dane_stack</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -180,33 +278,14 @@ Oto graf wywoływań tej funkcji:</div>
 <div class="memdoc">
 <p>Metoda ktora wyswietla liczby przechowywane przez tablice. </p>
 
-<p>Definicja w linii <a class="el" href="lista_8cpp_source.html#l00040">40</a> pliku <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad00be09a712bd0f9af9bd19b4edcfc03"></a><!-- doxytag: member="Lista::zwroc_adres" ref="ad00be09a712bd0f9af9bd19b4edcfc03" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int * <a class="el" href="class_lista.html#ad00be09a712bd0f9af9bd19b4edcfc03">Lista::zwroc_adres</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Metoda zwraca adres do prywatnego pola klasy <a class="el" href="class_lista.html" title="Modeluje pojęcie Lista.">Lista</a>, czyli adres tablicy typu int. </p>
-
-<p>Definicja w linii <a class="el" href="lista_8cpp_source.html#l00053">53</a> pliku <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
+<p>Definicja w linii <a class="el" href="lista_8cpp_source.html#l00078">78</a> pliku <a class="el" href="lista_8cpp_source.html">lista.cpp</a>.</p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_lista_ad00be09a712bd0f9af9bd19b4edcfc03_icgraph.png" border="0" usemap="#class_lista_ad00be09a712bd0f9af9bd19b4edcfc03_icgraph" alt=""/></div>
-<map name="class_lista_ad00be09a712bd0f9af9bd19b4edcfc03_icgraph" id="class_lista_ad00be09a712bd0f9af9bd19b4edcfc03_icgraph">
-<area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="189,5,240,35"/></map>
+<div class="center"><img src="class_lista_a91aa3c8e4401c2ae7be75030c14191bc_icgraph.png" border="0" usemap="#class_lista_a91aa3c8e4401c2ae7be75030c14191bc_icgraph" alt=""/></div>
+<map name="class_lista_a91aa3c8e4401c2ae7be75030c14191bc_icgraph" id="class_lista_a91aa3c8e4401c2ae7be75030c14191bc_icgraph">
+<area shape="rect" id="node3" href="class_benchmark.html#ac09752738b63821eed800c30463d609c" title="Testuje Liste i zapisuje wyniki do pliku wynikow." alt="" coords="241,5,369,35"/><area shape="rect" id="node5" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="419,5,469,35"/></map>
 </div>
 </p>
 
@@ -223,24 +302,57 @@ Oto graf wywoływań tej funkcji:</div>
       </table>
 </div>
 <div class="memdoc">
+<p>Zmienna typu int, ktora zawiera liczbe elementow w strukturze np. w stosie, kolejce, liscie. </p>
 
-<p>Definicja w linii <a class="el" href="lista_8hh_source.html#l00040">40</a> pliku <a class="el" href="lista_8hh_source.html">lista.hh</a>.</p>
+<p>Definicja w linii <a class="el" href="lista_8hh_source.html#l00058">58</a> pliku <a class="el" href="lista_8hh_source.html">lista.hh</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0f81ac20cb0c07611c199eedbb28cee6"></a><!-- doxytag: member="Lista::tablica" ref="a0f81ac20cb0c07611c199eedbb28cee6" args="" -->
+<a class="anchor" id="a9780dd7cbeaf766712027adcfa53d74b"></a><!-- doxytag: member="Lista::Q" ref="a9780dd7cbeaf766712027adcfa53d74b" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int* <a class="el" href="class_lista.html#a0f81ac20cb0c07611c199eedbb28cee6">Lista::tablica</a><code> [private]</code></td>
+          <td class="memname"><a class="el" href="class_queue.html">Queue</a> <a class="el" href="class_lista.html#a9780dd7cbeaf766712027adcfa53d74b">Lista::Q</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Pole jest wzkaznikiem na tablice ktora zawiera pola typu int. </p>
+<p>Obiekt jest po prostu Kolejką. </p>
 
-<p>Definicja w linii <a class="el" href="lista_8hh_source.html#l00035">35</a> pliku <a class="el" href="lista_8hh_source.html">lista.hh</a>.</p>
+<p>Definicja w linii <a class="el" href="lista_8hh_source.html#l00050">50</a> pliku <a class="el" href="lista_8hh_source.html">lista.hh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1be495f7ca40f985bd18245645943946"></a><!-- doxytag: member="Lista::S" ref="a1be495f7ca40f985bd18245645943946" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_stack.html">Stack</a> <a class="el" href="class_lista.html#a1be495f7ca40f985bd18245645943946">Lista::S</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Obiekt jest po prostu Stosem. </p>
+
+<p>Definicja w linii <a class="el" href="lista_8hh_source.html#l00044">44</a> pliku <a class="el" href="lista_8hh_source.html">lista.hh</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2871ffe55a13bd985c3c98ff62196484"></a><!-- doxytag: member="Lista::sl" ref="a2871ffe55a13bd985c3c98ff62196484" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_single___list.html">Single_List</a> <a class="el" href="class_lista.html#a2871ffe55a13bd985c3c98ff62196484">Lista::sl</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Obiekt jest po prostu Listą jednokierunkową. </p>
+
+<p>Definicja w linii <a class="el" href="lista_8hh_source.html#l00038">38</a> pliku <a class="el" href="lista_8hh_source.html">lista.hh</a>.</p>
 
 </div>
 </div>
@@ -254,7 +366,7 @@ Oto graf wywoływań tej funkcji:</div>
     <ul>
       <li class="navelem"><a class="el" href="class_lista.html">Lista</a>      </li>
 
-    <li class="footer">Wygenerowano Thu Mar 12 2015 08:49:02 dla 2Ow1L programem
+    <li class="footer">Wygenerowano Thu Mar 19 2015 08:31:55 dla 2Ow1L programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

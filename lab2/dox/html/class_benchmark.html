@@ -91,8 +91,8 @@
 Metody publiczne</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#aa5fa344572d7ee2a2320aa8074610304">generuj_liczby</a> (int ilosc, int zakres)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Generuje losowe liczby i zapisuje do pliku.  <a href="#aa5fa344572d7ee2a2320aa8074610304"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#a1e780b2563c46ab092393c0ed4e18e6f">testuj</a> (<a class="el" href="class_lista.html">Lista</a> Testowa, int *dane, int powtorzenia, int ilosc_liczb)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Testuje Liste i zapisuje wyniki do pliku wynikow.  <a href="#a1e780b2563c46ab092393c0ed4e18e6f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#ac09752738b63821eed800c30463d609c">testuj</a> (<a class="el" href="class_lista.html">Lista</a> Testowa, int rodzaj_listy, int powtorzenia, int ilosc_liczb)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Testuje Liste i zapisuje wyniki do pliku wynikow.  <a href="#ac09752738b63821eed800c30463d609c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_benchmark.html#acfca497989836a688d44477802e822d8">Benchmark</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor klasy <a class="el" href="class_benchmark.html" title="Modeluje pojęcie Benchmark.">Benchmark</a>.  <a href="#acfca497989836a688d44477802e822d8"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
@@ -173,12 +173,12 @@ Oto graf wywoływań tej funkcji:</div>
 
 </div>
 </div>
-<a class="anchor" id="a1e780b2563c46ab092393c0ed4e18e6f"></a><!-- doxytag: member="Benchmark::testuj" ref="a1e780b2563c46ab092393c0ed4e18e6f" args="(Lista Testowa, int *dane, int powtorzenia, int ilosc_liczb)" -->
+<a class="anchor" id="ac09752738b63821eed800c30463d609c"></a><!-- doxytag: member="Benchmark::testuj" ref="ac09752738b63821eed800c30463d609c" args="(Lista Testowa, int rodzaj_listy, int powtorzenia, int ilosc_liczb)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_benchmark.html#a1e780b2563c46ab092393c0ed4e18e6f">Benchmark::testuj</a> </td>
+          <td class="memname">void <a class="el" href="class_benchmark.html#ac09752738b63821eed800c30463d609c">Benchmark::testuj</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_lista.html">Lista</a>&#160;</td>
           <td class="paramname"><em>Testowa</em>, </td>
@@ -186,8 +186,8 @@ Oto graf wywoływań tej funkcji:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>dane</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rodzaj_listy</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -212,7 +212,7 @@ Oto graf wywoływań tej funkcji:</div>
 <dl class="params"><dt><b>Parametry:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">Testowa</td><td>- obiekt typu <a class="el" href="class_lista.html" title="Modeluje pojęcie Lista.">Lista</a>, tetsowany obiekt </td></tr>
-    <tr><td class="paramname">dane</td><td>- wskaznik na tablice danych </td></tr>
+    <tr><td class="paramname">rodzaj_listy</td><td>- wskazuje na jakiej strukturze danych pracujemy </td></tr>
     <tr><td class="paramname">powtorzenia</td><td>- ilosc powtorzen testu </td></tr>
     <tr><td class="paramname">ilosc_liczb</td><td>- ile liczb wykorzystamy do testu</td></tr>
   </table>
@@ -225,17 +225,17 @@ Oto graf wywoływań tej funkcji:</div>
 <p><div class="dynheader">
 Oto graf wywołań dla tej funkcji:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_benchmark_a1e780b2563c46ab092393c0ed4e18e6f_cgraph.png" border="0" usemap="#class_benchmark_a1e780b2563c46ab092393c0ed4e18e6f_cgraph" alt=""/></div>
-<map name="class_benchmark_a1e780b2563c46ab092393c0ed4e18e6f_cgraph" id="class_benchmark_a1e780b2563c46ab092393c0ed4e18e6f_cgraph">
-<area shape="rect" id="node3" href="class_lista.html#af687ce305398fea29139c1226cf27dc3" title="Wczytuje dane do tablicy." alt="" coords="184,5,325,35"/></map>
+<div class="center"><img src="class_benchmark_ac09752738b63821eed800c30463d609c_cgraph.png" border="0" usemap="#class_benchmark_ac09752738b63821eed800c30463d609c_cgraph" alt=""/></div>
+<map name="class_benchmark_ac09752738b63821eed800c30463d609c_cgraph" id="class_benchmark_ac09752738b63821eed800c30463d609c_cgraph">
+<area shape="rect" id="node3" href="class_lista.html#a3e2c7b63ec04a26fa077627d077b3a32" title="Wczytuje dane do struktury danych Lista Jednokierunkowa." alt="" coords="199,5,361,35"/><area shape="rect" id="node5" href="class_lista.html#a515870cb021cd7624582df00d0a73140" title="Wczytuje dane do struktury danych Kolejka." alt="" coords="187,58,373,89"/><area shape="rect" id="node7" href="class_lista.html#a57287985b35260123fd104639686c86e" title="Wczytuje dane do struktury danych Stos." alt="" coords="191,111,369,142"/><area shape="rect" id="node9" href="class_lista.html#aa99dbb06edbe1707b6052be3b5f9c16d" title="Wyswietla zawarte w Liscie Jednokierunkowej." alt="" coords="195,165,365,195"/><area shape="rect" id="node11" href="class_lista.html#a46f6340ecf1b4fbeb5426c9ff8f55010" title="Wyswietla zawarte w Kolejce." alt="" coords="184,218,376,249"/><area shape="rect" id="node13" href="class_lista.html#a91aa3c8e4401c2ae7be75030c14191bc" title="Wyswietla dane zawarte w Stosie." alt="" coords="187,271,373,302"/></map>
 </div>
 </p>
 
 <p><div class="dynheader">
 Oto graf wywoływań tej funkcji:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_benchmark_a1e780b2563c46ab092393c0ed4e18e6f_icgraph.png" border="0" usemap="#class_benchmark_a1e780b2563c46ab092393c0ed4e18e6f_icgraph" alt=""/></div>
-<map name="class_benchmark_a1e780b2563c46ab092393c0ed4e18e6f_icgraph" id="class_benchmark_a1e780b2563c46ab092393c0ed4e18e6f_icgraph">
+<div class="center"><img src="class_benchmark_ac09752738b63821eed800c30463d609c_icgraph.png" border="0" usemap="#class_benchmark_ac09752738b63821eed800c30463d609c_icgraph" alt=""/></div>
+<map name="class_benchmark_ac09752738b63821eed800c30463d609c_icgraph" id="class_benchmark_ac09752738b63821eed800c30463d609c_icgraph">
 <area shape="rect" id="node3" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="184,5,235,35"/></map>
 </div>
 </p>
@@ -285,7 +285,7 @@ Oto graf wywoływań tej funkcji:</div>
     <ul>
       <li class="navelem"><a class="el" href="class_benchmark.html">Benchmark</a>      </li>
 
-    <li class="footer">Wygenerowano Thu Mar 12 2015 08:49:02 dla 2Ow1L programem
+    <li class="footer">Wygenerowano Thu Mar 19 2015 08:31:55 dla 2Ow1L programem
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
