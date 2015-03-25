@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_lista_figur_geometrycznych.html#a822b8d5146ee1eac9885dca8154ae13f" title="Dodaje nowy kwadrat do listy kwadratów." alt="" coords="116,5,393,35"/>
+<area shape="rect" id="node5" href="$class_lista_figur_geometrycznych.html#a1b22f2cb09249ecee89bcaa185b9f3f0" title="Dodaje nowe kolo do listy kół" alt="" coords="128,58,381,89"/>
+<area shape="rect" id="node7" href="$class_lista_figur_geometrycznych.html#aaab6ec3962f497777884aaee82768cd6" title="Wyświetla pola kwadratów i kół" alt="" coords="104,111,405,142"/>
+<area shape="rect" id="node9" href="$listafigurgeometrycznych_8cpp.html#a7dc5031570d87cd506c062d96734e87b" title="WyswietlPole" alt="" coords="455,111,556,142"/>
+<area shape="rect" id="node11" href="$class_figura_geometryczna.html#a7e0bf199a3c2275a03b6bd5398792d4d" title="FiguraGeometryczna::TypFigury" alt="" coords="605,111,824,142"/>
+</map>

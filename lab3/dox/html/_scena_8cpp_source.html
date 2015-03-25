@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>2Ow1L: Plik źródłowy Scena.cpp</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">2Ow1L
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li><a href="dirs.html"><span>Katalogi</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('_scena_8cpp.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">Scena.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_scena_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
+<a name="l00002"></a>00002 <span class="comment"> * scena.cpp</span>
+<a name="l00003"></a>00003 <span class="comment"> *</span>
+<a name="l00004"></a>00004 <span class="comment"> *  Created on: 01-06-2014</span>
+<a name="l00005"></a>00005 <span class="comment"> *      Author: rafal</span>
+<a name="l00006"></a>00006 <span class="comment"> */</span>
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_scena_8hh.html" title="Definicja klasy Scena.">Scena.hh</a>&quot;</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a><a class="code" href="class_scena.html#a094a2e4d2483631000f5ac2d8f52c53b">00010</a> <span class="keywordtype">bool</span> <a class="code" href="class_scena.html#a094a2e4d2483631000f5ac2d8f52c53b" title="Metoda sprawdza czy nastepuje kolizja pomiedzy dwoma manipualtorami.">Scena::SprawdzCzyKoliduje</a>(<a class="code" href="class_manipulator.html" title="Modeluje pojecie Manipulatora.">Manipulator</a> ManipSterowany, <a class="code" href="class_manipulator.html" title="Modeluje pojecie Manipulatora.">Manipulator</a> ManipNieruchomy)
+<a name="l00011"></a>00011 {
+<a name="l00012"></a>00012         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;ManipSterowany.<a class="code" href="class_manipulator.html#a1301751b9affde2f306e29034eb47a66" title="Zapewnia dostep do pola ilosc_ogniw manipulatora.">LiczbaOgniw</a>()-1;j++)
+<a name="l00013"></a>00013         {
+<a name="l00014"></a>00014                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;ManipNieruchomy.<a class="code" href="class_manipulator.html#a1301751b9affde2f306e29034eb47a66" title="Zapewnia dostep do pola ilosc_ogniw manipulatora.">LiczbaOgniw</a>()-1;i++)
+<a name="l00015"></a>00015                 {
+<a name="l00016"></a>00016                         <span class="keywordflow">if</span>(<a class="code" href="_manipulator_8hh.html#adc6e751d8b7084c9fe1f3fd8ad2e0d35" title="Sprawdza czy nastapiło przeciecie dwóch odcinkow.">SprawdzCzyPrzeciecie</a>(ManipSterowany[j],ManipSterowany[j+1],ManipNieruchomy[i],ManipNieruchomy[i+1])) <span class="keywordflow">return</span> 1;
+<a name="l00017"></a>00017                 }
+<a name="l00018"></a>00018         }
+<a name="l00019"></a>00019         <span class="keywordflow">return</span> 0;
+<a name="l00020"></a>00020 }
+<a name="l00021"></a>00021 
+<a name="l00022"></a><a class="code" href="class_scena.html#a43c9abd38982183fc670eb6ec82dc946">00022</a> <span class="keywordtype">bool</span> <a class="code" href="class_scena.html#a094a2e4d2483631000f5ac2d8f52c53b" title="Metoda sprawdza czy nastepuje kolizja pomiedzy dwoma manipualtorami.">Scena::SprawdzCzyKoliduje</a>(<a class="code" href="class_manipulator.html" title="Modeluje pojecie Manipulatora.">Manipulator</a> ManipSterowany, <a class="code" href="class_wielobok.html" title="Modeluje pojecie Wieloboku.">Wielobok</a> Figura)
+<a name="l00023"></a>00023 {
+<a name="l00024"></a>00024         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0;j&lt;ManipSterowany.<a class="code" href="class_manipulator.html#a1301751b9affde2f306e29034eb47a66" title="Zapewnia dostep do pola ilosc_ogniw manipulatora.">LiczbaOgniw</a>()-1;j++)
+<a name="l00025"></a>00025         {
+<a name="l00026"></a>00026                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;Figura.<a class="code" href="class_wielobok.html#a70cda4ccd47a9c6ea2ed641af19e4969" title="Metoda zapewnia dostep do pola ilosc_punktow.">LiczbaPunktow</a>()-1;i++)
+<a name="l00027"></a>00027                 {
+<a name="l00028"></a>00028                         <span class="keywordflow">if</span>(<a class="code" href="_manipulator_8hh.html#adc6e751d8b7084c9fe1f3fd8ad2e0d35" title="Sprawdza czy nastapiło przeciecie dwóch odcinkow.">SprawdzCzyPrzeciecie</a>(ManipSterowany[j],ManipSterowany[j+1],Figura[i],Figura[i+1])) <span class="keywordflow">return</span> 1;
+<a name="l00029"></a>00029                 }
+<a name="l00030"></a>00030         }
+<a name="l00031"></a>00031         <span class="keywordflow">return</span> 0;
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033 }
+<a name="l00034"></a>00034 
+<a name="l00035"></a><a class="code" href="class_scena.html#a64ec395c75cf8cac9612a39391437018">00035</a> <span class="keywordtype">void</span> <a class="code" href="class_scena.html#a64ec395c75cf8cac9612a39391437018" title="Wczytuje plik sceny.">Scena::WczytajPlikSceny</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* NazwaPliku)
+<a name="l00036"></a>00036 {
+<a name="l00037"></a>00037         <span class="keywordtype">char</span> znak;
+<a name="l00038"></a>00038         <span class="keywordtype">char</span> pojemnik;
+<a name="l00039"></a>00039         <span class="keywordtype">int</span> ilosc_wielobokow = 0 , ilosc_manip = 0;
+<a name="l00040"></a>00040         <a class="code" href="class_wektor.html" title="Modeluje pojęcie Wektora.">Wektor</a> PunktWieloboku,DrugiPunktWieloboku;
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042         <span class="keywordtype">string</span> napis;
+<a name="l00043"></a>00043         fstream plik_sceny;
+<a name="l00044"></a>00044         (plik_sceny).open(NazwaPliku, std::ios::in);
+<a name="l00045"></a>00045         <span class="keywordflow">if</span>( (plik_sceny).good() == false )
+<a name="l00046"></a>00046         {
+<a name="l00047"></a>00047                 cerr &lt;&lt; <span class="stringliteral">&quot;Brak pliku opisu sceny!!!\n&quot;</span>;
+<a name="l00048"></a>00048                 exit(1);
+<a name="l00049"></a>00049         }
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i =0 ;;++i)
+<a name="l00052"></a>00052         {
+<a name="l00053"></a>00053                 plik_sceny &gt;&gt; znak;
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055                 <span class="keywordflow">if</span>(plik_sceny.eof()) <span class="keywordflow">break</span>;
+<a name="l00056"></a>00056                 <span class="keywordflow">if</span>(znak == <span class="charliteral">&#39;M&#39;</span>)
+<a name="l00057"></a>00057                 {
+<a name="l00058"></a>00058                         plik_sceny &gt;&gt; znak;
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061                         <a class="code" href="class_scena.html#a1749754e293c0c86218ceae72ae6eaf8" title="Wektor ktory przechowuje Manipulatory.">ListaPrzeszkod</a>.push_back(<a class="code" href="class_manipulator.html" title="Modeluje pojecie Manipulatora.">Manipulator</a>());
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063                         plik_sceny &gt;&gt; <a class="code" href="class_scena.html#a1749754e293c0c86218ceae72ae6eaf8" title="Wektor ktory przechowuje Manipulatory.">ListaPrzeszkod</a>[i].DosNazwa();
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065                         plik_sceny &gt;&gt; pojemnik;
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067                         <span class="keywordflow">if</span>(pojemnik == <span class="charliteral">&#39;(&#39;</span>)
+<a name="l00068"></a>00068                         {
+<a name="l00069"></a>00069                                 plik_sceny &gt;&gt; <a class="code" href="class_scena.html#a1749754e293c0c86218ceae72ae6eaf8" title="Wektor ktory przechowuje Manipulatory.">ListaPrzeszkod</a>[i].DosPodstawa();
+<a name="l00070"></a>00070                                 plik_sceny &gt;&gt; pojemnik;
+<a name="l00071"></a>00071                         }
+<a name="l00072"></a>00072                         <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;Brak nawiasu przed wspolrzednymi.&quot;</span>;
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074                         plik_sceny &gt;&gt; <a class="code" href="class_scena.html#a1749754e293c0c86218ceae72ae6eaf8" title="Wektor ktory przechowuje Manipulatory.">ListaPrzeszkod</a>[i].DosNazwaKonfig();
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077                         plik_sceny &gt;&gt; <a class="code" href="class_scena.html#a1749754e293c0c86218ceae72ae6eaf8" title="Wektor ktory przechowuje Manipulatory.">ListaPrzeszkod</a>[i].DosNazwaPostura();
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081                 }
+<a name="l00082"></a>00082                 <span class="keywordflow">else</span> <span class="keywordflow">if</span>(znak == <span class="charliteral">&#39;W&#39;</span>)
+<a name="l00083"></a>00083                 {
+<a name="l00084"></a>00084                         plik_sceny &gt;&gt; znak;
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086                         <a class="code" href="class_scena.html#a0e0ce0ef726ae8f264affaf5cc60a88e" title="Wektor ktory przechowuje Wieloboki jako przeszkody.">ListaWielobokow</a>.push_back(<a class="code" href="class_wielobok.html" title="Modeluje pojecie Wieloboku.">Wielobok</a>());
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088                         plik_sceny &gt;&gt; <a class="code" href="class_scena.html#a0e0ce0ef726ae8f264affaf5cc60a88e" title="Wektor ktory przechowuje Wieloboki jako przeszkody.">ListaWielobokow</a>[ilosc_wielobokow].DosNazwa();
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092                         plik_sceny &gt;&gt; pojemnik;
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094                         <span class="keywordflow">if</span>(pojemnik == <span class="charliteral">&#39;(&#39;</span>)
+<a name="l00095"></a>00095                         {
+<a name="l00096"></a>00096                                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;pojemnik == <span class="charliteral">&#39;(&#39;</span>;i++)
+<a name="l00097"></a>00097                                 {
+<a name="l00098"></a>00098                                         <span class="keywordflow">if</span>(i==0)
+<a name="l00099"></a>00099                                         {
+<a name="l00100"></a>00100                                                 plik_sceny &gt;&gt; PunktWieloboku[0];
+<a name="l00101"></a>00101                                                 plik_sceny &gt;&gt; PunktWieloboku[1];
+<a name="l00102"></a>00102                                                 (<a class="code" href="class_scena.html#a0e0ce0ef726ae8f264affaf5cc60a88e" title="Wektor ktory przechowuje Wieloboki jako przeszkody.">ListaWielobokow</a>[ilosc_wielobokow]).Wstaw(PunktWieloboku);
+<a name="l00103"></a>00103                                         }
+<a name="l00104"></a>00104                                         <span class="keywordflow">else</span>
+<a name="l00105"></a>00105                                         {
+<a name="l00106"></a>00106                                                 plik_sceny &gt;&gt; DrugiPunktWieloboku[0];
+<a name="l00107"></a>00107                                                 plik_sceny &gt;&gt; DrugiPunktWieloboku[1];
+<a name="l00108"></a>00108                                                 (<a class="code" href="class_scena.html#a0e0ce0ef726ae8f264affaf5cc60a88e" title="Wektor ktory przechowuje Wieloboki jako przeszkody.">ListaWielobokow</a>[ilosc_wielobokow]).Wstaw(DrugiPunktWieloboku);
+<a name="l00109"></a>00109                                         }
+<a name="l00110"></a>00110                                         plik_sceny &gt;&gt; pojemnik;
+<a name="l00111"></a>00111                                         plik_sceny &gt;&gt; pojemnik;
+<a name="l00112"></a>00112                                         <span class="keywordflow">if</span>(plik_sceny.eof()) <span class="keywordflow">break</span>;
+<a name="l00113"></a>00113                                 }
+<a name="l00114"></a>00114                                 (<a class="code" href="class_scena.html#a0e0ce0ef726ae8f264affaf5cc60a88e" title="Wektor ktory przechowuje Wieloboki jako przeszkody.">ListaWielobokow</a>[ilosc_wielobokow]).Wstaw(PunktWieloboku);
+<a name="l00115"></a>00115                         }
+<a name="l00116"></a>00116                         ilosc_wielobokow++;
+<a name="l00117"></a>00117                 }
+<a name="l00118"></a>00118                 <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;Zly symbol oznaczajacy przeszkode.&quot;</span>;
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120                 <span class="keywordflow">if</span>(plik_sceny.eof()) <span class="keywordflow">break</span>;
+<a name="l00121"></a>00121         }
+<a name="l00122"></a>00122 }
+<a name="l00123"></a>00123 
+<a name="l00124"></a><a class="code" href="class_scena.html#a4b36d473c9c14edb2f04dd2f17ead836">00124</a> <span class="keywordtype">void</span> <a class="code" href="class_scena.html#a4b36d473c9c14edb2f04dd2f17ead836" title="Rozpoczyna prace na scenie.">Scena::RozpocznijPrace</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[], <span class="keywordtype">char</span> *NazwaPliku)
+<a name="l00125"></a>00125 {
+<a name="l00126"></a>00126         <span class="keywordtype">bool</span> kolizja=0;
+<a name="l00127"></a>00127         <a class="code" href="class_scena.html#adefe35c8535078668dd9ea764cc29b55" title="Pole w ktorym zapisany jest manipualtor ktorym sterujemy.">ManipulatorSterowany</a>.<a class="code" href="class_manipulator.html#a7b478e27deeb270c0c59c11325fc82b6" title="Metoda wczytujaca plik configuracyjny.">WczytajPlikConfig</a>(argv[1]);
+<a name="l00128"></a>00128         <a class="code" href="class_scena.html#adefe35c8535078668dd9ea764cc29b55" title="Pole w ktorym zapisany jest manipualtor ktorym sterujemy.">ManipulatorSterowany</a>.<a class="code" href="class_manipulator.html#a57f68ada28434d099d453d661ed2c5b0" title="Wyswietla konfiguracje manipulatora.">WysKonfiguracje</a>();
+<a name="l00129"></a>00129         <a class="code" href="class_scena.html#adefe35c8535078668dd9ea764cc29b55" title="Pole w ktorym zapisany jest manipualtor ktorym sterujemy.">ManipulatorSterowany</a>.<a class="code" href="class_manipulator.html#a513615a6468595ec70ae7bcde111effa" title="Wylicza wspołrzedne przegobow (prosta)">ObliczWspolrzedneStart</a>();
+<a name="l00130"></a>00130         <a class="code" href="class_scena.html#adefe35c8535078668dd9ea764cc29b55" title="Pole w ktorym zapisany jest manipualtor ktorym sterujemy.">ManipulatorSterowany</a>.<a class="code" href="class_manipulator.html#a2e853d4f1a43dd00828df43852b868d2" title="Metoda zapisuje wspolrzedne do pliku.">ZapiszDoPliku</a>(NazwaPliku);
+<a name="l00131"></a>00131         <a class="code" href="class_scena.html#adefe35c8535078668dd9ea764cc29b55" title="Pole w ktorym zapisany jest manipualtor ktorym sterujemy.">ManipulatorSterowany</a>.<a class="code" href="class_manipulator.html#a36b8f9d9c86c344418ece6932d2a9cea" title="Wyswietla posture manipulatora.">WysPosture</a>();
+<a name="l00132"></a>00132 
+<a name="l00133"></a>00133         (*this).WczytajPlikSceny(argv[2]);
+<a name="l00134"></a>00134 
+<a name="l00135"></a>00135         <a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html" title="Klasa realizuje interfejs do programu GNUPlot.">PzG::LaczeDoGNUPlota</a>  Lacze;
+<a name="l00136"></a>00136 
+<a name="l00137"></a>00137         <span class="keywordflow">for</span>(std::vector&lt;Manipulator&gt;::iterator iter=<a class="code" href="class_scena.html#a1749754e293c0c86218ceae72ae6eaf8" title="Wektor ktory przechowuje Manipulatory.">ListaPrzeszkod</a>.begin();iter!= <a class="code" href="class_scena.html#a1749754e293c0c86218ceae72ae6eaf8" title="Wektor ktory przechowuje Manipulatory.">ListaPrzeszkod</a>.end();++(iter))
+<a name="l00138"></a>00138         {
+<a name="l00139"></a>00139                 (*iter).WczytajPlikConfig((*iter).DosNazwaKonfig());
+<a name="l00140"></a>00140                 (*iter).WczytajPlikPosturaJeden((*iter).DosNazwaPostura());
+<a name="l00141"></a>00141                 (*iter).ObliczWspolrzedne();
+<a name="l00142"></a>00142                 (*iter).ZapiszDoPliku((*iter).DosNazwa());
+<a name="l00143"></a>00143                 Lacze.<a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a34bd48f57c0fd69c12bf4127a1cacd8f" title="Dodaje nazwê pliku.">DodajNazwePliku</a>((*iter).DosNazwa(),<a class="code" href="namespace_pz_g.html#a705c92106f39b7d0c34a6739d10ff0b6a927eaa159aa4bd3198f0a330b967746d">PzG::RR_Ciagly</a>,6);
+<a name="l00144"></a>00144                 Lacze.<a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a34bd48f57c0fd69c12bf4127a1cacd8f" title="Dodaje nazwê pliku.">DodajNazwePliku</a>((*iter).DosNazwa(),<a class="code" href="namespace_pz_g.html#a705c92106f39b7d0c34a6739d10ff0b6aa01097ee8266d6402b752ef6f9a4690c">PzG::RR_Punktowy</a>,2);
+<a name="l00145"></a>00145         }
+<a name="l00146"></a>00146 
+<a name="l00147"></a>00147         <span class="keywordflow">for</span>(std::vector&lt;Wielobok&gt;::iterator iter=<a class="code" href="class_scena.html#a0e0ce0ef726ae8f264affaf5cc60a88e" title="Wektor ktory przechowuje Wieloboki jako przeszkody.">ListaWielobokow</a>.begin(); iter!= <a class="code" href="class_scena.html#a0e0ce0ef726ae8f264affaf5cc60a88e" title="Wektor ktory przechowuje Wieloboki jako przeszkody.">ListaWielobokow</a>.end(); ++(iter))
+<a name="l00148"></a>00148         {
+<a name="l00149"></a>00149                 (*iter).ZapiszDoPliku((*iter).DosNazwa());
+<a name="l00150"></a>00150                 Lacze.<a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a34bd48f57c0fd69c12bf4127a1cacd8f" title="Dodaje nazwê pliku.">DodajNazwePliku</a>((*iter).DosNazwa(),<a class="code" href="namespace_pz_g.html#a705c92106f39b7d0c34a6739d10ff0b6a927eaa159aa4bd3198f0a330b967746d">PzG::RR_Ciagly</a>,6);
+<a name="l00151"></a>00151                 Lacze.<a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a34bd48f57c0fd69c12bf4127a1cacd8f" title="Dodaje nazwê pliku.">DodajNazwePliku</a>((*iter).DosNazwa(),<a class="code" href="namespace_pz_g.html#a705c92106f39b7d0c34a6739d10ff0b6aa01097ee8266d6402b752ef6f9a4690c">PzG::RR_Punktowy</a>,1);
+<a name="l00152"></a>00152         }
+<a name="l00153"></a>00153 
+<a name="l00154"></a>00154         Lacze.<a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a34bd48f57c0fd69c12bf4127a1cacd8f" title="Dodaje nazwê pliku.">DodajNazwePliku</a>(<span class="stringliteral">&quot;manipulator.dat&quot;</span>,<a class="code" href="namespace_pz_g.html#a705c92106f39b7d0c34a6739d10ff0b6a927eaa159aa4bd3198f0a330b967746d">PzG::RR_Ciagly</a>,6);
+<a name="l00155"></a>00155         Lacze.<a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a34bd48f57c0fd69c12bf4127a1cacd8f" title="Dodaje nazwê pliku.">DodajNazwePliku</a>(<span class="stringliteral">&quot;manipulator.dat&quot;</span>,<a class="code" href="namespace_pz_g.html#a705c92106f39b7d0c34a6739d10ff0b6aa01097ee8266d6402b752ef6f9a4690c">PzG::RR_Punktowy</a>,2);
+<a name="l00156"></a>00156 
+<a name="l00157"></a>00157         Lacze.<a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a200ce6bdb980c314a9eafe49e8f2dd5e" title="Inicjalizuje po³±czenie z programem gnuplot.">Inicjalizuj</a>();  <span class="comment">// Tutaj startuje gnuplot.</span>
+<a name="l00158"></a>00158         Lacze.<a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a10950349b348fd3a3d4143e95337527c" title="Zmienia tryb rysowania.">ZmienTrybRys</a>(<a class="code" href="namespace_pz_g.html#aeedae1ef10c66d720f9e89de408ca4caa5eb0cf8b3405e136f092efdb489d60c4">PzG::TR_2D</a>);
+<a name="l00159"></a>00159 
+<a name="l00160"></a>00160         Lacze.<a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a54c6e9cf9ab2eae479451fd953c2717c" title="Ustawia zakres osi OY.">UstawZakresY</a>(-50,300);
+<a name="l00161"></a>00161         Lacze.<a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a9c91987dfc869d6fcea96205c581daef" title="Ustawia zakres osi OX.">UstawZakresX</a>(-200,200);
+<a name="l00162"></a>00162 
+<a name="l00163"></a>00163          Lacze.<a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a065f5b8402737cc62b0ad4f66d028335">Rysuj</a>();
+<a name="l00164"></a>00164          sleep(2);
+<a name="l00165"></a>00165 
+<a name="l00166"></a>00166          <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=3;i&lt;argc;i++)
+<a name="l00167"></a>00167          {
+<a name="l00168"></a>00168                  <a class="code" href="class_scena.html#adefe35c8535078668dd9ea764cc29b55" title="Pole w ktorym zapisany jest manipualtor ktorym sterujemy.">ManipulatorSterowany</a>.<a class="code" href="class_manipulator.html#a5df91c7a9eecc3bf8a456b835be2d9c8" title="Metoda wczytujaca plik z postura.">WczytajPlikPostury</a>(i,argv);
+<a name="l00169"></a>00169                  cout &lt;&lt; <span class="stringliteral">&quot;Postura wczytana z &quot;</span>&lt;&lt;argv[i]&lt;&lt;endl;
+<a name="l00170"></a>00170                  <a class="code" href="class_scena.html#adefe35c8535078668dd9ea764cc29b55" title="Pole w ktorym zapisany jest manipualtor ktorym sterujemy.">ManipulatorSterowany</a>.<a class="code" href="class_manipulator.html#a282b2a21715ae356d35f6a73865fc88c">ObliczWspolrzedne</a>();
+<a name="l00171"></a>00171                 <span class="keywordflow">for</span>(std::vector&lt;Wielobok&gt;::iterator iter=<a class="code" href="class_scena.html#a0e0ce0ef726ae8f264affaf5cc60a88e" title="Wektor ktory przechowuje Wieloboki jako przeszkody.">ListaWielobokow</a>.begin(); iter!= <a class="code" href="class_scena.html#a0e0ce0ef726ae8f264affaf5cc60a88e" title="Wektor ktory przechowuje Wieloboki jako przeszkody.">ListaWielobokow</a>.end(); ++(iter))
+<a name="l00172"></a>00172                 {
+<a name="l00173"></a>00173                          <span class="keywordflow">if</span>((*this).SprawdzCzyKoliduje(<a class="code" href="class_scena.html#adefe35c8535078668dd9ea764cc29b55" title="Pole w ktorym zapisany jest manipualtor ktorym sterujemy.">ManipulatorSterowany</a>,(*iter)))
+<a name="l00174"></a>00174                          {
+<a name="l00175"></a>00175                                  cerr &lt;&lt; <span class="stringliteral">&quot;KOLIZJA!!!\n Nastapiła kolizja z wielobokiem o nazwie: &quot;</span>&lt;&lt;(*iter).DosNazwa()&lt;&lt;endl;
+<a name="l00176"></a>00176                                  cerr &lt;&lt; <span class="stringliteral">&quot; Działanie programu zostało przerwane.&quot;</span>&lt;&lt;endl;
+<a name="l00177"></a>00177                                  kolizja=1;
+<a name="l00178"></a>00178                                  <span class="keywordflow">break</span>;
+<a name="l00179"></a>00179                          }
+<a name="l00180"></a>00180                 }
+<a name="l00181"></a>00181 
+<a name="l00182"></a>00182                  <span class="keywordflow">for</span>(std::vector&lt;Manipulator&gt;::iterator iter=<a class="code" href="class_scena.html#a1749754e293c0c86218ceae72ae6eaf8" title="Wektor ktory przechowuje Manipulatory.">ListaPrzeszkod</a>.begin();iter!= <a class="code" href="class_scena.html#a1749754e293c0c86218ceae72ae6eaf8" title="Wektor ktory przechowuje Manipulatory.">ListaPrzeszkod</a>.end();++(iter))
+<a name="l00183"></a>00183                  {
+<a name="l00184"></a>00184                          <span class="keywordflow">if</span>((*this).SprawdzCzyKoliduje(<a class="code" href="class_scena.html#adefe35c8535078668dd9ea764cc29b55" title="Pole w ktorym zapisany jest manipualtor ktorym sterujemy.">ManipulatorSterowany</a>,(*iter)))
+<a name="l00185"></a>00185                          {
+<a name="l00186"></a>00186                                  cerr &lt;&lt; <span class="stringliteral">&quot;KOLIZJA!!!\n Nastapiła kolizja z manipulatorem o nazwie: &quot;</span>&lt;&lt;(*iter).DosNazwa()&lt;&lt;endl;
+<a name="l00187"></a>00187                                  cerr &lt;&lt; <span class="stringliteral">&quot; Działanie programu zostało przerwane.&quot;</span>&lt;&lt;endl;
+<a name="l00188"></a>00188                                  kolizja=1;
+<a name="l00189"></a>00189                                  <span class="keywordflow">break</span>;
+<a name="l00190"></a>00190                          }
+<a name="l00191"></a>00191                  }
+<a name="l00192"></a>00192 
+<a name="l00193"></a>00193                  <a class="code" href="class_scena.html#adefe35c8535078668dd9ea764cc29b55" title="Pole w ktorym zapisany jest manipualtor ktorym sterujemy.">ManipulatorSterowany</a>.<a class="code" href="class_manipulator.html#a36b8f9d9c86c344418ece6932d2a9cea" title="Wyswietla posture manipulatora.">WysPosture</a>();
+<a name="l00194"></a>00194                  <a class="code" href="class_scena.html#adefe35c8535078668dd9ea764cc29b55" title="Pole w ktorym zapisany jest manipualtor ktorym sterujemy.">ManipulatorSterowany</a>.<a class="code" href="class_manipulator.html#a2e853d4f1a43dd00828df43852b868d2" title="Metoda zapisuje wspolrzedne do pliku.">ZapiszDoPliku</a>(NazwaPliku);
+<a name="l00195"></a>00195                  Lacze.<a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html#a065f5b8402737cc62b0ad4f66d028335">Rysuj</a>();
+<a name="l00196"></a>00196                  sleep(1);
+<a name="l00197"></a>00197                  <span class="keywordflow">if</span>(kolizja) <span class="keywordflow">break</span>;
+<a name="l00198"></a>00198          }
+<a name="l00199"></a>00199 
+<a name="l00200"></a>00200 }
+</pre></div></div><!-- contents -->
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="_scena_8cpp.html">Scena.cpp</a>      </li>
+
+    <li class="footer">Wygenerowano Mon Jun 16 2014 11:51:30 dla 2Ow1L programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>
