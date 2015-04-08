@@ -1,0 +1,71 @@
+/*
+ * PCD8544.c
+ *
+ *  Created on: 02-04-2015
+ *      Author: rafal
+ */
+
+#include "PCD8544.h"
+
+#define SET_SCE		PORT(SCE_PORT) |= (1<<SCE)
+#define CLR_SCE		PORT(SCE_PORT) &= ~(1<<SCE)
+
+#define SET_RST		PORT(RST_PORT) |= (1<<RST)
+#define CLR_RST		PORT(RST_PORT) &= ~(1<<RST)
+
+#define SET_D/C		PORT(D/C_PORT) |= (1<<D/C)
+#define CLR_D/C		PORT(D/C_PORT) &= ~(1<<D/C)
+
+#define SET_SDIN	PORT(SDIN_PORT) |= (1<<SDIN)
+#define CLR_SDIN	PORT(SDIN_PORT) &= ~(1<<SDIN)
+
+#define SET_SCLK	PORT(SCLK_PORT) |= (1<<SCLK)
+#define CLR_SCLK	PORT(SCLK_PORT) &= ~(1<<SCLK)
+
+
+//********************* FUNKCJE WEWNÊTRZNE *********************
+
+//----------------------------------------------------------------------------------------
+//
+//		 Zapis bajtu do wywietlacza LCD
+//
+//----------------------------------------------------------------------------------------
+void _lcd_write_byte(unsigned char _data)
+{
+	// Ustawienie pinów portu LCD D4..D7 jako wyjcia
+	data_dir_out();
+
+#if USE_RW == 1
+	CLR_RW;
+#endif
+
+	SET_E;
+	lcd_sendHalf(_data >> 4);			// wys³anie starszej czêci bajtu danych D7..D4
+	CLR_E;
+
+	SET_E;
+	lcd_sendHalf(_data);				// wys³anie m³odszej czêci bajtu danych D3..D0
+	CLR_E;
+
+#if USE_RW == 1
+	while( (check_BF() & (1<<7)) );
+#else
+	_delay_us(120);
+#endif
+
+}
+
+
+//----------------------------------------------------------------------------------------
+//
+//		 Zapis danych do wywietlacza LCD
+//
+//----------------------------------------------------------------------------------------
+void lcd_write_data(uint8_t data)
+{
+	SET_RS;
+	_lcd_write_byte(data);
+}
+
+
+

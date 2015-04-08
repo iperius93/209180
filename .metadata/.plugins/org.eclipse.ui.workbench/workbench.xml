@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="15" version="2.0">
+<workbench progressCount="24" version="2.0">
 <workbenchAdvisor/>
-<window height="686" maximized="true" width="1012" x="72" y="112">
+<window height="686" maximized="true" width="1008" x="72" y="82">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="132" y="30"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="166" y="38"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="48" y="30"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="40" y="30"/>
-<coolItem id="group.nav" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
-<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="de.innot.avreclipse.actionset.avrdude" itemType="typeToolBarContribution" x="48" y="38"/>
+<coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="156" y="38"/>
+<coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="82" y="38"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="38"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="38"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="96" y="38"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="38"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page aggregateWorkingSetId="Aggregate for window 1425969058173" focus="true" label="Workspace - Resource">
+<page aggregateWorkingSetId="Aggregate for window 1425969058173" focus="true" label="Workspace - C/C++">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
@@ -28,22 +31,60 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" title="main.cpp" tooltip="/home/rafal/Pulpit/PAMSI/lab3/prj/src/main.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/home/rafal/Pulpit/PAMSI/lab3/prj/src/main.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="410" selectionTopPixel="126"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="PCD8544.h" partName="PCD8544.h" path="/home/rafal/Pulpit/PAMSI/wys3310/PCD8544.h" title="PCD8544.h" tooltip="wys3310/PCD8544.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/wys3310/PCD8544.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="833" selectionTopPixel="225"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="benchmark.cpp" partName="benchmark.cpp" title="benchmark.cpp" tooltip="/home/rafal/Pulpit/PAMSI/lab3/prj/src/benchmark.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/home/rafal/Pulpit/PAMSI/lab3/prj/src/benchmark.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="166" selectionTopPixel="0"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="PCD8544.c" partName="PCD8544.c" path="/home/rafal/Pulpit/PAMSI/wys3310/PCD8544.c" title="PCD8544.c" tooltip="wys3310/PCD8544.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/wys3310/PCD8544.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9550" selectionTopPixel="7878"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="/home/rafal/Pulpit/PAMSI/wys3310/main.c" title="main.c" tooltip="wys3310/main.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/wys3310/main.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="204" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="bmp.h" partName="bmp.h" path="/home/rafal/Pulpit/PAMSI/wys3310/bmp.h" title="bmp.h" tooltip="wys3310/bmp.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/wys3310/bmp.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2784" selectionTopPixel="242"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="PCD8544.h" partName="PCD8544.h" path="/home/rafal/Pulpit/PAMSI/wyswietlacz3310/PCD8544.h" title="PCD8544.h" tooltip="wyswietlacz3310/PCD8544.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/wyswietlacz3310/PCD8544.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="197" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.cview.groupmacros="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+<view id="de.innot.avreclipse.views.AVRDeviceView" partName="AVR Device Explorer">
+<viewState/>
+</view>
+<view id="de.innot.avreclipse.views.supportedmcus" partName="AVR Supported MCUs">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
+<viewState/>
+</view>
+<view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="334" org.eclipse.ui.ide.pathField="132" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="324"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
 </view>
 <view id="org.eclipse.ui.views.TaskList" partName="Tasks">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
@@ -61,8 +102,8 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.ui.resourcePerspective">
-<perspective editorAreaTrimState="1" editorAreaVisible="1" fixed="0" version="0.016">
+<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
 <alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
@@ -92,55 +133,148 @@
 <perspective_action id="org.eclipse.team.ui.TeamSynchronizingPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<fastViewBars>
-<fastViewBar fastViewLocation="16384" id="bottomLeft" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="1">
-<fastViews>
-<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
-</fastViews>
-</fastViewBar>
-<fastViewBar fastViewLocation="16384" id="topLeft" orientation="512" selectedTabId="org.eclipse.ui.navigator.ProjectExplorer" style="1">
-<fastViews>
-<view id="org.eclipse.ui.navigator.ProjectExplorer" ratio="0.3"/>
-</fastViews>
-</fastViewBar>
-<fastViewBar fastViewLocation="1024" id="bottomRight" orientation="256" selectedTabId="org.eclipse.ui.views.TaskList" style="1">
-<fastViews>
-<view id="org.eclipse.ui.views.TaskList" ratio="0.3"/>
-</fastViews>
-</fastViewBar>
-</fastViewBars>
-<layout>
-<mainWindow>
-<info folder="true" part="topLeft">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="topLeft">&#x0A;<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@b894ee" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@b894ee" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25940594" ratioLeft="262" ratioRight="748" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottomRight" ratio="0.6596434" ratioLeft="407" ratioRight="210" relationship="4" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<info folder="true" part="bottomRight" ratio="0.6596434" ratioLeft="407" ratioRight="210" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.team.ui.GenericHistoryView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
 </folder>
 </info>
-<info folder="true" part="bottomLeft" ratio="0.49918962" ratioLeft="308" ratioRight="309" relationship="4" relative="topLeft">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<info folder="true" part="bottomLeft" ratio="0.49918962" ratioLeft="308" ratioRight="309" relationship="4" relative="topLeft">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.SearchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.CElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="de.innot.avreclipse.actionset.avrdude"/>
+<alwaysOnActionSet id="org.eclipse.cdt.make.ui.makeTargetActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.buildConfigActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.NavigationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.OpenActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.ui.CodingActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.presentation"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.cdt.ui.CView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="de.innot.avreclipse.views.AVRDeviceView"/>
+<show_view_action id="de.innot.avreclipse.views.supportedmcus"/>
+<show_view_action id="org.eclipse.cdt.make.ui.views.MakeView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.cdt.ui.includeBrowser"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.ConvertToMakeWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewMakeFromExisting"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewCWizard1"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewCWizard2"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewSourceFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewHeaderFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.cdt.ui.wizards.NewClassCreationWizard"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<perspective_action id="org.eclipse.team.ui.TeamSynchronizingPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="de.innot.avreclipse.views.AVRDeviceView"/>
+<view id="de.innot.avreclipse.views.supportedmcus"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.cdt.make.ui.views.MakeView"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="topLeft">
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<page content="org.eclipse.cdt.ui.CView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.74980146" ratioLeft="944" ratioRight="315" relationship="2" relative="topLeft">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.2494043" ratioLeft="314" ratioRight="945" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottom" ratio="0.7492163" ratioLeft="478" ratioRight="160" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
+<page content="de.innot.avreclipse.views.AVRDeviceView" label="AVR Device Explorer"/>
+<page content="de.innot.avreclipse.views.supportedmcus" label="AVR Supported MCUs"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="topRight" ratio="0.74920636" ratioLeft="708" ratioRight="237" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.cdt.make.ui.views.MakeView" label="Make Target"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
 </folder>
 </info>
 </mainWindow>
@@ -150,164 +284,172 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/home/rafal/Pulpit/PAMSI/lab3/prj/inc/single_list.hh"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/home/rafal/Pulpit/PAMSI/lab3/prj/inc/queue.hh"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/home/rafal/Pulpit/PAMSI/lab3/prj/src/queue.cpp"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/home/rafal/Pulpit/PAMSI/lab3/prj/src/stack.cpp"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/home/rafal/Pulpit/PAMSI/lab3/prj/src/single_list.cpp"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/home/rafal/Pulpit/PAMSI/lab3/prj/src/main.cpp"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/home/rafal/Pulpit/PAMSI/lab3/prj/src/queue.cpp"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/home/rafal/Pulpit/PAMSI/lab3/prj/src/benchmark.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wyswietlacz3310/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wyswietlacz3310/PCD8544.c"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/home/rafal/Pulpit/ProgAVR/projektyavr/wysLCD/lcd44780.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wyswietlacz3310/PCD8544.h"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/home/rafal/Pulpit/ProgAVR/projektyavr/wysLCD/lcd44780.h"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/home/rafal/Pulpit/ProgAVR/projektyavr/wysLCD/lcd44780.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wyswietlacz3310/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wys3310/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wys3310/PCD8544.C"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wys3310/PCD8544.H"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wys3310/PCD8544.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wys3310/PCD8544.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wyswietlacz3310/PCD8544.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wyswietlacz3310/PCD8544.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wys3310/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wys3310/bmp.h"/>
 </editors>
-<item historyLabel="queue.cpp" index="2">
-<position info="not_deleted" x="1982" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="152" y="0"/>
 </item>
-<item historyLabel="single_list.hh" index="0">
-<position info="not_deleted" x="3264" y="141"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="150" y="0"/>
 </item>
-<item historyLabel="queue.cpp" index="2">
-<position info="not_deleted" x="1982" y="0"/>
+<item historyLabel="PCD8544.c" index="1">
+<position info="not_deleted" x="2812" y="0"/>
 </item>
-<item historyLabel="queue.hh" index="1">
-<position info="not_deleted" x="2554" y="167"/>
+<item historyLabel="PCD8544.c" index="1">
+<position info="not_deleted" x="2845" y="0"/>
 </item>
-<item historyLabel="queue.cpp" index="2">
-<position info="not_deleted" x="1723" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="176" y="0"/>
 </item>
-<item historyLabel="stack.cpp" index="3">
-<position info="not_deleted" x="1748" y="47"/>
+<item historyLabel="main.c" index="0">
+<position/>
 </item>
-<item historyLabel="queue.cpp" index="2">
-<position info="not_deleted" x="1982" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="152" y="0"/>
 </item>
-<item historyLabel="stack.cpp" index="3">
-<position info="not_deleted" x="1844" y="42"/>
+<item historyLabel="lcd44780.c" index="2">
+<position info="not_deleted" x="579" y="0"/>
 </item>
-<item historyLabel="queue.cpp" index="2">
-<position info="not_deleted" x="2032" y="0"/>
+<item historyLabel="PCD8544.h" index="3">
+<position info="not_deleted" x="548" y="0"/>
 </item>
-<item historyLabel="stack.cpp" index="3">
-<position info="not_deleted" x="1926" y="24"/>
+<item historyLabel="PCD8544.c" index="1">
+<position info="not_deleted" x="2845" y="0"/>
 </item>
-<item historyLabel="queue.cpp" index="2">
-<position info="not_deleted" x="2136" y="0"/>
+<item historyLabel="lcd44780.h" index="4">
+<position info="not_deleted" x="5086" y="0"/>
 </item>
-<item historyLabel="stack.cpp" index="3">
-<position info="not_deleted" x="1966" y="37"/>
+<item historyLabel="PCD8544.h" index="3">
+<position info="not_deleted" x="548" y="0"/>
 </item>
-<item historyLabel="queue.cpp" index="2">
-<position info="not_deleted" x="2136" y="0"/>
+<item historyLabel="PCD8544.c" index="1">
+<position info="not_deleted" x="2674" y="0"/>
 </item>
-<item historyLabel="stack.cpp" index="3">
-<position info="not_deleted" x="1298" y="44"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="176" y="0"/>
 </item>
-<item historyLabel="queue.cpp" index="2">
-<position info="not_deleted" x="1623" y="0"/>
+<item historyLabel="lcd44780.h" index="5">
+<position info="not_deleted" x="5086" y="0"/>
 </item>
-<item historyLabel="stack.cpp" index="3">
-<position info="not_deleted" x="1392" y="43"/>
+<item historyLabel="main.c" index="6">
+<position info="not_deleted" x="128" y="0"/>
 </item>
-<item historyLabel="queue.cpp" index="2">
-<position info="not_deleted" x="1669" y="0"/>
-</item>
-<item historyLabel="stack.cpp" index="3">
-<position info="not_deleted" x="1456" y="24"/>
-</item>
-<item historyLabel="queue.cpp" index="2">
-<position info="not_deleted" x="1669" y="0"/>
-</item>
-<item historyLabel="stack.cpp" index="3">
-<position info="not_deleted" x="1496" y="37"/>
-</item>
-<item historyLabel="queue.cpp" index="2">
-<position info="not_deleted" x="1334" y="0"/>
-</item>
-<item historyLabel="stack.cpp" index="3">
-<position info="not_deleted" x="1496" y="37"/>
-</item>
-<item historyLabel="single_list.cpp" index="4">
+<item historyLabel="main.c" index="7">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="stack.cpp" index="3">
-<position info="not_deleted" x="1298" y="44"/>
+<item historyLabel="PCD8544.C" index="8">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="single_list.cpp" index="4">
-<position info="not_deleted" x="2231" y="0"/>
+<item historyLabel="PCD8544.H" index="9">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="stack.cpp" index="3">
-<position info="not_deleted" x="1392" y="43"/>
+<item historyLabel="PCD8544.h" index="10">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="single_list.cpp" index="4">
-<position info="not_deleted" x="2325" y="0"/>
+<item historyLabel="PCD8544.c" index="11">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="stack.cpp" index="3">
-<position info="not_deleted" x="1456" y="24"/>
+<item historyLabel="PCD8544.c" index="12">
+<position info="not_deleted" x="2674" y="0"/>
 </item>
-<item historyLabel="single_list.cpp" index="4">
-<position info="not_deleted" x="2372" y="0"/>
+<item historyLabel="PCD8544.c" index="11">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="stack.cpp" index="3">
-<position info="not_deleted" x="1496" y="37"/>
+<item historyLabel="PCD8544.h" index="13">
+<position info="not_deleted" x="548" y="0"/>
 </item>
-<item historyLabel="single_list.cpp" index="4">
-<position info="not_deleted" x="2426" y="0"/>
+<item historyLabel="PCD8544.c" index="11">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="stack.cpp" index="3">
-<position info="not_deleted" x="1682" y="0"/>
+<item historyLabel="PCD8544.h" index="10">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="single_list.cpp" index="4">
-<position info="not_deleted" x="2426" y="0"/>
+<item historyLabel="PCD8544.c" index="11">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="stack.cpp" index="3">
-<position info="not_deleted" x="1748" y="47"/>
+<item historyLabel="PCD8544.h" index="10">
+<position info="not_deleted" x="6841" y="0"/>
 </item>
-<item historyLabel="single_list.cpp" index="4">
-<position info="not_deleted" x="2692" y="0"/>
+<item historyLabel="PCD8544.c" index="11">
+<position info="not_deleted" x="9625" y="0"/>
 </item>
-<item historyLabel="stack.cpp" index="3">
-<position info="not_deleted" x="1843" y="43"/>
+<item historyLabel="main.c" index="14">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="single_list.cpp" index="4">
+<item historyLabel="PCD8544.c" index="11">
+<position info="not_deleted" x="9414" y="0"/>
+</item>
+<item historyLabel="PCD8544.h" index="10">
+<position info="not_deleted" x="6841" y="0"/>
+</item>
+<item historyLabel="main.c" index="14">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="bmp.h" index="15">
 <position info="not_deleted" x="2784" y="0"/>
 </item>
-<item historyLabel="stack.cpp" index="3">
-<position info="not_deleted" x="1926" y="24"/>
+<item historyLabel="PCD8544.c" index="11">
+<position info="not_deleted" x="246" y="0"/>
 </item>
-<item historyLabel="single_list.cpp" index="4">
-<position info="not_deleted" x="2848" y="0"/>
+<item historyLabel="PCD8544.h" index="10">
+<position info="not_deleted" x="6841" y="0"/>
 </item>
-<item historyLabel="stack.cpp" index="3">
-<position info="not_deleted" x="1966" y="37"/>
+<item historyLabel="PCD8544.c" index="11">
+<position info="not_deleted" x="246" y="0"/>
 </item>
-<item historyLabel="single_list.cpp" index="4">
-<position info="not_deleted" x="2806" y="0"/>
+<item historyLabel="main.c" index="14">
+<position info="not_deleted" x="204" y="0"/>
 </item>
-<item historyLabel="stack.cpp" index="3">
-<position info="not_deleted" x="1966" y="37"/>
+<item historyLabel="PCD8544.c" index="11">
+<position info="not_deleted" x="9550" y="0"/>
 </item>
-<item historyLabel="main.cpp" index="5">
-<position info="not_deleted" x="229" y="0"/>
+<item historyLabel="PCD8544.h" index="10">
+<position info="not_deleted" x="935" y="0"/>
 </item>
-<item historyLabel="queue.cpp" index="6">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="PCD8544.h" index="13">
+<position info="not_deleted" x="197" y="0"/>
 </item>
-<item historyLabel="benchmark.cpp" index="7">
-<position info="not_deleted" x="25" y="73"/>
+<item historyLabel="PCD8544.h" index="10">
+<position info="not_deleted" x="833" y="0"/>
 </item>
-<item historyLabel="queue.cpp" index="6">
-<position info="not_deleted" x="193" y="0"/>
+<item historyLabel="PCD8544.c" index="11">
+<position info="not_deleted" x="9550" y="0"/>
 </item>
-<item historyLabel="main.cpp" index="5">
-<position info="not_deleted" x="410" y="0"/>
+<item historyLabel="main.c" index="14">
+<position info="not_deleted" x="204" y="0"/>
 </item>
-<item historyLabel="queue.cpp" index="6">
-<position info="not_deleted" x="142" y="0"/>
+<item historyLabel="PCD8544.h" index="13">
+<position info="not_deleted" x="197" y="0"/>
 </item>
-<item historyLabel="main.cpp" index="5">
-<position info="not_deleted" x="410" y="0"/>
+<item historyLabel="PCD8544.h" index="10">
+<position info="not_deleted" x="927" y="0"/>
 </item>
-<item active="true" historyLabel="benchmark.cpp" index="7">
-<position info="not_deleted" x="25" y="73"/>
+<item historyLabel="PCD8544.h" index="13">
+<position info="not_deleted" x="197" y="0"/>
+</item>
+<item historyLabel="PCD8544.h" index="10">
+<position info="not_deleted" x="787" y="0"/>
+</item>
+<item historyLabel="PCD8544.h" index="13">
+<position info="not_deleted" x="197" y="0"/>
+</item>
+<item active="true" historyLabel="PCD8544.h" index="10">
+<position info="not_deleted" x="787" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -315,10 +457,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="topLeft"/>
-<trimItem IMemento.internal.id="bottomLeft"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -326,55 +464,54 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="bottomRight"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="benchmark.cpp" tooltip="/home/rafal/Pulpit/PAMSI/lab3/prj/src/benchmark.cpp">
-<persistable uri="file:/home/rafal/Pulpit/PAMSI/lab3/prj/src/benchmark.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="PCD8544.h" tooltip="wyswietlacz3310/PCD8544.h">
+<persistable path="/wyswietlacz3310/PCD8544.h"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="queue.cpp" tooltip="/home/rafal/Pulpit/PAMSI/lab3/prj/src/queue.cpp">
-<persistable uri="file:/home/rafal/Pulpit/PAMSI/lab3/prj/src/queue.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="bmp.h" tooltip="wys3310/bmp.h">
+<persistable path="/wys3310/bmp.h"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="single_list.cpp" tooltip="/home/rafal/Pulpit/PAMSI/lab3/prj/src/single_list.cpp">
-<persistable uri="file:/home/rafal/Pulpit/PAMSI/lab3/prj/src/single_list.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="wys3310/main.c">
+<persistable path="/wys3310/main.c"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stack.cpp" tooltip="/home/rafal/Pulpit/PAMSI/lab3/prj/src/stack.cpp">
-<persistable uri="file:/home/rafal/Pulpit/PAMSI/lab3/prj/src/stack.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="PCD8544.c" tooltip="wys3310/PCD8544.c">
+<persistable path="/wys3310/PCD8544.c"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="benchmark.hh" tooltip="/home/rafal/Pulpit/PAMSI/lab3/prj/inc/benchmark.hh">
-<persistable uri="file:/home/rafal/Pulpit/PAMSI/lab3/prj/inc/benchmark.hh"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="PCD8544.h" tooltip="wys3310/PCD8544.h">
+<persistable path="/wys3310/PCD8544.h"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stack.hh" tooltip="/home/rafal/Pulpit/PAMSI/lab3/prj/inc/stack.hh">
-<persistable uri="file:/home/rafal/Pulpit/PAMSI/lab3/prj/inc/stack.hh"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="PCD8544.H" tooltip="wys3310/PCD8544.H">
+<persistable path="/wys3310/PCD8544.H"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="single_list.hh" tooltip="/home/rafal/Pulpit/PAMSI/lab3/prj/inc/single_list.hh">
-<persistable uri="file:/home/rafal/Pulpit/PAMSI/lab3/prj/inc/single_list.hh"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="PCD8544.C" tooltip="wys3310/PCD8544.C">
+<persistable path="/wys3310/PCD8544.C"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="queue.hh" tooltip="/home/rafal/Pulpit/PAMSI/lab3/prj/inc/queue.hh">
-<persistable uri="file:/home/rafal/Pulpit/PAMSI/lab3/prj/inc/queue.hh"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="wyswietlacz3310/main.c">
+<persistable path="/wyswietlacz3310/main.c"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="element.hh" tooltip="/home/rafal/Pulpit/PAMSI/lab3/prj/inc/element.hh">
-<persistable uri="file:/home/rafal/Pulpit/PAMSI/lab3/prj/inc/element.hh"/>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="lcd44780.c" tooltip="/home/rafal/Pulpit/ProgAVR/projektyavr/wysLCD/lcd44780.c">
+<persistable uri="file:/home/rafal/Pulpit/ProgAVR/projektyavr/wysLCD/lcd44780.c"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="/home/rafal/Pulpit/PAMSI/lab3/prj/src/main.cpp">
-<persistable uri="file:/home/rafal/Pulpit/PAMSI/lab3/prj/src/main.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="PCD8544.c" tooltip="wyswietlacz3310/PCD8544.c">
+<persistable path="/wyswietlacz3310/PCD8544.c"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="queue.cpp" tooltip="/home/rafal/Pulpit/PAMSI/lab2/prj/src/queue.cpp">
-<persistable uri="file:/home/rafal/Pulpit/PAMSI/lab2/prj/src/queue.cpp"/>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="lcd44780.h" tooltip="/home/rafal/Pulpit/ProgAVR/projektyavr/wysLCD/lcd44780.h">
+<persistable uri="file:/home/rafal/Pulpit/ProgAVR/projektyavr/wysLCD/lcd44780.h"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="queue.hh" tooltip="/home/rafal/Pulpit/PAMSI/lab2/prj/inc/queue.hh">
-<persistable uri="file:/home/rafal/Pulpit/PAMSI/lab2/prj/inc/queue.hh"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="mystack.h" tooltip="Lab_1/program/inc/mystack.h">
+<persistable path="/Lab_1/program/inc/mystack.h"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stack.hh" tooltip="/home/rafal/Pulpit/PAMSI/lab2/prj/inc/stack.hh">
-<persistable uri="file:/home/rafal/Pulpit/PAMSI/lab2/prj/inc/stack.hh"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stackonarray.cpp" tooltip="Lab_1/program/src/stackonarray.cpp">
+<persistable path="/Lab_1/program/src/stackonarray.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stack.cpp" tooltip="/home/rafal/Pulpit/PAMSI/lab2/prj/src/stack.cpp">
-<persistable uri="file:/home/rafal/Pulpit/PAMSI/lab2/prj/src/stack.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="mylist.cpp" tooltip="Lab_1/program/src/mylist.cpp">
+<persistable path="/Lab_1/program/src/mylist.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="single_list.hh" tooltip="/home/rafal/Pulpit/PAMSI/lab2/prj/inc/single_list.hh">
-<persistable uri="file:/home/rafal/Pulpit/PAMSI/lab2/prj/inc/single_list.hh"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="mybenchmark.cpp" tooltip="Lab_1/program/src/mybenchmark.cpp">
+<persistable path="/Lab_1/program/src/mybenchmark.cpp"/>
 </file>
 </mruList>
 </workbench>

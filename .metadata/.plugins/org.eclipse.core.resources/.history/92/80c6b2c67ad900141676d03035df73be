@@ -1,0 +1,15 @@
+/*
+ * main.c
+ *
+ *  Created on: 02-04-2015
+ *      Author: rafal
+ */
+
+#include <avr/io.h>
+#include <util/delay.h>
+
+int main()
+{
+
+	return 0;
+}

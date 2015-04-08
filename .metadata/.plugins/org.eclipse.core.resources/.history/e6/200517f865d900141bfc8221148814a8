@@ -1,0 +1,20 @@
+/*
+ * PCD8544.c
+ *
+ *  Created on: 02-04-2015
+ *      Author: rafal
+ */
+
+#include "PCD8544.h"
+
+#define SET_SCE PORT |= (1<<SCE)
+#define SET_RST
+#define SET_D/C
+#define SET_SDIN
+#define SET_SCLK
+
+#define CLR_SCE
+#define CLR_RST
+#define CLR_D/c
+#define CLR_SDIN
+#define CLR_SCLK

@@ -1,0 +1,116 @@
+/*
+ * PCD8544.c
+ *
+ *  Created on: 02-04-2015
+ *      Author: rafal
+ */
+#include <avr/io.h>
+#include <stdlib.h>
+#include <util/delay.h>
+
+#include "PCD8544.h"
+
+#define SET_SCE		PORT(SCE_PORT) |= (1<<SCE)
+#define CLR_SCE		PORT(SCE_PORT) &= ~(1<<SCE)
+
+#define SET_RST		PORT(RST_PORT) |= (1<<RST)
+#define CLR_RST		PORT(RST_PORT) &= ~(1<<RST)
+
+#define SET_DC		PORT(DC_PORT) |= (1<<DC)
+#define CLR_DC		PORT(DC_PORT) &= ~(1<<DC)
+
+#define SET_SDIN	PORT(SDIN_PORT) |= (1<<SDIN)
+#define CLR_SDIN	PORT(SDIN_PORT) &= ~(1<<SDIN)
+
+#define SET_SCLK	PORT(SCLK_PORT) |= (1<<SCLK)
+#define CLR_SCLK	PORT(SCLK_PORT) &= ~(1<<SCLK)
+
+
+//********************* FUNKCJE WEWNÊTRZNE *********************
+
+
+//----------------------------------------------------------------------------------------
+//
+//		 Ustawienie wszystkich 4 linii danych jako WYjcia
+//
+//----------------------------------------------------------------------------------------
+static inline void data_dir_out(void)
+{
+	DDR(SCE_PORT) |= (1<<SCE);
+	DDR(RST_PORT) |= (1<<RST);
+	DDR(DC_PORT) |= (1<<DC);
+	DDR(SDIN_PORT) |= (1<<SDIN);
+	DDR(SCLK_PORT) |= (1<<SCLK);
+}
+
+//----------------------------------------------------------------------------------------
+//
+//		 Zapis bajtu do wywietlacza LCD
+//
+//----------------------------------------------------------------------------------------
+void _lcd_write_byte(unsigned char _data)
+{
+	unsigned char counter;
+	// Ustawienie pinów portow jako wyjcia
+	data_dir_out();
+
+	for(counter=0x80; counter; counter>>=1)
+	{
+	    if(_data & counter)
+	    	SET_SDIN;
+	    else
+	    	CLR_SDIN;
+
+	    SET_SCLK;
+	    _delay_ms(20);
+	    CLR_SCLK;
+	}
+
+}
+
+
+//----------------------------------------------------------------------------------------
+//
+//		 Zapis komendy do wywietlacza LCD
+//
+//----------------------------------------------------------------------------------------
+void lcd_write_cmd(uint8_t cmd)
+{
+	CLR_SCE;
+	CLR_DC;
+	_lcd_write_byte(cmd);
+	SET_SCE;
+}
+
+//----------------------------------------------------------------------------------------
+//
+//		 Zapis danych do wywietlacza LCD
+//
+//----------------------------------------------------------------------------------------
+void lcd_write_data(uint8_t data)
+{
+	CLR_SCE;
+	SET_DC;
+	_lcd_write_byte(data);
+	SET_SCE;
+}
+
+//**************************  FUNKCJE PRZEZNACZONE TAK¯E DLA INNYCH MODU£ÓW  ******************
+
+void lcd_init(void)
+{
+    CLR_RST;
+
+    //   < 30ms
+    _delay_ms(15);
+
+    SET_RST;
+    SET_SCLK;
+
+    lcd_write_cmd(0b00100001);
+    lcd_write_cmd(0b00010011);
+    lcd_write_cmd(0b00000110);
+    lcd_write_cmd(0b10100101);
+    lcd_write_cmd(0b00100000);
+    lcd_write_cmd(0b00001100);
+}

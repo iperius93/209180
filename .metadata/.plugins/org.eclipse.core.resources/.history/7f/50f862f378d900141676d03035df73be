@@ -1,0 +1,38 @@
+/*
+ * PCD8544.h
+ *
+ *  Created on: 02-04-2015
+ *      Author: rafal
+ */
+
+#ifndef PCD8544_H_
+#define PCD8544_H_
+
+#define SCE_PORT D
+#define SCE 	1
+
+#define RST_PORT D
+#define RST 	2
+
+#define D/C_PORT D
+#define D/C 	3
+
+#define SDIN_PORT D
+#define SDIN 	4
+
+#define SCLK_PORT D
+#define SCLK 	5
+
+// Makra upraszczajace dostep do portów
+// *** PORT
+#define PORT(x) SPORT(x)
+#define SPORT(x) (PORT##x)
+// *** PIN
+#define PIN(x) SPIN(x)
+#define SPIN(x) (PIN##x)
+// *** DDR
+#define DDR(x) SDDR(x)
+#define SDDR(x) (DDR##x)
+
+
+#endif /* PCD8544_H_ */

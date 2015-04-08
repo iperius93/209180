@@ -1,0 +1,51 @@
+
+**** Build of configuration Release for project wyswietlacz3310 ****
+
+make all 
+Building file: ../PCD8544.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"PCD8544.d" -MT"PCD8544.d" -c -o "PCD8544.o" "../PCD8544.c"
+Finished building: ../PCD8544.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.d" -c -o "main.o" "../main.c"
+../main.c: In function ‘main’:
+../main.c:14:2: warning: implicit declaration of function ‘lcd_init’
+Finished building: ../main.c
+../main.c:17:3: warning: implicit declaration of function ‘funkcja’
+ 
+Building target: wyswietlacz3310.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,wyswietlacz3310.map -mmcu=atmega32 -o "wyswietlacz3310.elf"  ./PCD8544.o ./main.o   
+Finished building target: wyswietlacz3310.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S wyswietlacz3310.elf  >"wyswietlacz3310.lss"
+Finished building: wyswietlacz3310.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -O ihex wyswietlacz3310.elf  "wyswietlacz3310.hex"
+Finished building: wyswietlacz3310.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex wyswietlacz3310.elf  "wyswietlacz3310.eep"
+Finished building: wyswietlacz3310.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 wyswietlacz3310.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     298 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+**** Build Finished ****
