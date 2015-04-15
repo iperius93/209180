@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_manipulator.html#a1301751b9affde2f306e29034eb47a66" title="Zapewnia dostep do pola ilosc_ogniw manipulatora." alt="" coords="248,5,424,35"/>
+<area shape="rect" id="node5" href="$class_wielobok.html#a70cda4ccd47a9c6ea2ed641af19e4969" title="Metoda zapewnia dostep do pola ilosc_punktow." alt="" coords="248,58,424,89"/>
+<area shape="rect" id="node7" href="$_manipulator_8hh.html#adc6e751d8b7084c9fe1f3fd8ad2e0d35" title="Sprawdza czy nastapiło przeciecie dwóch odcinkow." alt="" coords="255,111,417,142"/>
+<area shape="rect" id="node9" href="$_manipulator_8hh.html#aed0f34084324c1c9de7ce0e9e0a5d0a5" title="Sprawdza czy punkt z nie nalezy do odcinka XY." alt="" coords="473,85,580,115"/>
+<area shape="rect" id="node11" href="$_manipulator_8hh.html#a00a9c20ad593cdb2ebe15f46e931479d" title="Liczy wyznacznik macierzy." alt="" coords="485,138,568,169"/>
+</map>
