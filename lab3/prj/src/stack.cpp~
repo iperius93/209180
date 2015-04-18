@@ -1,0 +1,115 @@
+#include <iostream>
+#include <sys/time.h>
+#include <unistd.h>
+#include <cstdlib>
+#include <ctime>
+#include <fstream>
+
+#include "stack.hh"
+
+
+/*!
+* \file
+* \brief Definicja metod klasy Stack
+* 
+*/
+
+using namespace std;
+
+/*!
+
+ 	 * Tworzy nowy stos, tworzy dynamiczna tablice danych o rozmiarze podanym w parametrze.
+*/
+Stack::Stack(int x)
+{
+  n = x;
+  S = new int[x];
+  sptr = 0;
+}
+
+/*!
+ *
+ 	 * Niszczy dynamiczną tablicę danych, zwalnia pamięć.
+*/
+Stack::~Stack()
+{
+  delete [] S;
+}
+
+/*!
+
+* \return Zwraca 1 jesli coś jest, lub 0 jesli jest pusty.
+*/
+bool Stack::empty(void)
+{
+  return !sptr;
+}
+
+/*!
+
+		Metoda która informuje nas jaki element znajduje się na samej górze Stosu. Zwraca jego wartosc.
+ */
+int Stack::top(void)
+{
+  if(sptr) return S[sptr - 1];
+  return -MAXINT;
+}
+
+/*!
+
+	 Metoda dodaje nowy element do Stosu, zawartość informacji tego elementu przesyłąny jest w parametrze v.
+*/
+void Stack::push(int v)
+{
+  if(sptr < n) S[sptr++] = v;
+  else
+  {
+	  (*this).zwieksz_tablice_o_jeden();
+	  //(*this).zwieksz_tablice_dwarazy();
+	  S[sptr++] = v;
+  }
+}
+
+
+/*!
+ * 
+		Metoda zdejmuje element ze stosu.
+ */
+void Stack::pop(void)
+{
+  if(sptr) sptr--;		
+}
+
+/*!
+
+		Metoda zwiększa rozmiar tablicy dynamicznej o jeden element.
+ */
+void Stack::zwieksz_tablice_o_jeden()
+{
+	int *tab2 = new int [++n];		// nowa tablica o rozmiarze o jeden wiekszym
+	
+	for(int i=0;i<n-1;i++)
+	{
+		tab2[i] = S[i];			// skopjuj wszystkie dane ze starej tablicy
+	}
+	delete[] S;					// zniszcz stara tablice
+	S = tab2;					// umiesć nową tablice pod wskaznik S
+}
+
+/*!
+ * 
+		Metoda zwiększa rozmiar tablicy dynamicznej do dwu-krotności istniejącej tablicy dynamicznej.
+ */
+void Stack::zwieksz_tablice_dwarazy()
+{
+	int nowy_rozmiar = 2*n;
+	int *tab2 = new int [nowy_rozmiar];  // nowa tablica o rozmiarze dwukrotnie wiekszym
+	
+	for(int i=0;i<n;i++)
+	{
+		tab2[i] = S[i];			// skopjuj wszystkie dane ze starej tablicy
+	}
+	n = nowy_rozmiar;
+	delete[] S;					// zniszcz stara tablice
+	S = tab2;					// umiesć nową tablice pod wskaznik S
+}

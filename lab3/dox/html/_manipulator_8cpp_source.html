@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>2Ow1L: Plik źródłowy Manipulator.cpp</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">2Ow1L
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li><a href="namespaces.html"><span>Przestrzenie&#160;nazw</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li><a href="dirs.html"><span>Katalogi</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('_manipulator_8cpp.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">Manipulator.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_manipulator_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
+<a name="l00002"></a>00002 <span class="comment"> * Manipulator.cpp</span>
+<a name="l00003"></a>00003 <span class="comment"> *</span>
+<a name="l00004"></a>00004 <span class="comment"> *  Created on: 25-05-2014</span>
+<a name="l00005"></a>00005 <span class="comment"> *      Author: rafal</span>
+<a name="l00006"></a>00006 <span class="comment"> */</span>
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_manipulator_8hh.html" title="Definicja klasy Manipulator.">Manipulator.hh</a>&quot;</span>
+<a name="l00009"></a>00009 
+<a name="l00018"></a><a class="code" href="class_manipulator.html#a57f68ada28434d099d453d661ed2c5b0">00018</a> <span class="keywordtype">void</span> <a class="code" href="class_manipulator.html#a57f68ada28434d099d453d661ed2c5b0" title="Wyswietla konfiguracje manipulatora.">Manipulator::WysKonfiguracje</a>()
+<a name="l00019"></a>00019 {
+<a name="l00020"></a>00020         cout&lt;&lt;<span class="stringliteral">&quot;Konfiguracja:\n&quot;</span>;
+<a name="l00021"></a>00021         <span class="keywordtype">int</span> i=0;
+<a name="l00022"></a>00022         <span class="keywordflow">for</span>(std::vector&lt;Ogniwo&gt;::iterator iter = <a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.begin(); iter!= <a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.end(); ++iter)
+<a name="l00023"></a>00023         {
+<a name="l00024"></a>00024                 cout &lt;&lt;<span class="stringliteral">&quot;  Dlugosc ogniwa_&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;:  &quot;</span>;  <span class="comment">//wyswietl dlugosci poszczegolnych ramion</span>
+<a name="l00025"></a>00025                 (*iter).WysDlugosc();
+<a name="l00026"></a>00026                 i++;
+<a name="l00027"></a>00027         }
+<a name="l00028"></a>00028         cout&lt;&lt;endl;
+<a name="l00029"></a>00029 }
+<a name="l00033"></a><a class="code" href="class_manipulator.html#a36b8f9d9c86c344418ece6932d2a9cea">00033</a> <span class="keywordtype">void</span> <a class="code" href="class_manipulator.html#a36b8f9d9c86c344418ece6932d2a9cea" title="Wyswietla posture manipulatora.">Manipulator::WysPosture</a>()
+<a name="l00034"></a>00034 {
+<a name="l00035"></a>00035         cout&lt;&lt;<span class="stringliteral">&quot;Postura\n&quot;</span>;
+<a name="l00036"></a>00036         <span class="keywordtype">int</span> i=0;
+<a name="l00037"></a>00037         <span class="keywordflow">for</span>(std::vector&lt;Ogniwo&gt;::iterator iter = <a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.begin(); iter!= <a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.end(); ++iter)
+<a name="l00038"></a>00038         {
+<a name="l00039"></a>00039                 cout&lt;&lt;<span class="stringliteral">&quot;  q&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot; = &quot;</span>;
+<a name="l00040"></a>00040                 (*iter).WysKat();               <span class="comment">//wyswietl katy oszczegolnych ogniw</span>
+<a name="l00041"></a>00041                 cout&lt;&lt;<span class="stringliteral">&quot;    Przegub_&quot;</span>&lt;&lt;i&lt;&lt;<span class="stringliteral">&quot;:&quot;</span>;
+<a name="l00042"></a>00042                 (*iter).WysWspolrzedne();               <span class="comment">// wyswietl wspolrzedne poszczegolnych przegobow</span>
+<a name="l00043"></a>00043                 cout&lt;&lt;endl;
+<a name="l00044"></a>00044                 i++;
+<a name="l00045"></a>00045         }
+<a name="l00046"></a>00046         cout&lt;&lt;<span class="stringliteral">&quot;           Efektor: &quot;</span>&lt;&lt;<a class="code" href="class_manipulator.html#ade60451f2fc47769b986f4bbcfd95488" title="Wektor Efektor.">Efektor</a>&lt;&lt;endl&lt;&lt;endl;      <span class="comment">//wyswietl wspolrzedne efektora</span>
+<a name="l00047"></a>00047 }
+<a name="l00054"></a><a class="code" href="class_manipulator.html#a7b478e27deeb270c0c59c11325fc82b6">00054</a> <span class="keywordtype">void</span> <a class="code" href="class_manipulator.html#a7b478e27deeb270c0c59c11325fc82b6" title="Metoda wczytujaca plik configuracyjny.">Manipulator::WczytajPlikConfig</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* NazwaPliku)
+<a name="l00055"></a>00055 {
+<a name="l00056"></a>00056         <span class="keywordtype">double</span> dlugosc;
+<a name="l00057"></a>00057         fstream plik_confg;
+<a name="l00058"></a>00058         (plik_confg).open( NazwaPliku, std::ios::in);           <span class="comment">//otworz plik konfiguracyjny</span>
+<a name="l00059"></a>00059         <span class="keywordflow">if</span>( (plik_confg).good() == false )
+<a name="l00060"></a>00060         {
+<a name="l00061"></a>00061                 cerr &lt;&lt; <span class="stringliteral">&quot;Brak pliku konfiguracji!!!\n&quot;</span>;         <span class="comment">//jesli nie udało sie otworzyc komunikat i zamknij program</span>
+<a name="l00062"></a>00062                 exit(1);
+<a name="l00063"></a>00063         }
+<a name="l00064"></a>00064         <span class="keywordtype">string</span> Napis;
+<a name="l00065"></a>00065         getline(plik_confg,Napis);              <span class="comment">//jesli udało sie to pobierz cała zawartosc pliku</span>
+<a name="l00066"></a>00066         plik_confg.seekg(0);                    <span class="comment">//wroc na poczatek pliku</span>
+<a name="l00067"></a>00067         <span class="keywordflow">if</span>(<a class="code" href="_modul_8hh.html#afd9880ba70eaefe9cbf96c195b1a3118" title="Sprawdza czy w napisie nie znajduja sie niedozwolone znaki.">SprawdzNapis</a>(Napis))                 <span class="comment">// sprawdz czy nie ma niedozwolonych znakow</span>
+<a name="l00068"></a>00068         {
+<a name="l00069"></a>00069                 cerr&lt;&lt;<span class="stringliteral">&quot;Plik konfiguracji zawiera niedozwolone znaki !!!\n&quot;</span>;     <span class="comment">// jesli sa to komunikat i zamknij program</span>
+<a name="l00070"></a>00070                 exit(1);
+<a name="l00071"></a>00071         }
+<a name="l00072"></a>00072         <span class="keywordflow">for</span>(<span class="keywordtype">double</span> i=0;;i++)    <span class="comment">// jesli wszystko ok    </span>
+<a name="l00073"></a>00073         {       
+<a name="l00074"></a>00074                 plik_confg &gt;&gt; dlugosc;
+<a name="l00075"></a>00075                 <span class="keywordflow">if</span>(plik_confg.eof()) <span class="keywordflow">break</span>;
+<a name="l00076"></a>00076                 <a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.push_back(<a class="code" href="class_ogniwo.html" title="Modeluje pojecie Ogniwa.">Ogniwo</a>(dlugosc,<span class="charliteral">&#39;d&#39;</span>));
+<a name="l00077"></a>00077                 <a class="code" href="class_manipulator.html#a914fe0dbbd83153cb264b0da4c9429c8">ilosc_ogniw</a>++;
+<a name="l00078"></a>00078                 <span class="keywordflow">if</span>(plik_confg.eof()) <span class="keywordflow">break</span>;
+<a name="l00079"></a>00079         }
+<a name="l00080"></a>00080 }
+<a name="l00089"></a><a class="code" href="class_manipulator.html#a657081201b28140f54f5e4e5b08677cf">00089</a> <span class="keywordtype">void</span> <a class="code" href="class_manipulator.html#a657081201b28140f54f5e4e5b08677cf" title="Wczytuje jedna posture manipulatora Stacjonarnego.">Manipulator::WczytajPlikPosturaJeden</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* NazwaPliku)
+<a name="l00090"></a>00090 {
+<a name="l00091"></a>00091         <span class="keywordtype">int</span> smieci;
+<a name="l00092"></a>00092         <span class="keywordtype">double</span> kat=0;
+<a name="l00093"></a>00093         fstream plik_postury;
+<a name="l00094"></a>00094         (plik_postury).open( NazwaPliku, std::ios::in);
+<a name="l00095"></a>00095         <span class="keywordflow">if</span>( (plik_postury).good() == false )
+<a name="l00096"></a>00096         {
+<a name="l00097"></a>00097                 cerr &lt;&lt; <span class="stringliteral">&quot;Brak pliku postury!!!\n&quot;</span>;
+<a name="l00098"></a>00098                 exit(1);
+<a name="l00099"></a>00099         }
+<a name="l00100"></a>00100         <span class="keywordtype">string</span> Napis;
+<a name="l00101"></a>00101         getline(plik_postury,Napis);
+<a name="l00102"></a>00102         plik_postury.seekg(0);
+<a name="l00103"></a>00103         <span class="keywordflow">if</span>(<a class="code" href="_modul_8hh.html#afd9880ba70eaefe9cbf96c195b1a3118" title="Sprawdza czy w napisie nie znajduja sie niedozwolone znaki.">SprawdzNapis</a>(Napis))
+<a name="l00104"></a>00104         {
+<a name="l00105"></a>00105                 cerr&lt;&lt;<span class="stringliteral">&quot;Plik zawiera niedozwolone znaki !!!\n&quot;</span>;
+<a name="l00106"></a>00106                 exit(1);
+<a name="l00107"></a>00107         }
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109         std::vector&lt;Ogniwo&gt;::iterator iter=<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.begin();
+<a name="l00110"></a>00110         <span class="keywordflow">for</span>(iter = <a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.begin(); iter!= <a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.end(); ++iter)
+<a name="l00111"></a>00111         {
+<a name="l00112"></a>00112                 plik_postury &gt;&gt; kat;
+<a name="l00113"></a>00113                 <span class="keywordflow">if</span>(plik_postury.eof()) <span class="keywordflow">break</span>;
+<a name="l00114"></a>00114                 (*iter)[2]=kat;
+<a name="l00115"></a>00115                 <span class="keywordflow">if</span>(plik_postury.eof()) <span class="keywordflow">break</span>;
+<a name="l00116"></a>00116         }
+<a name="l00117"></a>00117         plik_postury &gt;&gt; smieci;
+<a name="l00118"></a>00118         <span class="keywordflow">if</span>(plik_postury.eof())
+<a name="l00119"></a>00119         {
+<a name="l00120"></a>00120                 <span class="keywordflow">if</span>(iter&lt;<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.end()) cerr &lt;&lt; <span class="stringliteral">&quot;Ostrzezenie: Brakuje katow dla &quot;</span>&lt;&lt;(<span class="keywordtype">int</span>)(<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.size())-1&lt;&lt;<span class="stringliteral">&quot; przegobow w pliku .&quot;</span>&lt;&lt;endl&lt;&lt;endl;
+<a name="l00121"></a>00121         }
+<a name="l00122"></a>00122         <span class="keywordflow">else</span>  cerr &lt;&lt; <span class="stringliteral">&quot;Ostrzezenie: W pliku znajduje sie za dużo katów.&quot;</span>&lt;&lt;endl&lt;&lt;endl;
+<a name="l00123"></a>00123 }
+<a name="l00124"></a>00124 
+<a name="l00128"></a><a class="code" href="class_manipulator.html#a5df91c7a9eecc3bf8a456b835be2d9c8">00128</a> <span class="keywordtype">void</span> <a class="code" href="class_manipulator.html#a5df91c7a9eecc3bf8a456b835be2d9c8" title="Metoda wczytujaca plik z postura.">Manipulator::WczytajPlikPostury</a>(<span class="keywordtype">int</span> nr_pliku, <span class="keywordtype">char</span>* argv[])
+<a name="l00129"></a>00129 {
+<a name="l00130"></a>00130         <span class="keywordtype">int</span> smieci;
+<a name="l00131"></a>00131         <span class="keywordtype">double</span> kat=0;
+<a name="l00132"></a>00132         fstream plik_postury;
+<a name="l00133"></a>00133         (plik_postury).open( argv[nr_pliku], std::ios::in);  <span class="comment">// otwórz plik postury</span>
+<a name="l00134"></a>00134         <span class="keywordflow">if</span>( (plik_postury).good() == false )            <span class="comment">//jesli sie nie udało to komunikat i zamknij prorgam</span>
+<a name="l00135"></a>00135         {
+<a name="l00136"></a>00136                 cerr &lt;&lt; <span class="stringliteral">&quot;Brak pliku postury!!!\n&quot;</span>;
+<a name="l00137"></a>00137                 exit(1);
+<a name="l00138"></a>00138         }
+<a name="l00139"></a>00139         <span class="keywordtype">string</span> Napis;
+<a name="l00140"></a>00140         getline(plik_postury,Napis);                    <span class="comment">//pobierz linijke i sparwdz czy sa niedozwolone znaki</span>
+<a name="l00141"></a>00141         plik_postury.seekg(0);                          <span class="comment">//wroc na poczatek pliku</span>
+<a name="l00142"></a>00142         <span class="keywordflow">if</span>(<a class="code" href="_modul_8hh.html#afd9880ba70eaefe9cbf96c195b1a3118" title="Sprawdza czy w napisie nie znajduja sie niedozwolone znaki.">SprawdzNapis</a>(Napis))
+<a name="l00143"></a>00143         {                                               <span class="comment">//jesli sa niedozwolone znaki komunikat i zamknij program </span>
+<a name="l00144"></a>00144                 cerr&lt;&lt;<span class="stringliteral">&quot;Plik &quot;</span>&lt;&lt;argv[nr_pliku]&lt;&lt;<span class="stringliteral">&quot; zawiera niedozwolone znaki !!!\n&quot;</span>;
+<a name="l00145"></a>00145                 exit(1);
+<a name="l00146"></a>00146         }
+<a name="l00147"></a>00147         std::vector&lt;Ogniwo&gt;::iterator iter=<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.begin();
+<a name="l00148"></a>00148         <span class="keywordflow">for</span>(iter = <a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.begin(); iter!= <a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.end(); ++iter)     <span class="comment">// jesli wszystko ok to wczytaj posture</span>
+<a name="l00149"></a>00149         {
+<a name="l00150"></a>00150                 plik_postury &gt;&gt; kat;
+<a name="l00151"></a>00151                 <span class="keywordflow">if</span>(plik_postury.eof()) <span class="keywordflow">break</span>;
+<a name="l00152"></a>00152                 (*iter)[2]=kat;
+<a name="l00153"></a>00153                 <span class="keywordflow">if</span>(plik_postury.eof()) <span class="keywordflow">break</span>;   <span class="comment">// i zapisz katy do odpowiednich pol</span>
+<a name="l00154"></a>00154         }
+<a name="l00155"></a>00155         plik_postury &gt;&gt; smieci;         <span class="comment">//wczytaj smieci</span>
+<a name="l00156"></a>00156         <span class="keywordflow">if</span>(plik_postury.eof())          <span class="comment">//jesli koniec pliku </span>
+<a name="l00157"></a>00157         {                                                  <span class="comment">// a liczba i jest mniejsza od ilosci ogniw to jest za malo katow</span>
+<a name="l00158"></a>00158                 <span class="keywordflow">if</span>(iter&lt;<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.end()) cerr &lt;&lt; <span class="stringliteral">&quot;Ostrzezenie: Brakuje katow dla &quot;</span>&lt;&lt;(<span class="keywordtype">int</span>)(<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.size())-1&lt;&lt;<span class="stringliteral">&quot; przegobow w pliku &quot;</span>&lt;&lt;argv[nr_pliku]&lt;&lt;<span class="stringliteral">&quot;.&quot;</span>&lt;&lt;endl&lt;&lt;endl;
+<a name="l00159"></a>00159         }                               <span class="comment">// a jesli nadal nie ma konca pliku to znaczy ze jest katow za duzo</span>
+<a name="l00160"></a>00160         <span class="keywordflow">else</span>  cerr &lt;&lt; <span class="stringliteral">&quot;Ostrzezenie: W pliku &quot;</span>&lt;&lt;argv[nr_pliku]&lt;&lt;<span class="stringliteral">&quot; znajduje sie za dużo katów.&quot;</span>&lt;&lt;endl&lt;&lt;endl;
+<a name="l00161"></a>00161 }
+<a name="l00162"></a>00162 
+<a name="l00168"></a><a class="code" href="class_manipulator.html#a513615a6468595ec70ae7bcde111effa">00168</a> <span class="keywordtype">void</span> <a class="code" href="class_manipulator.html#a513615a6468595ec70ae7bcde111effa" title="Wylicza wspołrzedne przegobow (prosta)">Manipulator::ObliczWspolrzedneStart</a>()
+<a name="l00169"></a>00169 {
+<a name="l00170"></a>00170         <span class="keywordtype">double</span> dlugosc=0;
+<a name="l00171"></a>00171         (<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>[0])(0)=<a class="code" href="class_manipulator.html#a933d51eb3dd36e1b88a087453bc12e74" title="Wektor Podstawa.">Podstawa</a>[0];
+<a name="l00172"></a>00172         (<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>[0])(1)=<a class="code" href="class_manipulator.html#a933d51eb3dd36e1b88a087453bc12e74" title="Wektor Podstawa.">Podstawa</a>[1];
+<a name="l00173"></a>00173 
+<a name="l00174"></a>00174         <span class="keywordflow">for</span>(std::vector&lt;Ogniwo&gt;::iterator iter = <a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.begin(); iter!= <a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.end()-1; ++iter)
+<a name="l00175"></a>00175         {
+<a name="l00176"></a>00176                 dlugosc += (*iter)[3];
+<a name="l00177"></a>00177                 (*iter)(0)=0;
+<a name="l00178"></a>00178                 (*(iter+1))(1)=dlugosc;
+<a name="l00179"></a>00179         }
+<a name="l00180"></a>00180         <a class="code" href="class_manipulator.html#ade60451f2fc47769b986f4bbcfd95488" title="Wektor Efektor.">Efektor</a>[1] = dlugosc + (<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>[<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.size()-1])[3];
+<a name="l00181"></a>00181         <a class="code" href="class_manipulator.html#ade60451f2fc47769b986f4bbcfd95488" title="Wektor Efektor.">Efektor</a>[0] = 0;
+<a name="l00182"></a>00182 }
+<a name="l00183"></a>00183         
+<a name="l00187"></a><a class="code" href="class_manipulator.html#a282b2a21715ae356d35f6a73865fc88c">00187</a> <span class="keywordtype">void</span> <a class="code" href="class_manipulator.html#a282b2a21715ae356d35f6a73865fc88c">Manipulator::ObliczWspolrzedne</a>()
+<a name="l00188"></a>00188 {
+<a name="l00189"></a>00189 
+<a name="l00190"></a>00190         <span class="keywordtype">double</span> kat=0;
+<a name="l00191"></a>00191         (<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>[0])(0)=<a class="code" href="class_manipulator.html#a933d51eb3dd36e1b88a087453bc12e74" title="Wektor Podstawa.">Podstawa</a>[0];
+<a name="l00192"></a>00192         (<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>[0])(1)=<a class="code" href="class_manipulator.html#a933d51eb3dd36e1b88a087453bc12e74" title="Wektor Podstawa.">Podstawa</a>[1];
+<a name="l00193"></a>00193 
+<a name="l00194"></a>00194         <span class="keywordflow">for</span>(std::vector&lt;Ogniwo&gt;::iterator iter = <a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.begin(); iter!= <a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.end()-1; ++iter)
+<a name="l00195"></a>00195         {
+<a name="l00196"></a>00196                 kat += (*iter)[2];
+<a name="l00197"></a>00197                 (*(iter+1))(0) =  (*iter)[3] * cos(<a class="code" href="_modul_8hh.html#ab3be25f351bc91d3deb7236f92664bc5" title="Zamienia stopnie na radiany.">ZamienNaRadiany</a>(kat));
+<a name="l00198"></a>00198                 (*(iter+1))(1) =  (*iter)[3] * sin(<a class="code" href="_modul_8hh.html#ab3be25f351bc91d3deb7236f92664bc5" title="Zamienia stopnie na radiany.">ZamienNaRadiany</a>(kat));
+<a name="l00199"></a>00199 
+<a name="l00200"></a>00200                 (*(iter+1))(0) += (*iter)(0);
+<a name="l00201"></a>00201                 (*(iter+1))(1) += (*iter)(1);
+<a name="l00202"></a>00202         }
+<a name="l00203"></a>00203         <a class="code" href="class_manipulator.html#ade60451f2fc47769b986f4bbcfd95488" title="Wektor Efektor.">Efektor</a>[0] =  (<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>[<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.size()-1])[3] * cos( <a class="code" href="_modul_8hh.html#ab3be25f351bc91d3deb7236f92664bc5" title="Zamienia stopnie na radiany.">ZamienNaRadiany</a>( (<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>[<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.size()-1])[2] + kat ) );
+<a name="l00204"></a>00204         <a class="code" href="class_manipulator.html#ade60451f2fc47769b986f4bbcfd95488" title="Wektor Efektor.">Efektor</a>[1] =  (<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>[<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.size()-1])[3] * sin( <a class="code" href="_modul_8hh.html#ab3be25f351bc91d3deb7236f92664bc5" title="Zamienia stopnie na radiany.">ZamienNaRadiany</a>( (<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>[<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.size()-1])[2] + kat ) );
+<a name="l00205"></a>00205 
+<a name="l00206"></a>00206         <a class="code" href="class_manipulator.html#ade60451f2fc47769b986f4bbcfd95488" title="Wektor Efektor.">Efektor</a>[0] +=  (<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>[<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.size()-1])(0);
+<a name="l00207"></a>00207         <a class="code" href="class_manipulator.html#ade60451f2fc47769b986f4bbcfd95488" title="Wektor Efektor.">Efektor</a>[1] +=  (<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>[<a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.size()-1])(1);
+<a name="l00208"></a>00208 }
+<a name="l00209"></a>00209 
+<a name="l00214"></a><a class="code" href="class_manipulator.html#a2e853d4f1a43dd00828df43852b868d2">00214</a> <span class="keywordtype">void</span> <a class="code" href="class_manipulator.html#a2e853d4f1a43dd00828df43852b868d2" title="Metoda zapisuje wspolrzedne do pliku.">Manipulator::ZapiszDoPliku</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* NazwaPliku)
+<a name="l00215"></a>00215 {
+<a name="l00216"></a>00216         fstream plik_zapisu;
+<a name="l00217"></a>00217         (plik_zapisu).open( NazwaPliku, std::ios::out);
+<a name="l00218"></a>00218         <span class="keywordflow">if</span>( (plik_zapisu).good() == false )
+<a name="l00219"></a>00219         {
+<a name="l00220"></a>00220                 cerr &lt;&lt; <span class="stringliteral">&quot;Brak pliku do zapisu!!!\n&quot;</span>;
+<a name="l00221"></a>00221                 exit(1);
+<a name="l00222"></a>00222         }
+<a name="l00223"></a>00223         plik_zapisu &lt;&lt; (int)<a class="code" href="class_manipulator.html#a933d51eb3dd36e1b88a087453bc12e74" title="Wektor Podstawa.">Podstawa</a>[0]&lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; (<span class="keywordtype">int</span>)<a class="code" href="class_manipulator.html#a933d51eb3dd36e1b88a087453bc12e74" title="Wektor Podstawa.">Podstawa</a>[1]&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;endl;
+<a name="l00224"></a>00224         <span class="keywordflow">for</span>(std::vector&lt;Ogniwo&gt;::iterator iter = <a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.begin(); iter!= <a class="code" href="class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc" title="Wektor elementow typu Ogniwo.">TabOgniw</a>.end(); ++iter)
+<a name="l00225"></a>00225         {
+<a name="l00226"></a>00226                 plik_zapisu &lt;&lt; (int)(*iter)(0) &lt;&lt;<span class="stringliteral">&quot; &quot;</span> &lt;&lt; (<span class="keywordtype">int</span>)(*iter)(1)&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;endl;
+<a name="l00227"></a>00227         }
+<a name="l00228"></a>00228         plik_zapisu &lt;&lt; (int)<a class="code" href="class_manipulator.html#ade60451f2fc47769b986f4bbcfd95488" title="Wektor Efektor.">Efektor</a>[0]&lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; (<span class="keywordtype">int</span>)<a class="code" href="class_manipulator.html#ade60451f2fc47769b986f4bbcfd95488" title="Wektor Efektor.">Efektor</a>[1]&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;endl;
+<a name="l00229"></a>00229 }
+<a name="l00230"></a>00230 
+<a name="l00234"></a><a class="code" href="_manipulator_8cpp.html#aed0f34084324c1c9de7ce0e9e0a5d0a5">00234</a> <span class="keywordtype">int</span> <a class="code" href="_manipulator_8hh.html#aed0f34084324c1c9de7ce0e9e0a5d0a5" title="Sprawdza czy punkt z nie nalezy do odcinka XY.">przynaleznosc</a>(<a class="code" href="class_wektor.html" title="Modeluje pojęcie Wektora.">Wektor</a> x,<a class="code" href="class_wektor.html" title="Modeluje pojęcie Wektora.">Wektor</a> y,<a class="code" href="class_wektor.html" title="Modeluje pojęcie Wektora.">Wektor</a> z)
+<a name="l00235"></a>00235 <span class="comment">//Ta funkcja sprawdza, czy punkt z nale¿y do odcinka |xy|</span>
+<a name="l00236"></a>00236 {
+<a name="l00237"></a>00237         <span class="keywordtype">int</span> det; <span class="comment">//wyznacznik macierzy</span>
+<a name="l00238"></a>00238         det=x[0]*y[1]+y[0]*z[1]+z[0]*x[1]-z[0]*y[1]-x[0]*z[1]-y[0]*x[1];
+<a name="l00239"></a>00239         <span class="keywordflow">if</span> (det!=0) <span class="keywordflow">return</span>(0); <span class="keywordflow">else</span>
+<a name="l00240"></a>00240         {
+<a name="l00241"></a>00241                 <span class="keywordflow">if</span> ((min(x[0],y[0])&lt;=z[0])&amp;&amp;(z[0]&lt;=max(x[0],y[0])) &amp;&amp; (min(x[1],y[1])&lt;=z[1])&amp;&amp;(z[1]&lt;=max(x[1],y[1]))) <span class="keywordflow">return</span>(1);
+<a name="l00242"></a>00242                 <span class="keywordflow">else</span> <span class="keywordflow">return</span>(0);
+<a name="l00243"></a>00243         }
+<a name="l00244"></a>00244 }
+<a name="l00245"></a>00245 
+<a name="l00249"></a><a class="code" href="_manipulator_8cpp.html#a00a9c20ad593cdb2ebe15f46e931479d">00249</a> <span class="keywordtype">int</span> <a class="code" href="_manipulator_8hh.html#a00a9c20ad593cdb2ebe15f46e931479d" title="Liczy wyznacznik macierzy.">det_matrix</a>(<a class="code" href="class_wektor.html" title="Modeluje pojęcie Wektora.">Wektor</a> x,<a class="code" href="class_wektor.html" title="Modeluje pojęcie Wektora.">Wektor</a> y,<a class="code" href="class_wektor.html" title="Modeluje pojęcie Wektora.">Wektor</a> z)
+<a name="l00250"></a>00250 {
+<a name="l00251"></a>00251         <span class="keywordflow">return</span>(x[0]*y[1]+y[0]*z[1]+z[0]*x[1]-z[0]*y[1]-x[0]*z[1]-y[0]*x[1]);
+<a name="l00252"></a>00252 }
+<a name="l00253"></a>00253 
+<a name="l00257"></a><a class="code" href="_manipulator_8cpp.html#adc6e751d8b7084c9fe1f3fd8ad2e0d35">00257</a> <span class="keywordtype">bool</span> <a class="code" href="_manipulator_8hh.html#adc6e751d8b7084c9fe1f3fd8ad2e0d35" title="Sprawdza czy nastapiło przeciecie dwóch odcinkow.">SprawdzCzyPrzeciecie</a>(<a class="code" href="class_wektor.html" title="Modeluje pojęcie Wektora.">Wektor</a> Punkt1A, <a class="code" href="class_wektor.html" title="Modeluje pojęcie Wektora.">Wektor</a> Punkt1B, <a class="code" href="class_wektor.html" title="Modeluje pojęcie Wektora.">Wektor</a> Punkt2A, <a class="code" href="class_wektor.html" title="Modeluje pojęcie Wektora.">Wektor</a> Punkt2B)
+<a name="l00258"></a>00258 {
+<a name="l00259"></a>00259         <span class="comment">//Sprawdzanie, czy jakis punkt nale¿y do drugiego odcinka</span>
+<a name="l00260"></a>00260         <span class="keywordflow">if</span> (<a class="code" href="_manipulator_8hh.html#aed0f34084324c1c9de7ce0e9e0a5d0a5" title="Sprawdza czy punkt z nie nalezy do odcinka XY.">przynaleznosc</a>(Punkt1A,Punkt1B,Punkt2A)==1) <span class="keywordflow">return</span> 1;
+<a name="l00261"></a>00261         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="_manipulator_8hh.html#aed0f34084324c1c9de7ce0e9e0a5d0a5" title="Sprawdza czy punkt z nie nalezy do odcinka XY.">przynaleznosc</a>(Punkt1A,Punkt1B,Punkt2B)==1) <span class="keywordflow">return</span> 1;
+<a name="l00262"></a>00262         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="_manipulator_8hh.html#aed0f34084324c1c9de7ce0e9e0a5d0a5" title="Sprawdza czy punkt z nie nalezy do odcinka XY.">przynaleznosc</a>(Punkt2A,Punkt2B,Punkt1A)==1) <span class="keywordflow">return</span> 1;
+<a name="l00263"></a>00263         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="_manipulator_8hh.html#aed0f34084324c1c9de7ce0e9e0a5d0a5" title="Sprawdza czy punkt z nie nalezy do odcinka XY.">przynaleznosc</a>(Punkt2A,Punkt2B,Punkt1B)==1) <span class="keywordflow">return</span> 1; <span class="comment">//zaden punkt nie nalezy do drugego odcinka</span>
+<a name="l00264"></a>00264         <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((<a class="code" href="_manipulator_8hh.html#a00a9c20ad593cdb2ebe15f46e931479d" title="Liczy wyznacznik macierzy.">det_matrix</a>(Punkt1A,Punkt1B,Punkt2A))*(<a class="code" href="_manipulator_8hh.html#a00a9c20ad593cdb2ebe15f46e931479d" title="Liczy wyznacznik macierzy.">det_matrix</a>(Punkt1A,Punkt1B,Punkt2B))&gt;=0) <span class="keywordflow">return</span> 0;
+<a name="l00265"></a>00265         <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((<a class="code" href="_manipulator_8hh.html#a00a9c20ad593cdb2ebe15f46e931479d" title="Liczy wyznacznik macierzy.">det_matrix</a>(Punkt2A,Punkt2B,Punkt1A))*(<a class="code" href="_manipulator_8hh.html#a00a9c20ad593cdb2ebe15f46e931479d" title="Liczy wyznacznik macierzy.">det_matrix</a>(Punkt2A,Punkt2B,Punkt1B))&gt;=0) <span class="keywordflow">return</span> 0;
+<a name="l00266"></a>00266         <span class="keywordflow">else</span> <span class="keywordflow">return</span> 1;          <span class="comment">//znaki wyznaczników sa równe</span>
+<a name="l00267"></a>00267 }
+<a name="l00268"></a>00268 
+</pre></div></div><!-- contents -->
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="_manipulator_8cpp.html">Manipulator.cpp</a>      </li>
+
+    <li class="footer">Wygenerowano Mon Jun 16 2014 11:51:30 dla 2Ow1L programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

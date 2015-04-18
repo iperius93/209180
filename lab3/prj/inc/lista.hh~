@@ -1,0 +1,184 @@
+#ifndef LISTA_HH
+#define LISTA_HH
+
+/*!
+ *	\file 
+	\brief Definicja klasy Lista
+
+*/
+
+#include <iostream>
+#include <sys/time.h>
+#include <unistd.h>
+#include <cstdlib>
+#include <ctime>
+#include <fstream>
+
+#include "queue.hh"
+#include "stack.hh"
+#include "single_list.hh"
+
+using namespace std;
+
+/*!
+ *	\brief Modeluje pojęcie Lista
+ *
+ *	Klasa modeluje pojecie Listy w naszym przypadku
+ *	tablice o zadanym rozmiarze w zmiennej ilosc 
+ * 	typu int.
+*/
+
+class Lista
+{
+	/*!
+	 *	\brief Obiekt typu Single_List.
+	 *	
+	 *	Obiekt jest po prostu Listą jednokierunkową.
+	*/
+	Single_List sl;
+	/*!
+	 *	\brief Obiekt typu Stack.
+	 *	
+	 *	Obiekt jest po prostu Stosem.
+	*/
+	Stack S;
+	/*!
+	 *	\brief Obiekt typu Queue.
+	 *	
+	 *	Obiekt jest po prostu Kolejką.
+	*/
+	Queue Q;
+	
+	int *tab;
+	int rozmiar;
+	int zajete;
+	
+	/*!
+	 *	\brief Zmienna przechowywująca ilość elementow.
+	 *	
+	 *	Zmienna typu int, ktora zawiera liczbe elementow 
+		w strukturze np. w stosie, kolejce, liscie.
+	*/
+	int ilosc;
+	
+	public:
+	
+	Lista()
+	{
+		rozmiar = 1;
+		tab = new int [rozmiar];
+		zajete = 0;
+	}
+	
+	void zwieksz_rozmiar_1()
+	{
+		rozmiar++;
+		int *tab2 = new int [rozmiar];
+		for(int i=0; i<rozmiar-1; i++)
+		{
+			tab2[i] = tab[i];
+		}
+		delete[] tab;
+		tab = tab2;
+		delete[] tab2;
+	}
+	
+	void zwieksz_rozmiar_razy2()
+	{
+		rozmiar*=2;
+		int *tab2 = new int [rozmiar];
+		for(int i=0; i<rozmiar-1; i++)
+		{
+			tab2[i] = tab[i];
+		}
+		delete[] tab;
+		tab = tab2;
+		delete[] tab2;
+	}
+	
+	void push_tab(int v)
+	{
+		if(rozmiar == zajete)
+		{
+			(*this).zwieksz_rozmiar_1();
+			tab[zajete] = v;
+			zajete++;
+		}
+		else
+		{
+			tab[zajete] = v;
+			zajete++;
+		}
+	}
+	
+	void wczytaj_dane_tab(int ilosc_liczb)
+	{
+		cout<<"WASD";
+		int dane=0;
+		fstream plik_danych;
+		plik_danych.open("dane.txt",std::ios::in);
+		if( plik_danych.good() == true )
+		{
+			for(int i=0;i<ilosc_liczb;i++)
+			{
+				plik_danych >> dane;
+				if(rozmiar == zajete)
+				{
+					cout<<"WASD"<<endl;
+					rozmiar++;
+					int *tab2 = new int [rozmiar];
+					
+					for(int i=0; i<rozmiar-1; i++)
+					{
+						tab2[i] = tab[i];
+					}
+					/*
+					delete[] tab;
+					tab = tab2;
+					delete[] tab2;
+					
+					tab[zajete] = dane;
+					zajete++;*/
+				}
+				else
+				{
+					tab[zajete] = dane;
+					zajete++;
+				}
+			}
+		} else cout << "Dostep do pliku zostal zabroniony!" << endl;
+		
+		plik_danych.close();
+	}
+	
+	/*!
+	 *	\brief Wczytuje dane do struktury danych Stos.
+	*/
+	void wczytaj_dane_stack(int ilosc_liczb);
+	/*!
+	 *	\brief Wczytuje dane do struktury danych Kolejka.
+	*/
+	void wczytaj_dane_queue(int ilosc_liczb);
+	/*!
+	 *	\brief Wczytuje dane do struktury danych Lista Jednokierunkowa.
+	*/
+	void wczytaj_dane_list(int ilosc_liczb);
+	
+	void wyswietl_dane();
+	/*!
+	 *	\brief Wyswietla dane zawarte w Stosie.
+	*/
+	void wyswietl_dane_stack();
+	/*!
+	 *	\brief Wyswietla zawarte w Kolejce.
+	*/
+	void wyswietl_dane_queue();
+	/*!
+	 *	\brief Wyswietla zawarte w Liscie Jednokierunkowej.
+	*/
+	void wyswietl_dane_list();
+
+};
+
+
+#endif

@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$class_stack.html" title="Modeluje pojęcie Stack." alt="" coords="5,123,61,154"/>
+<area shape="rect" id="node4" href="$struct_element.html" title="Modeluje pojęcie Element." alt="" coords="93,6,163,37"/>
+<area shape="rect" id="node7" href="$class_single___list.html" title="Modeluje pojęcie Single_List." alt="" coords="85,123,171,154"/>
+<area shape="rect" id="node10" href="$class_queue.html" title="Modeluje pojęcie Queue." alt="" coords="195,123,256,154"/>
+</map>

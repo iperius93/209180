@@ -1,0 +1,18 @@
+/*!
+   \mainpage 2Ow1L - Program symuluje zachowanie manipulatora 2D
+
+   Aplikacja jest przykładem realizacji symulatora
+   ruchów manipulatora przez zmiane kątów przegubów.
+
+
+   \section etykieta-wazne-cechy Najważniejsze cechy
+
+   Aplikacja zbudowana została na trzech klasach Wektor która 
+   przechowywuje punkt przegubu, Ogniwo która zawiera punkt
+   przegubu, kąt przegubu oraz długość ramienia oraz z klasy 
+   głównej Manipulator.
+   \section etykieta-wazne-cechy Konstrukcja destruktora
+
+   
+
+ */

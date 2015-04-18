@@ -1,0 +1,103 @@
+#include "lista.hh"
+
+using namespace std;
+
+/*!
+ *   \file
+ *   \brief Definicja metod klasy Macierz
+ *
+ *
+ *
+ *
+*/
+
+
+/*!
+ * Metoda ktora otwiera plik w ktorym znajduja 
+   się wygenerowane liczby, i wczytuje te 
+   liczby do tablicy w obiekcie typu Lista.
+ */
+void Lista::wczytaj_dane_stack(int ilosc_liczb)
+{
+	int dane=0;
+	fstream plik_danych;
+	plik_danych.open("dane.txt",std::ios::in);
+	if( plik_danych.good() == true )
+	{
+		for(int i=0;i<ilosc_liczb;i++)
+		{
+			plik_danych >> dane;
+			S.push(dane);
+		}
+	} else cout << "Dostep do pliku zostal zabroniony!" << endl;
+	
+	plik_danych.close();
+}
+
+void Lista::wczytaj_dane_queue(int ilosc_liczb)
+{
+	int dane=0;
+	fstream plik_danych;
+	plik_danych.open("dane.txt",std::ios::in);
+	if( plik_danych.good() == true )
+	{
+		for(int i=0;i<ilosc_liczb;i++)
+		{
+			plik_danych >> dane;
+			Q.push(dane);
+		}
+	} else cout << "Dostep do pliku zostal zabroniony!" << endl;
+	
+	plik_danych.close();
+}
+
+void Lista::wczytaj_dane_list(int ilosc_liczb)
+{
+	int dane=0;
+	Element *p;
+	fstream plik_danych;
+	plik_danych.open("dane.txt",std::ios::in);
+	if( plik_danych.good() == true )
+	{
+		for(int i=0;i<ilosc_liczb;i++)
+		{
+			plik_danych >> dane;
+			p = new Element;
+			p->info = dane;
+			sl.push_front(p);
+			
+		}
+	} else cout << "Dostep do pliku zostal zabroniony!" << endl;
+	
+	plik_danych.close();
+}
+
+/*!
+ * Metoda ktora wyswietla liczby przechowywane przez tablice.
+ */
+void Lista::wyswietl_dane_stack()
+{
+	while(!S.empty())
+	{
+		//cout << S.top()->info<<endl;
+		S.pop();
+	}
+
+}
+
+
+void Lista::wyswietl_dane_queue()
+{
+	while(!Q.empty())
+	{
+		cout << Q.front()<<endl;
+		Q.pop();
+	}
+}
+
+void Lista::wyswietl_dane_list()
+{
+	//sl.showInfo();
+}
+
+

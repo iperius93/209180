@@ -1,0 +1,26 @@
+var class_manipulator =
+[
+    [ "Manipulator", "class_manipulator.html#a4c301d01641037e7548a1b87e6103f65", null ],
+    [ "DosEfektor", "class_manipulator.html#a8facc7e034b8be43bb016cf1a340d040", null ],
+    [ "DosNazwa", "class_manipulator.html#a68df6e78df019cda5465575acd4e012c", null ],
+    [ "DosNazwaKonfig", "class_manipulator.html#aac6a4d981218bb413c99e91e3ec8d594", null ],
+    [ "DosNazwaPostura", "class_manipulator.html#a607507e74457818642c8d5281699fd79", null ],
+    [ "DosPodstawa", "class_manipulator.html#a2455cd0ed6af8275062ae55b08a2ad8f", null ],
+    [ "LiczbaOgniw", "class_manipulator.html#a1301751b9affde2f306e29034eb47a66", null ],
+    [ "ObliczWspolrzedne", "class_manipulator.html#a282b2a21715ae356d35f6a73865fc88c", null ],
+    [ "ObliczWspolrzedneStart", "class_manipulator.html#a513615a6468595ec70ae7bcde111effa", null ],
+    [ "operator[]", "class_manipulator.html#a133217ff8a962450f23d2e6fc9524a4f", null ],
+    [ "WczytajPlikConfig", "class_manipulator.html#a7b478e27deeb270c0c59c11325fc82b6", null ],
+    [ "WczytajPlikPosturaJeden", "class_manipulator.html#a657081201b28140f54f5e4e5b08677cf", null ],
+    [ "WczytajPlikPostury", "class_manipulator.html#a5df91c7a9eecc3bf8a456b835be2d9c8", null ],
+    [ "WysKonfiguracje", "class_manipulator.html#a57f68ada28434d099d453d661ed2c5b0", null ],
+    [ "WysPosture", "class_manipulator.html#a36b8f9d9c86c344418ece6932d2a9cea", null ],
+    [ "ZapiszDoPliku", "class_manipulator.html#a2e853d4f1a43dd00828df43852b868d2", null ],
+    [ "Efektor", "class_manipulator.html#ade60451f2fc47769b986f4bbcfd95488", null ],
+    [ "ilosc_ogniw", "class_manipulator.html#a914fe0dbbd83153cb264b0da4c9429c8", null ],
+    [ "Nazwa", "class_manipulator.html#aa97b719da86762a588cf736724f95e33", null ],
+    [ "nazwa_pliku_konfig", "class_manipulator.html#ad4b773c6b3fba2ea471b005b4e8cacc6", null ],
+    [ "nazwa_pliku_postury", "class_manipulator.html#afe51ce863a6f18a10a0ebbcce0deaff0", null ],
+    [ "Podstawa", "class_manipulator.html#a933d51eb3dd36e1b88a087453bc12e74", null ],
+    [ "TabOgniw", "class_manipulator.html#a1f6eaee7dce4cc761bd88b7d3b7558dc", null ]
+];
