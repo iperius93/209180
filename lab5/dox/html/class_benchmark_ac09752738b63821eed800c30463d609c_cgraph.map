@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_lista.html#a3e2c7b63ec04a26fa077627d077b3a32" title="Wczytuje dane do struktury danych Lista Jednokierunkowa." alt="" coords="199,5,361,35"/>
+<area shape="rect" id="node5" href="$class_lista.html#a515870cb021cd7624582df00d0a73140" title="Wczytuje dane do struktury danych Kolejka." alt="" coords="187,58,373,89"/>
+<area shape="rect" id="node7" href="$class_lista.html#a57287985b35260123fd104639686c86e" title="Wczytuje dane do struktury danych Stos." alt="" coords="191,111,369,142"/>
+<area shape="rect" id="node9" href="$class_lista.html#aa99dbb06edbe1707b6052be3b5f9c16d" title="Wyswietla zawarte w Liscie Jednokierunkowej." alt="" coords="195,165,365,195"/>
+<area shape="rect" id="node11" href="$class_lista.html#a46f6340ecf1b4fbeb5426c9ff8f55010" title="Wyswietla zawarte w Kolejce." alt="" coords="184,218,376,249"/>
+<area shape="rect" id="node13" href="$class_lista.html#a91aa3c8e4401c2ae7be75030c14191bc" title="Wyswietla dane zawarte w Stosie." alt="" coords="187,271,373,302"/>
+</map>

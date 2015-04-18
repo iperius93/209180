@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>2Ow1L: Plik źródłowy lista.cpp</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">2Ow1L
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li><a href="dirs.html"><span>Katalogi</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('lista_8cpp.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">lista.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="lista_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="lista_8hh.html" title="Definicja klasy Lista.">lista.hh</a>&quot;</span>
+<a name="l00002"></a>00002 
+<a name="l00003"></a>00003 <span class="keyword">using namespace </span>std;
+<a name="l00004"></a>00004 
+<a name="l00020"></a><a class="code" href="class_lista.html#a57287985b35260123fd104639686c86e">00020</a> <span class="keywordtype">void</span> <a class="code" href="class_lista.html#a57287985b35260123fd104639686c86e" title="Wczytuje dane do struktury danych Stos.">Lista::wczytaj_dane_stack</a>(<span class="keywordtype">int</span> ilosc_liczb)
+<a name="l00021"></a>00021 {
+<a name="l00022"></a>00022         <span class="keywordtype">int</span> dane=0;
+<a name="l00023"></a>00023         fstream plik_danych;
+<a name="l00024"></a>00024         plik_danych.open(<span class="stringliteral">&quot;dane.txt&quot;</span>,std::ios::in);
+<a name="l00025"></a>00025         <span class="keywordflow">if</span>( plik_danych.good() == true )
+<a name="l00026"></a>00026         {
+<a name="l00027"></a>00027                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;ilosc_liczb;i++)
+<a name="l00028"></a>00028                 {
+<a name="l00029"></a>00029                         plik_danych &gt;&gt; dane;
+<a name="l00030"></a>00030                         S.push(dane);
+<a name="l00031"></a>00031                 }
+<a name="l00032"></a>00032         } <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;Dostep do pliku zostal zabroniony!&quot;</span> &lt;&lt; endl;
+<a name="l00033"></a>00033         
+<a name="l00034"></a>00034         plik_danych.close();
+<a name="l00035"></a>00035 }
+<a name="l00036"></a>00036 
+<a name="l00037"></a><a class="code" href="class_lista.html#a515870cb021cd7624582df00d0a73140">00037</a> <span class="keywordtype">void</span> <a class="code" href="class_lista.html#a515870cb021cd7624582df00d0a73140" title="Wczytuje dane do struktury danych Kolejka.">Lista::wczytaj_dane_queue</a>(<span class="keywordtype">int</span> ilosc_liczb)
+<a name="l00038"></a>00038 {
+<a name="l00039"></a>00039         <span class="keywordtype">int</span> dane=0;
+<a name="l00040"></a>00040         fstream plik_danych;
+<a name="l00041"></a>00041         plik_danych.open(<span class="stringliteral">&quot;dane.txt&quot;</span>,std::ios::in);
+<a name="l00042"></a>00042         <span class="keywordflow">if</span>( plik_danych.good() == true )
+<a name="l00043"></a>00043         {
+<a name="l00044"></a>00044                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;ilosc_liczb;i++)
+<a name="l00045"></a>00045                 {
+<a name="l00046"></a>00046                         plik_danych &gt;&gt; dane;
+<a name="l00047"></a>00047                         Q.push(dane);
+<a name="l00048"></a>00048                 }
+<a name="l00049"></a>00049         } <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;Dostep do pliku zostal zabroniony!&quot;</span> &lt;&lt; endl;
+<a name="l00050"></a>00050         
+<a name="l00051"></a>00051         plik_danych.close();
+<a name="l00052"></a>00052 }
+<a name="l00053"></a>00053 
+<a name="l00054"></a><a class="code" href="class_lista.html#a3e2c7b63ec04a26fa077627d077b3a32">00054</a> <span class="keywordtype">void</span> <a class="code" href="class_lista.html#a3e2c7b63ec04a26fa077627d077b3a32" title="Wczytuje dane do struktury danych Lista Jednokierunkowa.">Lista::wczytaj_dane_list</a>(<span class="keywordtype">int</span> ilosc_liczb)
+<a name="l00055"></a>00055 {
+<a name="l00056"></a>00056         <span class="keywordtype">int</span> dane=0;
+<a name="l00057"></a>00057         <a class="code" href="struct_element.html" title="Modeluje pojęcie Element.">Element</a> *p;
+<a name="l00058"></a>00058         fstream plik_danych;
+<a name="l00059"></a>00059         plik_danych.open(<span class="stringliteral">&quot;dane.txt&quot;</span>,std::ios::in);
+<a name="l00060"></a>00060         <span class="keywordflow">if</span>( plik_danych.good() == true )
+<a name="l00061"></a>00061         {
+<a name="l00062"></a>00062                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;ilosc_liczb;i++)
+<a name="l00063"></a>00063                 {
+<a name="l00064"></a>00064                         plik_danych &gt;&gt; dane;
+<a name="l00065"></a>00065                         p = <span class="keyword">new</span> <a class="code" href="struct_element.html" title="Modeluje pojęcie Element.">Element</a>;
+<a name="l00066"></a>00066                         p-&gt;<a class="code" href="struct_element.html#a74a3522b25500589751f47699a89c867" title="Zmienna przechowywująca informacje zawarta w elemencie.">info</a> = dane;
+<a name="l00067"></a>00067                         sl.push_front(p);
+<a name="l00068"></a>00068                         
+<a name="l00069"></a>00069                 }
+<a name="l00070"></a>00070         } <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;Dostep do pliku zostal zabroniony!&quot;</span> &lt;&lt; endl;
+<a name="l00071"></a>00071         
+<a name="l00072"></a>00072         plik_danych.close();
+<a name="l00073"></a>00073 }
+<a name="l00074"></a>00074 
+<a name="l00078"></a><a class="code" href="class_lista.html#a91aa3c8e4401c2ae7be75030c14191bc">00078</a> <span class="keywordtype">void</span> <a class="code" href="class_lista.html#a91aa3c8e4401c2ae7be75030c14191bc" title="Wyswietla dane zawarte w Stosie.">Lista::wyswietl_dane_stack</a>()
+<a name="l00079"></a>00079 {
+<a name="l00080"></a>00080         <span class="keywordflow">while</span>(!S.empty())
+<a name="l00081"></a>00081         {
+<a name="l00082"></a>00082                 <span class="comment">//cout &lt;&lt; S.top()-&gt;info&lt;&lt;endl;</span>
+<a name="l00083"></a>00083                 S.pop();
+<a name="l00084"></a>00084         }
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086 }
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 
+<a name="l00089"></a><a class="code" href="class_lista.html#a46f6340ecf1b4fbeb5426c9ff8f55010">00089</a> <span class="keywordtype">void</span> <a class="code" href="class_lista.html#a46f6340ecf1b4fbeb5426c9ff8f55010" title="Wyswietla zawarte w Kolejce.">Lista::wyswietl_dane_queue</a>()
+<a name="l00090"></a>00090 {
+<a name="l00091"></a>00091         <span class="keywordflow">while</span>(!Q.empty())
+<a name="l00092"></a>00092         {
+<a name="l00093"></a>00093                 <span class="comment">//cout &lt;&lt; Q.front()&lt;&lt;endl;</span>
+<a name="l00094"></a>00094                 Q.pop();
+<a name="l00095"></a>00095         }
+<a name="l00096"></a>00096 }
+<a name="l00097"></a>00097 
+<a name="l00098"></a><a class="code" href="class_lista.html#aa99dbb06edbe1707b6052be3b5f9c16d">00098</a> <span class="keywordtype">void</span> <a class="code" href="class_lista.html#aa99dbb06edbe1707b6052be3b5f9c16d" title="Wyswietla zawarte w Liscie Jednokierunkowej.">Lista::wyswietl_dane_list</a>()
+<a name="l00099"></a>00099 {
+<a name="l00100"></a>00100         <span class="comment">//sl.showInfo();</span>
+<a name="l00101"></a>00101 }
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103 
+</pre></div></div><!-- contents -->
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="lista_8cpp.html">lista.cpp</a>      </li>
+
+    <li class="footer">Wygenerowano Thu Mar 19 2015 08:31:55 dla 2Ow1L programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>
