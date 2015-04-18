@@ -1,6 +1,6 @@
 avrdude/configs/programmerconfig.1/baudrate=
 avrdude/configs/programmerconfig.1/description=Default AVRDude Programmer Configuration. Modify as required for your setup.
-avrdude/configs/programmerconfig.1/name=New Configuration
+avrdude/configs/programmerconfig.1/name=usbasp
 avrdude/configs/programmerconfig.1/port=
 avrdude/configs/programmerconfig.1/postAvrdudeDelayMs=
 avrdude/configs/programmerconfig.1/ppresetline=

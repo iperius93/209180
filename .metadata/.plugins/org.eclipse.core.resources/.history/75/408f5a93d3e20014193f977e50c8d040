@@ -1,0 +1,11 @@
+/*
+ * main.c
+ *
+ *  Created on: 14-04-2015
+ *      Author: rafal
+ */
+
+int main()
+{
+	return 0;
+}

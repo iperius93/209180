@@ -8,15 +8,15 @@
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="166" y="38"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="132" y="38"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="de.innot.avreclipse.actionset.avrdude" itemType="typeToolBarContribution" x="48" y="38"/>
 <coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="156" y="38"/>
 <coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="82" y="38"/>
-<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="38"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="38"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="96" y="38"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="68" y="38"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="38"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -28,36 +28,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="PCD8544.h" partName="PCD8544.h" path="/home/rafal/Pulpit/PAMSI/wys3310/PCD8544.h" title="PCD8544.h" tooltip="wys3310/PCD8544.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/wys3310/PCD8544.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="833" selectionTopPixel="225"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="PCD8544.c" partName="PCD8544.c" path="/home/rafal/Pulpit/PAMSI/wys3310/PCD8544.c" title="PCD8544.c" tooltip="wys3310/PCD8544.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/wys3310/PCD8544.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9550" selectionTopPixel="7878"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="/home/rafal/Pulpit/PAMSI/wys3310/main.c" title="main.c" tooltip="wys3310/main.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/wys3310/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="204" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="bmp.h" partName="bmp.h" path="/home/rafal/Pulpit/PAMSI/wys3310/bmp.h" title="bmp.h" tooltip="wys3310/bmp.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/wys3310/bmp.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2784" selectionTopPixel="242"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="PCD8544.h" partName="PCD8544.h" path="/home/rafal/Pulpit/PAMSI/wyswietlacz3310/PCD8544.h" title="PCD8544.h" tooltip="wyswietlacz3310/PCD8544.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/wyswietlacz3310/PCD8544.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="197" selectionTopPixel="0"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
@@ -75,6 +49,9 @@
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Warnings (1 item)"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="334" org.eclipse.ui.ide.pathField="132" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="324"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -102,7 +79,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="org.eclipse.cdt.ui.CPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -282,176 +259,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wyswietlacz3310/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wyswietlacz3310/PCD8544.c"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/home/rafal/Pulpit/ProgAVR/projektyavr/wysLCD/lcd44780.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wyswietlacz3310/PCD8544.h"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/home/rafal/Pulpit/ProgAVR/projektyavr/wysLCD/lcd44780.h"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/home/rafal/Pulpit/ProgAVR/projektyavr/wysLCD/lcd44780.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wyswietlacz3310/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wys3310/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wys3310/PCD8544.C"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wys3310/PCD8544.H"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wys3310/PCD8544.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wys3310/PCD8544.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wyswietlacz3310/PCD8544.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wyswietlacz3310/PCD8544.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wys3310/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/wys3310/bmp.h"/>
-</editors>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="152" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="150" y="0"/>
-</item>
-<item historyLabel="PCD8544.c" index="1">
-<position info="not_deleted" x="2812" y="0"/>
-</item>
-<item historyLabel="PCD8544.c" index="1">
-<position info="not_deleted" x="2845" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="176" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="152" y="0"/>
-</item>
-<item historyLabel="lcd44780.c" index="2">
-<position info="not_deleted" x="579" y="0"/>
-</item>
-<item historyLabel="PCD8544.h" index="3">
-<position info="not_deleted" x="548" y="0"/>
-</item>
-<item historyLabel="PCD8544.c" index="1">
-<position info="not_deleted" x="2845" y="0"/>
-</item>
-<item historyLabel="lcd44780.h" index="4">
-<position info="not_deleted" x="5086" y="0"/>
-</item>
-<item historyLabel="PCD8544.h" index="3">
-<position info="not_deleted" x="548" y="0"/>
-</item>
-<item historyLabel="PCD8544.c" index="1">
-<position info="not_deleted" x="2674" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="176" y="0"/>
-</item>
-<item historyLabel="lcd44780.h" index="5">
-<position info="not_deleted" x="5086" y="0"/>
-</item>
-<item historyLabel="main.c" index="6">
-<position info="not_deleted" x="128" y="0"/>
-</item>
-<item historyLabel="main.c" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PCD8544.C" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PCD8544.H" index="9">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PCD8544.h" index="10">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PCD8544.c" index="11">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PCD8544.c" index="12">
-<position info="not_deleted" x="2674" y="0"/>
-</item>
-<item historyLabel="PCD8544.c" index="11">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PCD8544.h" index="13">
-<position info="not_deleted" x="548" y="0"/>
-</item>
-<item historyLabel="PCD8544.c" index="11">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PCD8544.h" index="10">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PCD8544.c" index="11">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PCD8544.h" index="10">
-<position info="not_deleted" x="6841" y="0"/>
-</item>
-<item historyLabel="PCD8544.c" index="11">
-<position info="not_deleted" x="9625" y="0"/>
-</item>
-<item historyLabel="main.c" index="14">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PCD8544.c" index="11">
-<position info="not_deleted" x="9414" y="0"/>
-</item>
-<item historyLabel="PCD8544.h" index="10">
-<position info="not_deleted" x="6841" y="0"/>
-</item>
-<item historyLabel="main.c" index="14">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="bmp.h" index="15">
-<position info="not_deleted" x="2784" y="0"/>
-</item>
-<item historyLabel="PCD8544.c" index="11">
-<position info="not_deleted" x="246" y="0"/>
-</item>
-<item historyLabel="PCD8544.h" index="10">
-<position info="not_deleted" x="6841" y="0"/>
-</item>
-<item historyLabel="PCD8544.c" index="11">
-<position info="not_deleted" x="246" y="0"/>
-</item>
-<item historyLabel="main.c" index="14">
-<position info="not_deleted" x="204" y="0"/>
-</item>
-<item historyLabel="PCD8544.c" index="11">
-<position info="not_deleted" x="9550" y="0"/>
-</item>
-<item historyLabel="PCD8544.h" index="10">
-<position info="not_deleted" x="935" y="0"/>
-</item>
-<item historyLabel="PCD8544.h" index="13">
-<position info="not_deleted" x="197" y="0"/>
-</item>
-<item historyLabel="PCD8544.h" index="10">
-<position info="not_deleted" x="833" y="0"/>
-</item>
-<item historyLabel="PCD8544.c" index="11">
-<position info="not_deleted" x="9550" y="0"/>
-</item>
-<item historyLabel="main.c" index="14">
-<position info="not_deleted" x="204" y="0"/>
-</item>
-<item historyLabel="PCD8544.h" index="13">
-<position info="not_deleted" x="197" y="0"/>
-</item>
-<item historyLabel="PCD8544.h" index="10">
-<position info="not_deleted" x="927" y="0"/>
-</item>
-<item historyLabel="PCD8544.h" index="13">
-<position info="not_deleted" x="197" y="0"/>
-</item>
-<item historyLabel="PCD8544.h" index="10">
-<position info="not_deleted" x="787" y="0"/>
-</item>
-<item historyLabel="PCD8544.h" index="13">
-<position info="not_deleted" x="197" y="0"/>
-</item>
-<item active="true" historyLabel="PCD8544.h" index="10">
-<position info="not_deleted" x="787" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -468,6 +276,12 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="wasd/main.c">
+<persistable path="/wasd/main.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="wasd2222222222222/main.c">
+<persistable path="/wasd2222222222222/main.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="PCD8544.h" tooltip="wyswietlacz3310/PCD8544.h">
 <persistable path="/wyswietlacz3310/PCD8544.h"/>
 </file>
@@ -506,12 +320,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stackonarray.cpp" tooltip="Lab_1/program/src/stackonarray.cpp">
 <persistable path="/Lab_1/program/src/stackonarray.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="mylist.cpp" tooltip="Lab_1/program/src/mylist.cpp">
-<persistable path="/Lab_1/program/src/mylist.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="mybenchmark.cpp" tooltip="Lab_1/program/src/mybenchmark.cpp">
-<persistable path="/Lab_1/program/src/mybenchmark.cpp"/>
 </file>
 </mruList>
 </workbench>
