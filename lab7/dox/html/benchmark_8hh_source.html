@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>2Ow1L: Plik źródłowy benchmark.hh</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">2Ow1L
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li><a href="dirs.html"><span>Katalogi</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('benchmark_8hh.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">benchmark.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="benchmark_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef BENCHMARK_HH</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define BENCHMARK_HH</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;sys/time.h&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;unistd.h&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;ctime&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="keyword">using namespace </span>std;
+<a name="l00012"></a>00012 
+<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;<a class="code" href="lista_8hh.html" title="Definicja klasy Lista.">lista.hh</a>&quot;</span>
+<a name="l00019"></a>00019 
+<a name="l00030"></a><a class="code" href="class_benchmark.html">00030</a> <span class="keyword">class </span><a class="code" href="class_benchmark.html" title="Modeluje pojęcie Benchmark.">Benchmark</a>
+<a name="l00031"></a>00031 {
+<a name="l00038"></a><a class="code" href="class_benchmark.html#aafd3a0517f4a5ef0a3a8d1b24b95f3ad">00038</a>         fstream <a class="code" href="class_benchmark.html#aafd3a0517f4a5ef0a3a8d1b24b95f3ad" title="Zmienna skojarzona z plikiem danych.">plik_danych</a>;
+<a name="l00046"></a><a class="code" href="class_benchmark.html#aaad39630fe3fd52af484a885bd207a58">00046</a>         fstream <a class="code" href="class_benchmark.html#aaad39630fe3fd52af484a885bd207a58" title="Zmienna skojarzona z plikiem wynikow.">plik_wynikow</a>;
+<a name="l00047"></a>00047         
+<a name="l00048"></a>00048         <span class="keyword">public</span>:
+<a name="l00055"></a>00055         <span class="keywordtype">void</span> generuj_liczby(<span class="keywordtype">int</span> ilosc, <span class="keywordtype">int</span> zakres);
+<a name="l00056"></a>00056         
+<a name="l00065"></a>00065         <span class="keywordtype">void</span> testuj(<a class="code" href="class_lista.html" title="Modeluje pojęcie Lista.">Lista</a> Testowa, <span class="keywordtype">int</span> rodzaj_listy, <span class="keywordtype">int</span> powtorzenia, <span class="keywordtype">int</span> ilosc_liczb);
+<a name="l00066"></a>00066         
+<a name="l00072"></a><a class="code" href="class_benchmark.html#acfca497989836a688d44477802e822d8">00072</a>         <a class="code" href="class_benchmark.html" title="Modeluje pojęcie Benchmark.">Benchmark</a>()
+<a name="l00073"></a>00073         {
+<a name="l00074"></a>00074                 plik_wynikow.open(<span class="stringliteral">&quot;wyniki.txt&quot;</span>,ios::out | ios::trunc);
+<a name="l00075"></a>00075                 <span class="keywordflow">if</span>( plik_wynikow.good() == true )
+<a name="l00076"></a>00076                 {
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078                 } <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;Dostep do pliku zostal zabroniony!&quot;</span> &lt;&lt; endl;
+<a name="l00079"></a>00079                 
+<a name="l00080"></a>00080                 plik_wynikow.close();
+<a name="l00081"></a>00081         }
+<a name="l00082"></a>00082         
+<a name="l00083"></a>00083 };
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086 <span class="preprocessor">#endif</span>
+</pre></div></div><!-- contents -->
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="benchmark_8hh.html">benchmark.hh</a>      </li>
+
+    <li class="footer">Wygenerowano Thu Mar 19 2015 08:31:55 dla 2Ow1L programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>

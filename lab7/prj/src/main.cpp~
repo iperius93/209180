@@ -1,0 +1,228 @@
+#include <iostream>
+#include <sys/time.h>
+#include <unistd.h>
+#include <cstdlib>
+#include <ctime>
+#include <fstream>
+#include <list>
+
+class Obserwator
+{
+	public:
+	virtual void update() = 0;
+};
+
+class Obserwowany
+{
+	protected:
+		std::list <Obserwator*> obserwatorzy;
+	public:
+    	void dodaj(Obserwator *o) {
+        	obserwatorzy.push_back (o);
+    	}
+    	void usun(Obserwator *o) {
+        	obserwatorzy.remove (o);
+   	}
+	void powiadom () {
+        	std::list<Obserwator *>::iterator it;
+        	for (it = obserwatorzy.begin(); it != obserwatorzy.end(); it++) {
+        	    (*it)->update ();
+        }
+    }
+};
+
+
+#include "element.hh"
+#include "single_list.hh"
+#include "queue.hh"
+#include "stack.hh"
+#include "lista.hh"
+#include "benchmark.hh"
+
+class ObserwowanyBenchmark : public Obserwowany, public Benchmark
+{
+	string stan;
+	public:
+ 
+        std::string pobierzStan () {
+        	return stan;
+   	}
+ 
+        void ustawStan (const std::string& s) {
+        	stan = s;
+        	std::cout << "Stan: " << stan << std::endl;
+        	powiadom();
+    	}
+};
+
+class ObserwatorUser : public Obserwator
+{
+	int idBenchmarku;
+	ObserwowanyBenchmark *test;
+
+	fstream plik_log;
+
+	public:
+	ObserwatorUser(ObserwowanyBenchmark *h, int id)    //konstruktor
+	{
+		idBenchmarku = id;
+		test = h;
+	} 
+	
+	void update()
+	{
+		string stan = test->pobierzStan();
+
+		plik_log.open("log.txt",std::ios::out | std::ios::app);
+		if( plik_log.good() == true )
+		{
+			if (!stan.compare ("Rozpoczynam generowanie liczb")) 
+			{
+           			plik_log <<"Benchmark " << idBenchmarku << ": Rozpoczął losowanie liczb.\n" << std::endl;
+        		}
+			else if (!stan.compare ("Liczby wygenerowane")) 
+			{
+           			plik_log << "Benchmark " << idBenchmarku << ": Wygenerowal losowe liczby.\n" << std::endl;
+        		}
+			else if (!stan.compare ("Rozpoczalem test")) 
+			{
+            			plik_log << "Benchmark " << idBenchmarku << ": Rozpoczal wykonywanie testu.\n" << std::endl;
+			}
+			else if (!stan.compare ("Zakonczyłem test")) 
+			{
+            			plik_log << "Benchmark" << idBenchmarku << ": Zakonczyl wykonywanie testu.\n" << std::endl;
+			}
+
+		} else cout << "Dostep do pliku zostal zabroniony!" << endl;
+	
+		plik_log.close();
+
+		
+		if (!stan.compare ("Rozpoczynam generowanie liczb")) 
+		{
+           		std::cout <<"Benchmark " << idBenchmarku << ": Rozpoczął losowanie liczb.\n" << std::endl;
+        	}
+		else if (!stan.compare ("Liczby wygenerowane")) 
+		{
+           		std::cout <<"Benchmark " << idBenchmarku << ": Wygenerowal losowe liczby.\n" << std::endl;
+        	}
+		else if (!stan.compare ("Rozpoczalem test")) {
+            		std::cout << "Benchmark " << idBenchmarku << ": Rozpoczal wykonywanie testu.\n" << std::endl;
+		}
+		else if (!stan.compare ("Zakonczyłem test")) {
+            		std::cout << "Benchmark" << idBenchmarku << ": Zakonczyl wykonywanie testu.\n" << std::endl;
+		}
+	}	
+};
+
+
+using namespace std;	
+
+int main()
+{
+	time_t czas;  //tworzenie zmiennej przechowującej czas
+	time(&czas);  //pobranie do niej czasu
+	char godzina[3],minuta[3],sekunda[3]; //po 3, bo trzeba pomieścić znak \0
+	char*c_czas = ctime(&czas);
+	godzina[0]=c_czas[11];
+	godzina[1]=c_czas[12];
+	minuta[0]=c_czas[14]; //przeskoczenie dwukropka
+	minuta[1]=c_czas[15];
+	sekunda[0]=c_czas[17];//przeskoczenie 2. dwukropka
+	sekunda[1]=c_czas[18];
+	int gdz,min,sek;
+	gdz = atoi(godzina);
+	min = atoi(minuta);
+	sek = atoi(sekunda);
+
+	ObserwowanyBenchmark test;
+	Obserwator *user1 = new ObserwatorUser(&test,1);
+	
+	test.dodaj(user1);
+
+	
+	int ilosc = 10;
+	int ilosc2 = 10000000; 
+	Benchmark Test;
+	Lista Testowana;
+
+	test.ustawStan("Rozpoczynam generowanie liczb");
+	Test.generuj_liczby(ilosc2,30);
+	test.ustawStan("Liczby wygenerowane");
+	
+	// Lista jednokierunkowa 1
+	// Kolejka 2
+	// Stos 3
+	for(ilosc=10;ilosc<=ilosc2;ilosc*=10)
+	{
+		test.ustawStan("Rozpoczalem test");
+		test.testuj(Testowana,1,10,ilosc);
+		test.ustawStan("Zakonczyłem test");
+	}
+	
+	delete user1;
+	
+	
+	
+/*	Single_List sl;
+	Element *p;
+	int i;
+	
+	cout << "(A) : "; sl.showInfo();
+	
+	for(i=1;i<=5;i++)
+	{
+		p = new Element;
+		p->info = i;
+		sl.push_front(p);
+	}
+	
+	cout << "(B) : "; sl.showInfo();
+	
+	for(i = 1; i <= 5; i++)
+	{
+		p = new Element;
+		p->info = i;
+		sl.push_back(p);
+	}
+	
+	cout << "(C) : "; sl.showInfo();
+
+
+	sl.pop_front();
+	  
+	cout << "(D) : ";   sl.showInfo();
+	*/
+	
+	
+	
+	
+	
+	
+/*	Stack S;
+	int i;
+	
+	for(i=1;i<=10;i++) S.push(i);
+	
+	while(!S.empty())
+	{
+		cout << S.top()->info<<endl;
+		S.pop();
+	}
+	*/
+	
+/*	Queue Q;
+	int i;
+	
+	for(i=1; i<=10; i++) Q.push(i);
+	
+	while(!Q.empty())
+	{
+		cout << Q.front()<<endl;
+		Q.pop();
+	}*/
+	
+	
+	return 0;
+
+}

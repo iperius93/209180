@@ -1,0 +1,95 @@
+#ifndef LISTA_HH
+#define LISTA_HH
+
+/*!
+ *	\file 
+	\brief Definicja klasy Lista
+
+*/
+
+#include <iostream>
+#include <sys/time.h>
+#include <unistd.h>
+#include <cstdlib>
+#include <ctime>
+#include <fstream>
+
+#include "queue.hh"
+#include "stack.hh"
+#include "single_list.hh"
+
+using namespace std;
+
+/*!
+ *	\brief Modeluje pojęcie Lista
+ *
+ *	Klasa modeluje pojecie Listy w naszym przypadku
+ *	tablice o zadanym rozmiarze w zmiennej ilosc 
+ * 	typu int.
+*/
+
+class Lista
+{
+	/*!
+	 *	\brief Obiekt typu Single_List.
+	 *	
+	 *	Obiekt jest po prostu Listą jednokierunkową.
+	*/
+	Single_List sl;
+	/*!
+	 *	\brief Obiekt typu Stack.
+	 *	
+	 *	Obiekt jest po prostu Stosem.
+	*/
+	Stack S;
+	/*!
+	 *	\brief Obiekt typu Queue.
+	 *	
+	 *	Obiekt jest po prostu Kolejką.
+	*/
+	Queue Q;
+	
+	/*!
+	 *	\brief Zmienna przechowywująca ilość elementow.
+	 *	
+	 *	Zmienna typu int, ktora zawiera liczbe elementow 
+		w strukturze np. w stosie, kolejce, liscie.
+	*/
+	int ilosc;
+	
+	public:
+	
+	/*!
+	 *	\brief Wczytuje dane do struktury danych Stos.
+	*/
+	void wczytaj_dane_stack(int ilosc_liczb);
+	/*!
+	 *	\brief Wczytuje dane do struktury danych Kolejka.
+	*/
+	void wczytaj_dane_queue(int ilosc_liczb);
+	/*!
+	 *	\brief Wczytuje dane do struktury danych Lista Jednokierunkowa.
+	*/
+	void wczytaj_dane_list(int ilosc_liczb);
+	
+	/*!
+	 *	\brief Wyswietla dane zawarte w Stosie.
+	*/
+	void wyswietl_dane_stack();
+	/*!
+	 *	\brief Wyswietla zawarte w Kolejce.
+	*/
+	void wyswietl_dane_queue();
+	/*!
+	 *	\brief Wyswietla zawarte w Liscie Jednokierunkowej.
+	*/
+	void wyswietl_dane_list();
+
+	/*!
+	 *	\brief Zwraca adres do tablicy, typu int.
+	*/
+	int* zwroc_adres();
+};
+
+
+#endif

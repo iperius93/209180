@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>2Ow1L: Plik źródłowy single_list.cpp</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">2Ow1L
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li><a href="dirs.html"><span>Katalogi</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('single__list_8cpp.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">single_list.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="single__list_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include &lt;sys/time.h&gt;</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include &lt;unistd.h&gt;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;ctime&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="single__list_8hh.html" title="Definicja klasy Single_List.">single_list.hh</a>&quot;</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 <span class="keyword">using namespace </span>std;
+<a name="l00011"></a>00011 
+<a name="l00012"></a><a class="code" href="class_single___list.html#ac31deeb27999166e454201ae98d2103c">00012</a> <span class="keywordtype">int</span> <a class="code" href="class_single___list.html#ac31deeb27999166e454201ae98d2103c" title="Metoda informująca o ilosci elementow.">Single_List::size</a>()
+<a name="l00013"></a>00013 {
+<a name="l00014"></a>00014         <span class="keywordflow">return</span> counter;
+<a name="l00015"></a>00015 }
+<a name="l00016"></a>00016         
+<a name="l00017"></a><a class="code" href="class_single___list.html#a1245b4cfa88e5840502680a27a485c73">00017</a> <a class="code" href="struct_element.html" title="Modeluje pojęcie Element.">Element</a>* <a class="code" href="class_single___list.html#a1245b4cfa88e5840502680a27a485c73" title="Metoda dodaje element na początku Listy.">Single_List::push_front</a>(<a class="code" href="struct_element.html" title="Modeluje pojęcie Element.">Element</a> * p)
+<a name="l00018"></a>00018 {
+<a name="l00019"></a>00019         p-&gt;<a class="code" href="struct_element.html#aa4abb0d5679fabd8208a4c6525dd1dc8" title="Wskaźnik na następny element.">next</a> = front;
+<a name="l00020"></a>00020         front = p;
+<a name="l00021"></a>00021         <span class="keywordflow">if</span>(!back) back = front;
+<a name="l00022"></a>00022         counter++;
+<a name="l00023"></a>00023         <span class="keywordflow">return</span> front;
+<a name="l00024"></a>00024 }
+<a name="l00025"></a>00025         
+<a name="l00026"></a><a class="code" href="class_single___list.html#a7a7ab28871f3ef12d1cb0348879b82a1">00026</a> <a class="code" href="struct_element.html" title="Modeluje pojęcie Element.">Element</a>* <a class="code" href="class_single___list.html#a7a7ab28871f3ef12d1cb0348879b82a1" title="Metoda dodaje element na końcu Listy.">Single_List::push_back</a>(<a class="code" href="struct_element.html" title="Modeluje pojęcie Element.">Element</a> *p)
+<a name="l00027"></a>00027 {
+<a name="l00028"></a>00028         <span class="keywordflow">if</span>(back) back-&gt;<a class="code" href="struct_element.html#aa4abb0d5679fabd8208a4c6525dd1dc8" title="Wskaźnik na następny element.">next</a> = p;
+<a name="l00029"></a>00029         p-&gt;<a class="code" href="struct_element.html#aa4abb0d5679fabd8208a4c6525dd1dc8" title="Wskaźnik na następny element.">next</a> = NULL;
+<a name="l00030"></a>00030         back = p;
+<a name="l00031"></a>00031         <span class="keywordflow">if</span>(!front) front = back;
+<a name="l00032"></a>00032         counter++;
+<a name="l00033"></a>00033         <span class="keywordflow">return</span> back;
+<a name="l00034"></a>00034 }
+<a name="l00035"></a>00035         
+<a name="l00036"></a><a class="code" href="class_single___list.html#add2430cf7204f2f204b5a8bd2bd421eb">00036</a> <a class="code" href="struct_element.html" title="Modeluje pojęcie Element.">Element</a>* <a class="code" href="class_single___list.html#add2430cf7204f2f204b5a8bd2bd421eb" title="Metoda zdejmuje element z początku Listy.">Single_List::pop_front</a>()
+<a name="l00037"></a>00037 {
+<a name="l00038"></a>00038         <a class="code" href="struct_element.html" title="Modeluje pojęcie Element.">Element</a> *p;
+<a name="l00039"></a>00039                 
+<a name="l00040"></a>00040         <span class="keywordflow">if</span>(front)
+<a name="l00041"></a>00041         {
+<a name="l00042"></a>00042                 p = front;
+<a name="l00043"></a>00043                 front = front-&gt;<a class="code" href="struct_element.html#aa4abb0d5679fabd8208a4c6525dd1dc8" title="Wskaźnik na następny element.">next</a>;
+<a name="l00044"></a>00044                 <span class="keywordflow">if</span>(!front) back = NULL;
+<a name="l00045"></a>00045                 counter--;
+<a name="l00046"></a>00046                 <span class="keywordflow">return</span> p;
+<a name="l00047"></a>00047         }
+<a name="l00048"></a>00048         <span class="keywordflow">else</span> <span class="keywordflow">return</span> NULL;
+<a name="l00049"></a>00049 }
+<a name="l00050"></a>00050         
+<a name="l00051"></a><a class="code" href="class_single___list.html#a1dcf9ac3b237ba5e575c129cb785e3b0">00051</a> <a class="code" href="struct_element.html" title="Modeluje pojęcie Element.">Element</a>* <a class="code" href="class_single___list.html#a1dcf9ac3b237ba5e575c129cb785e3b0" title="Metoda zdejmuje element z końca Listy.">Single_List::pop_back</a>()
+<a name="l00052"></a>00052 {
+<a name="l00053"></a>00053         <a class="code" href="struct_element.html" title="Modeluje pojęcie Element.">Element</a>* p;
+<a name="l00054"></a>00054         <span class="keywordflow">if</span>(back)
+<a name="l00055"></a>00055         {
+<a name="l00056"></a>00056                 p = back;
+<a name="l00057"></a>00057                 <span class="keywordflow">if</span>(p == front) front = back = NULL;
+<a name="l00058"></a>00058                 <span class="keywordflow">else</span>
+<a name="l00059"></a>00059                 {
+<a name="l00060"></a>00060                         back = front;
+<a name="l00061"></a>00061                         <span class="keywordflow">while</span>(back-&gt;next != p) back = back-&gt;<a class="code" href="struct_element.html#aa4abb0d5679fabd8208a4c6525dd1dc8" title="Wskaźnik na następny element.">next</a>;
+<a name="l00062"></a>00062                         back-&gt;<a class="code" href="struct_element.html#aa4abb0d5679fabd8208a4c6525dd1dc8" title="Wskaźnik na następny element.">next</a> = NULL;
+<a name="l00063"></a>00063                 }
+<a name="l00064"></a>00064                 counter--;
+<a name="l00065"></a>00065                 <span class="keywordflow">return</span> p;
+<a name="l00066"></a>00066         }
+<a name="l00067"></a>00067         <span class="keywordflow">else</span> <span class="keywordflow">return</span> NULL;
+<a name="l00068"></a>00068 }
+<a name="l00069"></a>00069         
+<a name="l00070"></a><a class="code" href="class_single___list.html#a22ae6a55a9efb44a5940b18efb79902b">00070</a> <span class="keywordtype">void</span> <a class="code" href="class_single___list.html#a22ae6a55a9efb44a5940b18efb79902b" title="Metoda wyświetla zawartość całej Listy.">Single_List::showInfo</a>()
+<a name="l00071"></a>00071 {
+<a name="l00072"></a>00072         <a class="code" href="struct_element.html" title="Modeluje pojęcie Element.">Element</a> *p;
+<a name="l00073"></a>00073         <span class="keywordflow">if</span>(!front) cout &lt;&lt; <span class="stringliteral">&quot;Lista jest pusta.&quot;</span> &lt;&lt; endl;
+<a name="l00074"></a>00074         <span class="keywordflow">else</span>
+<a name="l00075"></a>00075         {
+<a name="l00076"></a>00076                 p = front;
+<a name="l00077"></a>00077                 <span class="keywordflow">while</span>(p)
+<a name="l00078"></a>00078                 {
+<a name="l00079"></a>00079                         cout &lt;&lt; p-&gt;<a class="code" href="struct_element.html#a74a3522b25500589751f47699a89c867" title="Zmienna przechowywująca informacje zawarta w elemencie.">info</a>&lt;&lt; <span class="stringliteral">&quot; &quot;</span>;
+<a name="l00080"></a>00080                         p = p-&gt;<a class="code" href="struct_element.html#aa4abb0d5679fabd8208a4c6525dd1dc8" title="Wskaźnik na następny element.">next</a>;
+<a name="l00081"></a>00081                 }
+<a name="l00082"></a>00082                 cout &lt;&lt; endl;
+<a name="l00083"></a>00083         }
+<a name="l00084"></a>00084 }
+</pre></div></div><!-- contents -->
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="single__list_8cpp.html">single_list.cpp</a>      </li>
+
+    <li class="footer">Wygenerowano Thu Mar 19 2015 08:31:55 dla 2Ow1L programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>
