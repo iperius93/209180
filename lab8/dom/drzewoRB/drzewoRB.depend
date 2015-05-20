@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1432155340 source:/home/rafal/Pulpit/ProgAVR/programy/drzewoRB/main.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	<ctime>
+	"drzewoRB.h"
+	"benchmark.h"
+
+1432155811 source:/home/rafal/Pulpit/ProgAVR/programy/drzewoRB/benchmark.cpp
+	"benchmark.h"
+	"drzewoRB.h"
+
+1432154211 /home/rafal/Pulpit/ProgAVR/programy/drzewoRB/benchmark.h
+	<iostream>
+	<sys/time.h>
+	<unistd.h>
+	<cstdlib>
+	<ctime>
+	<fstream>
+	"drzewoRB.h"
+
+1432156085 /home/rafal/Pulpit/ProgAVR/programy/drzewoRB/drzewoRB.h
+	<iostream>
+	<sys/time.h>
+	<unistd.h>
+	<cstdlib>
+	<ctime>
+	<fstream>
+
+1432154041 source:/home/rafal/Pulpit/ProgAVR/programy/drzewoRB/drzewoRB.cpp
+	"drzewoRB.h"
+
