@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1431596166 source:/home/rafal/Pulpit/ProgAVR/programy/drzewo/main.cpp
-	<iostream>
-	<fstream>
-	<sys/time.h>
-	<unistd.h>
-	<cstdlib>
-	<ctime>
-
