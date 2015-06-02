@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classdrzewo_r_b.html#ad192235c260b466ddffc3194fcbfbc93" title="Dodaje nowy wezel do drzewa." alt="" coords="179,5,307,35"/>
-<area shape="rect" id="node9" href="$classdrzewo_r_b.html#ae704f77b902d166331880b1d78b15783" title="Usuwa wezeł którego adres podany jest jako parametr." alt="" coords="183,58,303,89"/>
-<area shape="rect" id="node5" href="$class_benchmark.html#a752210b9eb1c1d7b6a932b326854d06d" title="Testuje drzewo czerwono&#45;czarne i zapisuje wyniki do pliku wynikow." alt="" coords="356,5,484,35"/>
-<area shape="rect" id="node7" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="533,5,584,35"/>
-</map>

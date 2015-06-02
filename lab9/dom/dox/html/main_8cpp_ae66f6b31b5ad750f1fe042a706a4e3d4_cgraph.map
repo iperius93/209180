@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$class_benchmark.html#aa5fa344572d7ee2a2320aa8074610304" title="Generuje losowe liczby i zapisuje do pliku." alt="" coords="104,5,288,35"/>
-<area shape="rect" id="node5" href="$class_benchmark.html#a8738e73f9d9bcb2efa3a435f2337a25e" title="Testuje Graf i zapisuje wyniki do pliku wynikow." alt="" coords="132,58,260,89"/>
-<area shape="rect" id="node7" href="$classgraf.html#adb2913b80837d0593975f5739b9437ac" title="Inicjalizuje graf danymi z zewnatrz." alt="" coords="336,31,443,62"/>
-<area shape="rect" id="node9" href="$classgraf.html#a482870579bf368c801de5f4a72b6603d" title="BFS &#45; przeszukiwanie wszerz." alt="" coords="351,85,428,115"/>
-</map>

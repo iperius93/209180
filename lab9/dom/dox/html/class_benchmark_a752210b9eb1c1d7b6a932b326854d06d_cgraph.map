@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$classdrzewo_r_b.html#ad192235c260b466ddffc3194fcbfbc93" title="Dodaje nowy wezel do drzewa." alt="" coords="187,31,315,62"/>
-<area shape="rect" id="node9" href="$classdrzewo_r_b.html#a5c15e4027913d2e65f4dbda3902d3546" title="Funkcja odpowiedzialna za wyszukiwanie elementow na drzewie." alt="" coords="185,85,316,115"/>
-<area shape="rect" id="node5" href="$classdrzewo_r_b.html#ad933a89c165a0ebf43166922fb51f539" title="Funkcja dokonująca rotacji w lewo wezełow w drzewie." alt="" coords="367,5,489,35"/>
-<area shape="rect" id="node7" href="$classdrzewo_r_b.html#a4fc894b8aefb89abf517fb1f5a2b5131" title="Funkcja dokonująca rotacji w prawo wezełow w drzewie." alt="" coords="367,58,489,89"/>
-</map>

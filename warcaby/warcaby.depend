@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1433279808 source:/home/rafal/Pulpit/ProgAVR/programy/warcaby/main.cpp
+	<iostream>
+	"plansza.h"
+
+1433278190 /home/rafal/Pulpit/ProgAVR/programy/warcaby/plansza.h
+	<iostream>
+	<string>
+
+1433280577 source:/home/rafal/Pulpit/ProgAVR/programy/warcaby/plansza.cpp
+	<ctime>
+	<stdio.h>
+	<string.h>
+	"plansza.h"
+
