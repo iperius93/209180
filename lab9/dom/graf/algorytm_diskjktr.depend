@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1433286804 source:/home/rafal/Pulpit/ProgAVR/programy/algorytm_diskjktr/main.cpp
+	<iostream>
+	<iomanip>
+	"graf.hh"
+	"benchmark.hh"
+
+1433285962 source:/home/rafal/Pulpit/ProgAVR/programy/algorytm_diskjktr/graf.cpp
+	"graf.hh"
+	<fstream>
+
+1433283074 /home/rafal/Pulpit/ProgAVR/programy/algorytm_diskjktr/graf.hh
+	<iomanip>
+	<iostream>
+
+1433286384 source:/home/rafal/Pulpit/ProgAVR/programy/algorytm_diskjktr/benchmark.cpp
+	"benchmark.hh"
+	"graf.hh"
+
+1433283828 /home/rafal/Pulpit/ProgAVR/programy/algorytm_diskjktr/benchmark.hh
+	<iostream>
+	<sys/time.h>
+	<unistd.h>
+	<cstdlib>
+	<ctime>
+	<fstream>
+	"graf.hh"
+

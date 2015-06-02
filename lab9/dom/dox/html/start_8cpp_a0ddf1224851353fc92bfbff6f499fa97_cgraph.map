@@ -1,0 +1,19 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_scena.html#a4b36d473c9c14edb2f04dd2f17ead836" title="Rozpoczyna prace na scenie." alt="" coords="104,325,275,355"/>
+<area shape="rect" id="node5" href="$class_manipulator.html#a7b478e27deeb270c0c59c11325fc82b6" title="Metoda wczytujaca plik configuracyjny." alt="" coords="364,271,569,302"/>
+<area shape="rect" id="node9" href="$class_manipulator.html#a57f68ada28434d099d453d661ed2c5b0" title="Wyswietla konfiguracje manipulatora." alt="" coords="367,58,567,89"/>
+<area shape="rect" id="node11" href="$class_manipulator.html#a513615a6468595ec70ae7bcde111effa" title="Wylicza wspołrzedne przegobow (prosta)" alt="" coords="345,111,588,142"/>
+<area shape="rect" id="node13" href="$class_manipulator.html#a2e853d4f1a43dd00828df43852b868d2" title="Metoda zapisuje wspolrzedne do pliku." alt="" coords="373,165,560,195"/>
+<area shape="rect" id="node15" href="$class_manipulator.html#a36b8f9d9c86c344418ece6932d2a9cea" title="Wyswietla posture manipulatora." alt="" coords="381,218,552,249"/>
+<area shape="rect" id="node17" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a34bd48f57c0fd69c12bf4127a1cacd8f" title="Dodaje nazwê pliku." alt="" coords="324,5,609,35"/>
+<area shape="rect" id="node21" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a200ce6bdb980c314a9eafe49e8f2dd5e" title="Inicjalizuje po³±czenie z programem gnuplot." alt="" coords="351,325,583,355"/>
+<area shape="rect" id="node23" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a10950349b348fd3a3d4143e95337527c" title="Zmienia tryb rysowania." alt="" coords="333,378,600,409"/>
+<area shape="rect" id="node25" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a54c6e9cf9ab2eae479451fd953c2717c" title="Ustawia zakres osi OY." alt="" coords="333,431,600,462"/>
+<area shape="rect" id="node27" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a9c91987dfc869d6fcea96205c581daef" title="Ustawia zakres osi OX." alt="" coords="333,485,600,515"/>
+<area shape="rect" id="node29" href="$class_pz_g_1_1_lacze_do_g_n_u_plota.html#a065f5b8402737cc62b0ad4f66d028335" title="PzG::LaczeDoGNUPlota::Rysuj" alt="" coords="361,538,572,569"/>
+<area shape="rect" id="node31" href="$class_manipulator.html#a5df91c7a9eecc3bf8a456b835be2d9c8" title="Metoda wczytujaca plik z postura." alt="" coords="361,591,572,622"/>
+<area shape="rect" id="node34" href="$class_manipulator.html#a282b2a21715ae356d35f6a73865fc88c" title="Manipulator::ObliczWspolrzedne" alt="" coords="360,645,573,675"/>
+<area shape="rect" id="node7" href="$_modul_8hh.html#afd9880ba70eaefe9cbf96c195b1a3118" title="Sprawdza czy w napisie nie znajduja sie niedozwolone znaki." alt="" coords="672,431,781,462"/>
+<area shape="rect" id="node19" href="$namespace_pz_g.html#ae1ae4d36f66c77879380ba73da8e20e3" title="PzG::CzyJestPlik" alt="" coords="664,5,789,35"/>
+<area shape="rect" id="node36" href="$_modul_8hh.html#ab3be25f351bc91d3deb7236f92664bc5" title="Zamienia stopnie na radiany." alt="" coords="660,645,793,675"/>
+</map>

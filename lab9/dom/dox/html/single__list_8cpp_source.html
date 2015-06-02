@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>2Ow1L: Plik źródłowy single_list.cpp</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">2Ow1L
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Wygenerowano przez Doxygen 1.7.6.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li><a href="dirs.html"><span>Katalogi</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+</div>
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+  initNavTree('single__list_8cpp.html','');
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">single_list.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="single__list_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &lt;iostream&gt;</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include &lt;sys/time.h&gt;</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include &lt;unistd.h&gt;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;cstdlib&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;ctime&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;fstream&gt;</span>
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="single__list_8hh.html" title="Definicja klasy Single_List.">single_list.hh</a>&quot;</span>
+<a name="l00009"></a>00009 
+<a name="l00015"></a>00015 <span class="keyword">using namespace </span>std;
+<a name="l00016"></a>00016 
+<a name="l00021"></a><a class="code" href="class_single___list.html#adcaae07240a37683b9e425f75e53b637">00021</a> <a class="code" href="class_single___list.html#adcaae07240a37683b9e425f75e53b637" title="Konstruktor klasy Single_List.">Single_List::Single_List</a>(<span class="keywordtype">int</span> x)
+<a name="l00022"></a>00022 {
+<a name="l00023"></a>00023   n = x;
+<a name="l00024"></a>00024   L = <span class="keyword">new</span> <span class="keywordtype">int</span>[x];
+<a name="l00025"></a>00025   front_ptr = back_ptr = qcnt = 0;
+<a name="l00026"></a>00026 }
+<a name="l00027"></a>00027 
+<a name="l00032"></a><a class="code" href="class_single___list.html#a4299262d7ef75fabd6c63c9d861f73d1">00032</a> <a class="code" href="class_single___list.html#a4299262d7ef75fabd6c63c9d861f73d1" title="Destruktor klasy Single_List.">Single_List::~Single_List</a>()
+<a name="l00033"></a>00033 {
+<a name="l00034"></a>00034   <span class="keyword">delete</span> [] L;
+<a name="l00035"></a>00035 }
+<a name="l00036"></a>00036 
+<a name="l00041"></a><a class="code" href="class_single___list.html#a25f11d821d749869c8eee01662c82e79">00041</a> <span class="keywordtype">bool</span> <a class="code" href="class_single___list.html#a25f11d821d749869c8eee01662c82e79" title="Sprawdza czy aby Lista nie jest pusta, brak elementów.">Single_List::empty</a>(<span class="keywordtype">void</span>)
+<a name="l00042"></a>00042 {
+<a name="l00043"></a>00043   <span class="keywordflow">return</span> !qcnt;
+<a name="l00044"></a>00044 }
+<a name="l00049"></a><a class="code" href="class_single___list.html#a9540e4ce7599aea7ecb0fef397c50b10">00049</a> <span class="keywordtype">void</span> <a class="code" href="class_single___list.html#a9540e4ce7599aea7ecb0fef397c50b10" title="Metoda dodaje element na początek Listy.">Single_List::push_front</a>(<span class="keywordtype">int</span> v)
+<a name="l00050"></a>00050 {
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052 }
+<a name="l00057"></a><a class="code" href="class_single___list.html#a31e4ae5bf29a861135da086687b4dbc6">00057</a> <span class="keywordtype">void</span> <a class="code" href="class_single___list.html#a31e4ae5bf29a861135da086687b4dbc6" title="Metoda dodaje element na końcu Listy.">Single_List::push_back</a>(<span class="keywordtype">int</span> v)
+<a name="l00058"></a>00058 {
+<a name="l00059"></a>00059           <span class="keywordtype">int</span> i;
+<a name="l00060"></a>00060           <span class="keywordflow">if</span>(qcnt &lt; n)
+<a name="l00061"></a>00061           {
+<a name="l00062"></a>00062             i = back_ptr + qcnt++;
+<a name="l00063"></a>00063             <span class="keywordflow">if</span>(i &gt;= n) i -= n;
+<a name="l00064"></a>00064             L[i] = v;
+<a name="l00065"></a>00065           }
+<a name="l00066"></a>00066           <span class="keywordflow">else</span>
+<a name="l00067"></a>00067           {
+<a name="l00068"></a>00068                   (*this).zwieksz_tablice_o_jeden();
+<a name="l00069"></a>00069                   <span class="comment">//(*this).zwieksz_tablice_dwarazy();</span>
+<a name="l00070"></a>00070                     i = back_ptr + qcnt++;
+<a name="l00071"></a>00071                     <span class="keywordflow">if</span>(i &gt;= n) i -= n;
+<a name="l00072"></a>00072                     L[i] = v;
+<a name="l00073"></a>00073           }
+<a name="l00074"></a>00074 }
+<a name="l00075"></a>00075         
+<a name="l00080"></a><a class="code" href="class_single___list.html#ac5ddd88d31eabab3220961479033d307">00080</a> <span class="keywordtype">void</span> <a class="code" href="class_single___list.html#ac5ddd88d31eabab3220961479033d307">Single_List::pop_front</a>()
+<a name="l00081"></a>00081 {
+<a name="l00082"></a>00082           <span class="keywordflow">if</span>(qcnt)
+<a name="l00083"></a>00083           {
+<a name="l00084"></a>00084             qcnt--;
+<a name="l00085"></a>00085             front_ptr++;
+<a name="l00086"></a>00086             <span class="keywordflow">if</span>(front_ptr == n) front_ptr = 0;
+<a name="l00087"></a>00087           }
+<a name="l00088"></a>00088 }
+<a name="l00089"></a>00089 
+<a name="l00094"></a><a class="code" href="class_single___list.html#a3a05abde3687635a42161e1b7e3a5451">00094</a> <span class="keywordtype">void</span> <a class="code" href="class_single___list.html#a3a05abde3687635a42161e1b7e3a5451">Single_List::pop_back</a>()
+<a name="l00095"></a>00095 {
+<a name="l00096"></a>00096           <span class="keywordflow">if</span>(qcnt)
+<a name="l00097"></a>00097           {
+<a name="l00098"></a>00098             qcnt--;
+<a name="l00099"></a>00099             back_ptr--;
+<a name="l00100"></a>00100             <span class="keywordflow">if</span>(back_ptr == n) back_ptr = 0;
+<a name="l00101"></a>00101           }
+<a name="l00102"></a>00102 }
+<a name="l00103"></a>00103 
+<a name="l00108"></a><a class="code" href="class_single___list.html#acad2ffc17c3c21f00069fbb475a4f006">00108</a> <span class="keywordtype">int</span> <a class="code" href="class_single___list.html#acad2ffc17c3c21f00069fbb475a4f006" title="Metoda zwraca wartość elementu na samym początku listy.">Single_List::front</a>(<span class="keywordtype">void</span>)
+<a name="l00109"></a>00109 {
+<a name="l00110"></a>00110   <span class="keywordflow">if</span>(qcnt) <span class="keywordflow">return</span> L[front_ptr];
+<a name="l00111"></a>00111   <span class="keywordflow">return</span> -<a class="code" href="element_8hh.html#a85349090d85e7f334d4b3fd1f14a05c5">MAXINT</a>;
+<a name="l00112"></a>00112 }
+<a name="l00117"></a><a class="code" href="class_single___list.html#a1b9df3da1dd30ef8807ac92c58bd88ab">00117</a> <span class="keywordtype">int</span> <a class="code" href="class_single___list.html#a1b9df3da1dd30ef8807ac92c58bd88ab" title="Metoda zwraca wartość elementu na samym końcu listy.">Single_List::back</a>(<span class="keywordtype">void</span>)
+<a name="l00118"></a>00118 {
+<a name="l00119"></a>00119   <span class="keywordflow">if</span>(qcnt) <span class="keywordflow">return</span> L[back_ptr];
+<a name="l00120"></a>00120   <span class="keywordflow">return</span> -<a class="code" href="element_8hh.html#a85349090d85e7f334d4b3fd1f14a05c5">MAXINT</a>;
+<a name="l00121"></a>00121 }
+<a name="l00122"></a>00122 
+<a name="l00127"></a><a class="code" href="class_single___list.html#a9ad65f4894e3217aecc2d225a1f9dcdb">00127</a> <span class="keywordtype">void</span> <a class="code" href="class_single___list.html#a9ad65f4894e3217aecc2d225a1f9dcdb" title="Metoda zwiększa rozmiar tablicy o jeden element.">Single_List::zwieksz_tablice_o_jeden</a>()
+<a name="l00128"></a>00128 {
+<a name="l00129"></a>00129         <span class="keywordtype">int</span> *tab2 = <span class="keyword">new</span> <span class="keywordtype">int</span> [++n];                      <span class="comment">// nowa tablica o rozmiarze o jeden wiekszym</span>
+<a name="l00130"></a>00130         
+<a name="l00131"></a>00131         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;n-1;i++)
+<a name="l00132"></a>00132         {
+<a name="l00133"></a>00133                 tab2[i] = L[i];                         <span class="comment">// skopjuj wszystkie dane ze starej tablicy</span>
+<a name="l00134"></a>00134         }       
+<a name="l00135"></a>00135         <span class="keyword">delete</span>[] L;                                             <span class="comment">// zniszcz stara tablice</span>
+<a name="l00136"></a>00136         L = tab2;                                               <span class="comment">// umiesć nową tablice pod wskaznik S</span>
+<a name="l00137"></a>00137 }
+<a name="l00138"></a>00138 
+<a name="l00143"></a><a class="code" href="class_single___list.html#a88b5d843a3e40401f18b21336e09669b">00143</a> <span class="keywordtype">void</span> <a class="code" href="class_single___list.html#a88b5d843a3e40401f18b21336e09669b" title="Metoda zwiększa rozmiar tablicy dwa razy.">Single_List::zwieksz_tablice_dwarazy</a>()
+<a name="l00144"></a>00144 {
+<a name="l00145"></a>00145         <span class="keywordtype">int</span> nowy_rozmiar = 2*n;
+<a name="l00146"></a>00146         <span class="keywordtype">int</span> *tab2 = <span class="keyword">new</span> <span class="keywordtype">int</span> [nowy_rozmiar];             <span class="comment">// nowa tablica o rozmiarze dwukrotnie wiekszym</span>
+<a name="l00147"></a>00147         
+<a name="l00148"></a>00148         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;n;i++)
+<a name="l00149"></a>00149         {
+<a name="l00150"></a>00150                 tab2[i] = L[i];                         <span class="comment">// skopjuj wszystkie dane ze starej tablicy</span>
+<a name="l00151"></a>00151         }
+<a name="l00152"></a>00152         n = nowy_rozmiar;
+<a name="l00153"></a>00153         <span class="keyword">delete</span>[] L;                                     <span class="comment">// zniszcz stara tablice</span>
+<a name="l00154"></a>00154         L = tab2;                                       <span class="comment">// umiesć nową tablice pod wskaznik S</span>
+<a name="l00155"></a>00155 }
+</pre></div></div><!-- contents -->
+</div>
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="single__list_8cpp.html">single_list.cpp</a>      </li>
+
+    <li class="footer">Wygenerowano Wed Mar 25 2015 11:17:24 dla 2Ow1L programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
+   </ul>
+ </div>
+
+
+</body>
+</html>
