@@ -6,23 +6,67 @@
 #include <fstream>
 #include <list>
 
+/*!
+ *   \file
+ *   \brief Plik główny
+ *
+*/
+
+/*!
+ *	\brief Modeluje interfejs Obserwator
+ *
+ *	Klasa modeluje interfejs dziedziczony miedzy innymi
+	przez klase ObserwatorUser. Zawiera wirtualną metodę
+	update. 
+*/
 class Obserwator
 {
 	public:
+	/*!
+	 *	\brief Metoda wirtualna .
+
+	*/
 	virtual void update() = 0;
 };
 
+/*!
+ *	\brief Modeluje pojącie Obserwowany
+ *
+ *	Klasa modeluje pojącie Obserwowany. Jest to klasa która
+	zawiera liste obserwatorów. Można dodawać oraz usuwać kolejnych 
+	obserwatorów.
+*/
 class Obserwowany
 {
 	protected:
+	/*!
+	 *	\brief Lista obserwatorów.
+	 *	
+	 *	Lista przechowuje wszystkich obserwatorów. 
+	*/
 		std::list <Obserwator*> obserwatorzy;
 	public:
+	/*!
+	 *	\brief Metoda za pomocą której możemy dodać nowy obserwator do listy.
+	 *	
+	 *	Dodaje nowy obserwator do listy obserwatorów.
+	*/
     	void dodaj(Obserwator *o) {
         	obserwatorzy.push_back (o);
     	}
+	/*!
+	 *	\brief Metoda za pomocą której możemy usuną obserwator z listy.
+	 *	
+	 *	Usuwa obserwator z listy obserwatorów.
+	*/
     	void usun(Obserwator *o) {
         	obserwatorzy.remove (o);
    	}
+	/*!
+	 *	\brief Metoda za pomocą której sprawdzamy czy nie zaszy zmiany w obserwowanych obiektach.
+	 *	
+	 *	Za jej pomocą sprawdzamy po kolei wszystkie obserwowane obiekty czy nie zaszła w nich zmiana.
+	*/
 	void powiadom () {
         	std::list<Obserwator *>::iterator it;
         	for (it = obserwatorzy.begin(); it != obserwatorzy.end(); it++) {
@@ -39,15 +83,36 @@ class Obserwowany
 #include "lista.hh"
 #include "benchmark.hh"
 
+/*!
+ *	\brief Modeluje pojącie ObserwowanyBenchmark
+ *
+ *	Klasa modeluje pojącie ObserwowanyBenchmark. Jest to klasa która
+	modeluje obiekt obserwowany konkretny z cehami Benchmarka. 
+*/
 class ObserwowanyBenchmark : public Obserwowany, public Benchmark
 {
+	/*!
+	 *	\brief Przechowuje ciag znaków jako wiadomość o stanie obserwowanego obiektu.
+	 *	
+	 *	Przechowuje informacje o stanie obiektu obserwowanego.
+	*/
 	string stan;
 	public:
- 
+ 	/*!
+	 *	\brief Metoda za pomocą której dosatjemy się do prywatnego pola.
+	 *	
+	 *	Za jej pomocą mamy dostęp do prywatnego pola klasy.
+	*/
         std::string pobierzStan () {
         	return stan;
    	}
- 
+
+ 	/*!
+	 *	\brief Metoda za pomocą której zmieniamy stan naszego obiektu.
+	 *	\param s - ciag znakow, informujacy o stanie obiektu.	
+
+	 *	Za jej pomocą mamy zmieniamy stan naszego obiektu.
+	*/
         void ustawStan (const std::string& s) {
         	stan = s;
         	std::cout << "Stan: " << stan << std::endl;
@@ -55,20 +120,53 @@ class ObserwowanyBenchmark : public Obserwowany, public Benchmark
     	}
 };
 
+/*!
+ *	\brief Modeluje pojącie ObserwatorUser
+ *
+ *	Klasa modeluje pojącie ObserwowanyUser. Jest to klasa która
+	modeluje obiekt obserwujący konkretny obiekt (u nas obserwuje Benchmarka).
+*/
 class ObserwatorUser : public Obserwator
 {
+	/*!
+	 *	\brief Zmienna przechowuje numer Obserwatora.
+
+	 *	Przechowuje numer obserwatora, za pomocą którego identyfikujey obserwatory.
+	*/
 	int idBenchmarku;
+	/*!
+	 *	\brief Zmienna przechowuje numer obserwowany obiekt.
+
+	 *	Przechowuje obiekt którego obserwujemy.
+	*/
 	ObserwowanyBenchmark *test;
 
+	/*!
+	 *	\brief Zmienna skojarzona z plikiem.
+
+	 *	Zmienna skojarzona z plikem w którym zapisujemy informacje o zmianach "logi"
+	*/
 	fstream plik_log;
 
 	public:
+	/*!
+	 *	\brief Konstruktor klasy ObserwatorUser
+		\param h - wskaznik na obserwowany obiekt 
+		\param id - numer identifikacyjny obserwatora.
+
+	 *	Inicjalizuje pola idBenchmarku oraz test.
+	*/
 	ObserwatorUser(ObserwowanyBenchmark *h, int id)    //konstruktor
 	{
 		idBenchmarku = id;
 		test = h;
 	} 
-	
+
+	/*!
+	 *	\brief Uaktualnia informacje o tym w jakim stanie jest obserwowany obiekt.
+
+	 *	Zapisuje do pliku informacje o stanie obserwowanego obiektu.
+	*/
 	void update()
 	{
 		string stan = test->pobierzStan();
@@ -149,65 +247,7 @@ int main()
 	delete user1;
 	
 	
-	
-/*	Single_List sl;
-	Element *p;
-	int i;
-	
-	cout << "(A) : "; sl.showInfo();
-	
-	for(i=1;i<=5;i++)
-	{
-		p = new Element;
-		p->info = i;
-		sl.push_front(p);
-	}
-	
-	cout << "(B) : "; sl.showInfo();
-	
-	for(i = 1; i <= 5; i++)
-	{
-		p = new Element;
-		p->info = i;
-		sl.push_back(p);
-	}
-	
-	cout << "(C) : "; sl.showInfo();
 
-
-	sl.pop_front();
-	  
-	cout << "(D) : ";   sl.showInfo();
-	*/
-	
-	
-	
-	
-	
-	
-/*	Stack S;
-	int i;
-	
-	for(i=1;i<=10;i++) S.push(i);
-	
-	while(!S.empty())
-	{
-		cout << S.top()->info<<endl;
-		S.pop();
-	}
-	*/
-	
-/*	Queue Q;
-	int i;
-	
-	for(i=1; i<=10; i++) Q.push(i);
-	
-	while(!Q.empty())
-	{
-		cout << Q.front()<<endl;
-		Q.pop();
-	}*/
-	
 	
 	return 0;
 
