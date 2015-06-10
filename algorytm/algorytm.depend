@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1433869957 source:c:\users\rafal\documents\codeblock_workspace\algorytm\plansza.cpp
+	<ctime>
+	<stdio.h>
+	<string.h>
+	"plansza.h"
+
+1433869191 c:\users\rafal\documents\codeblock_workspace\algorytm\plansza.h
+	<iostream>
+	<string>
+
+1433934401 source:c:\users\rafal\documents\codeblock_workspace\algorytm\main.cpp
+	<iostream>
+	<fstream>
+	"plansza.h"
+
